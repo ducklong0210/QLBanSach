@@ -53,9 +53,7 @@ namespace GUI.FormMaster
 
         private void btn_QLHoaDon_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            QuanLyHoaDon quanLyHoaDon = new QuanLyHoaDon();
-            quanLyHoaDon.Show();
+            
         }
 
         private void btn_ThongTinTK_Click(object sender, EventArgs e)
@@ -64,6 +62,27 @@ namespace GUI.FormMaster
             this.Hide();
             ThongTinTaiKhoan thongTinTaiKhoan = new ThongTinTaiKhoan(this.taiKhoan);
             thongTinTaiKhoan.Show();
+        }
+
+        private void btnQuanLyLoaiSach_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            QuanLyLoaiSach quanLyLoaiSach = new QuanLyLoaiSach();
+            quanLyLoaiSach.Show();
+        }
+
+        private void btn_BaoCaoThongKe_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BaoCaoThongKe baoCaoThongKe = new BaoCaoThongKe();
+            baoCaoThongKe.Show();
+        }
+
+        private void btn_QuanLyNhanVien_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            QuanLyNhanVien quanLyNhanVien = new QuanLyNhanVien();
+            quanLyNhanVien.Show();
         }
     }
 }

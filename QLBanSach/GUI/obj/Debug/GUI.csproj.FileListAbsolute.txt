@@ -23,12 +23,10 @@ C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormCustomer.GioHang.reso
 C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormCustomer.Home.resources
 C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormCustomer.LichSu.resources
 C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormCustomer.ThongTinCaNhan.resources
-C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormMaster.QuanLyHoaDon.resources
 C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormMaster.QuanLyNguoiDung.resources
 C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormMaster.QuanLySach.resources
 C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormMaster.ThongTinTaiKhoan.resources
 C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormMaster.QuanLyLoaiSach.resources
-C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormMaster.QuanLySacsh.resources
 C:\Users\User\source\repos\QLBanSach\GUI\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\User\source\repos\QLBanSach\GUI\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\User\source\repos\QLBanSach\GUI\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -81,3 +79,4 @@ C:\Users\User\source\repos\QLBanSach\GUI\bin\Debug\pt\Microsoft.ReportViewer.Win
 C:\Users\User\source\repos\QLBanSach\GUI\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\User\source\repos\QLBanSach\GUI\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\User\source\repos\QLBanSach\GUI\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormMaster.QuanLyNhanVien.resources

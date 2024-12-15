@@ -112,11 +112,11 @@
     <Compile Include="FormCustomer\TrangChu.Designer.cs">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMaster\QuanLyHoaDon.cs">
+    <Compile Include="FormMaster\BaoCaoThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMaster\QuanLyHoaDon.Designer.cs">
-      <DependentUpon>QuanLyHoaDon.cs</DependentUpon>
+    <Compile Include="FormMaster\BaoCaoThongKe.Designer.cs">
+      <DependentUpon>BaoCaoThongKe.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMaster\QuanLyLoaiSach.cs">
       <SubType>Form</SubType>
@@ -130,17 +130,17 @@
     <Compile Include="FormMaster\QuanLyNguoiDung.Designer.cs">
       <DependentUpon>QuanLyNguoiDung.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMaster\QuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaster\QuanLyNhanVien.Designer.cs">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMaster\QuanLySach.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMaster\QuanLySach.Designer.cs">
       <DependentUpon>QuanLySach.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormMaster\QuanLySacsh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMaster\QuanLySacsh.Designer.cs">
-      <DependentUpon>QuanLySacsh.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMaster\QuanTri.cs">
       <SubType>Form</SubType>
@@ -181,20 +181,17 @@
     <EmbeddedResource Include="FormCustomer\TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMaster\QuanLyHoaDon.resx">
-      <DependentUpon>QuanLyHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormMaster\QuanLyLoaiSach.resx">
       <DependentUpon>QuanLyLoaiSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMaster\QuanLyNguoiDung.resx">
       <DependentUpon>QuanLyNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMaster\QuanLyNhanVien.resx">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMaster\QuanLySach.resx">
       <DependentUpon>QuanLySach.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMaster\QuanLySacsh.resx">
-      <DependentUpon>QuanLySacsh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMaster\QuanTri.resx">
       <DependentUpon>QuanTri.cs</DependentUpon>
@@ -302,6 +299,11 @@
     <Content Include="Image\doremon.jpg" />
     <None Include="Resources\search.png" />
     <None Include="Resources\default.bmp" />
+    <None Include="Resources\book.png" />
+    <None Include="Resources\type_book.png" />
+    <None Include="Resources\result.png" />
+    <None Include="Resources\man.png" />
+    <None Include="Resources\reset.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

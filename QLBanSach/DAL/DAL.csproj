@@ -46,6 +46,7 @@
     <Compile Include="Info_Account_Mng.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterAccess.cs" />
+    <Compile Include="StaffMng.cs" />
     <Compile Include="UserAccess.cs" />
     <Compile Include="UserMng.cs" />
     <Compile Include="UserRegister.cs" />

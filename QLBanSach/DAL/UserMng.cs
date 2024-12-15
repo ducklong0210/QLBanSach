@@ -98,6 +98,10 @@ namespace DAL
             }
             catch (SqlException ex)
             {
+                if (ex.Number == 50000) // Bắt lỗi throw 50000 trong csdl
+                {
+                    return "user_Add_Retail";
+                }
                 Console.WriteLine($"Loi SQL : ${ex.Message}");
             }
             finally 

@@ -60,7 +60,7 @@ namespace BLL
         {
             // kiểm tra thông tin đã được nhập đầy đủ vào chưa
             if (addBook.TenSach == "" || 
-                addBook.MaLoaiSach == "" ||
+                addBook.MaLoaiSach != addBook.MaLoaiSach ||
                 addBook.Gia == 0 || 
                 addBook.SoLuong == 0  ||
                 addBook.Poster == "")
@@ -111,6 +111,81 @@ namespace BLL
             catch (Exception ex)
             {
                 throw new Exception("Lỗi trong quá trình xóa sách: " + ex.Message);
+            }
+        }
+        // ========================== Xử lý thông tin loại sách ====================================
+
+        public DataTable HienThiLoaiSach()
+        {
+            try
+            {
+                return bookMng.HienThiDuLieuLoaiSach();
+            }
+            catch (Exception ex)
+            {
+                return new DataTable();
+            }
+        }
+        public DataTable TimKiemMaLoaiSach(string maLoaiSach)
+        {
+            if(maLoaiSach == null)
+            {
+                throw new Exception("Mã Loại Sách Null!");
+            }
+            return bookMng.TimKiemMaLoaiSach(maLoaiSach);
+        }
+        public DataTable TimKiemTenLoaiSach(string tenLoaiSach)
+        {
+            if (tenLoaiSach == null)
+            {
+                throw new Exception("Tên Loại Sách Null!");
+            }
+            return bookMng.TimKiemTenLoaiSach(tenLoaiSach);
+        }
+        public string ThemLoaiSach(LoaiSach addLoaiSach)
+        {
+            if(addLoaiSach == null)
+            {
+                return "error_null_LoaiSach";
+            }
+            if(addLoaiSach.MaLoaiSach == "" ||
+                addLoaiSach.TenLoaiSach == "")
+            {
+                return "error_LoaiSach";
+            }
+            BookMng bookMng = new BookMng();
+            string Add_OK = bookMng.ThemLoaiSach(addLoaiSach);
+            return Add_OK;
+        }
+        public string SuaLoaiSach(LoaiSach editLoaiSach)
+        {
+            if (editLoaiSach == null)
+            {
+                return "error_null_LoaiSach";
+            }
+            if (editLoaiSach.MaLoaiSach == "" ||
+                editLoaiSach.TenLoaiSach == "")
+            {
+                return "error_LoaiSach";
+            }
+            BookMng bookMng = new BookMng();
+            string Edit_OK = bookMng.SuaLoaiSach(editLoaiSach);
+            return Edit_OK;
+        }
+        public string XoaLoaiSach(LoaiSach deleteLoaiSach)
+        {
+            if (deleteLoaiSach == null)
+            {
+                return "error_null_LoaiSach";
+            }
+            try 
+            {
+                string Delete_OK = bookMng.XoaLoaiSach(deleteLoaiSach);
+                return Delete_OK;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi trong quá trình xóa loại sách");
             }
         }
 

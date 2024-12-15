@@ -48,6 +48,7 @@
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnReset = new System.Windows.Forms.Button();
             this.btn_TimKiem = new System.Windows.Forms.Button();
             this.txtTKHoTen = new System.Windows.Forms.TextBox();
             this.lblTKHoTen = new System.Windows.Forms.Label();
@@ -198,6 +199,7 @@
             this.dgvThongTinNguoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvThongTinNguoiDung.Location = new System.Drawing.Point(3, 19);
             this.dgvThongTinNguoiDung.Name = "dgvThongTinNguoiDung";
+            this.dgvThongTinNguoiDung.ReadOnly = true;
             this.dgvThongTinNguoiDung.Size = new System.Drawing.Size(771, 308);
             this.dgvThongTinNguoiDung.TabIndex = 0;
             this.dgvThongTinNguoiDung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinNguoiDung_CellContentClick);
@@ -207,6 +209,7 @@
             this.MaND.DataPropertyName = "MaND";
             this.MaND.HeaderText = "Mã ND";
             this.MaND.Name = "MaND";
+            this.MaND.ReadOnly = true;
             this.MaND.Width = 40;
             // 
             // Username
@@ -214,6 +217,7 @@
             this.Username.DataPropertyName = "Username";
             this.Username.HeaderText = "Username";
             this.Username.Name = "Username";
+            this.Username.ReadOnly = true;
             this.Username.Width = 80;
             // 
             // Pass
@@ -221,6 +225,7 @@
             this.Pass.DataPropertyName = "Pass";
             this.Pass.HeaderText = "Password";
             this.Pass.Name = "Pass";
+            this.Pass.ReadOnly = true;
             this.Pass.Width = 80;
             // 
             // MaQuyen
@@ -228,6 +233,7 @@
             this.MaQuyen.DataPropertyName = "MaQuyen";
             this.MaQuyen.HeaderText = "Mã Quyền";
             this.MaQuyen.Name = "MaQuyen";
+            this.MaQuyen.ReadOnly = true;
             this.MaQuyen.Width = 60;
             // 
             // HoVaTen
@@ -235,18 +241,21 @@
             this.HoVaTen.DataPropertyName = "HoVaTen";
             this.HoVaTen.HeaderText = "Họ Tên";
             this.HoVaTen.Name = "HoVaTen";
+            this.HoVaTen.ReadOnly = true;
             // 
             // NamSinh
             // 
             this.NamSinh.DataPropertyName = "NamSinh";
             this.NamSinh.HeaderText = "Năm Sinh";
             this.NamSinh.Name = "NamSinh";
+            this.NamSinh.ReadOnly = true;
             // 
             // GioiTinh
             // 
             this.GioiTinh.DataPropertyName = "GioiTinh";
             this.GioiTinh.HeaderText = "Giới Tính";
             this.GioiTinh.Name = "GioiTinh";
+            this.GioiTinh.ReadOnly = true;
             this.GioiTinh.Width = 90;
             // 
             // DiaChi
@@ -254,6 +263,7 @@
             this.DiaChi.DataPropertyName = "DiaChi";
             this.DiaChi.HeaderText = "Địa Chỉ";
             this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
             this.DiaChi.Width = 80;
             // 
             // SoDienThoai
@@ -261,9 +271,11 @@
             this.SoDienThoai.DataPropertyName = "SoDienThoai";
             this.SoDienThoai.HeaderText = "Số Điện Thoại";
             this.SoDienThoai.Name = "SoDienThoai";
+            this.SoDienThoai.ReadOnly = true;
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.btnReset);
             this.panel4.Controls.Add(this.btn_TimKiem);
             this.panel4.Controls.Add(this.txtTKHoTen);
             this.panel4.Controls.Add(this.lblTKHoTen);
@@ -275,13 +287,24 @@
             this.panel4.Size = new System.Drawing.Size(777, 51);
             this.panel4.TabIndex = 1;
             // 
+            // btnReset
+            // 
+            this.btnReset.Image = global::GUI.Properties.Resources.reset;
+            this.btnReset.Location = new System.Drawing.Point(688, 5);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(47, 37);
+            this.btnReset.TabIndex = 5;
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // btn_TimKiem
             // 
-            this.btn_TimKiem.Location = new System.Drawing.Point(533, 9);
+            this.btn_TimKiem.Image = global::GUI.Properties.Resources.search;
+            this.btn_TimKiem.Location = new System.Drawing.Point(533, 4);
             this.btn_TimKiem.Name = "btn_TimKiem";
-            this.btn_TimKiem.Size = new System.Drawing.Size(75, 32);
+            this.btn_TimKiem.Size = new System.Drawing.Size(52, 42);
             this.btn_TimKiem.TabIndex = 4;
-            this.btn_TimKiem.Text = "Tìm Kiếm";
+            this.btn_TimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_TimKiem.UseVisualStyleBackColor = true;
             this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
@@ -319,7 +342,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -330,10 +353,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Gainsboro;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label1.Location = new System.Drawing.Point(279, 13);
+            this.label1.Location = new System.Drawing.Point(296, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(233, 26);
             this.label1.TabIndex = 0;
@@ -350,7 +373,7 @@
             // 
             // grbThongTinChiTiet
             // 
-            this.grbThongTinChiTiet.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.grbThongTinChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.grbThongTinChiTiet.Controls.Add(this.btn_Huy);
             this.grbThongTinChiTiet.Controls.Add(this.btn_Luu);
             this.grbThongTinChiTiet.Controls.Add(this.cbGioiTinh);
@@ -380,7 +403,7 @@
             // btn_Huy
             // 
             this.btn_Huy.Image = global::GUI.Properties.Resources.multiply__1_;
-            this.btn_Huy.Location = new System.Drawing.Point(176, 439);
+            this.btn_Huy.Location = new System.Drawing.Point(176, 440);
             this.btn_Huy.Name = "btn_Huy";
             this.btn_Huy.Size = new System.Drawing.Size(84, 51);
             this.btn_Huy.TabIndex = 18;
@@ -392,7 +415,7 @@
             // btn_Luu
             // 
             this.btn_Luu.Image = global::GUI.Properties.Resources.diskette;
-            this.btn_Luu.Location = new System.Drawing.Point(43, 439);
+            this.btn_Luu.Location = new System.Drawing.Point(43, 440);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(82, 51);
             this.btn_Luu.TabIndex = 17;
@@ -409,7 +432,7 @@
             "Nữ"});
             this.cbGioiTinh.Location = new System.Drawing.Point(136, 291);
             this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Size = new System.Drawing.Size(121, 24);
+            this.cbGioiTinh.Size = new System.Drawing.Size(124, 24);
             this.cbGioiTinh.TabIndex = 16;
             // 
             // dtpNamSinh
@@ -476,6 +499,7 @@
             this.txtMaQuyen.Name = "txtMaQuyen";
             this.txtMaQuyen.Size = new System.Drawing.Size(124, 23);
             this.txtMaQuyen.TabIndex = 7;
+            this.txtMaQuyen.Click += new System.EventHandler(this.txtMaQuyen_Click);
             // 
             // label5
             // 
@@ -538,6 +562,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1068, 519);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -612,5 +637,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoDienThoai;
+        private System.Windows.Forms.Button btnReset;
     }
 }

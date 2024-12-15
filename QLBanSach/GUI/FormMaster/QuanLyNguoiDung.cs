@@ -7,6 +7,7 @@ using System.Data;
 using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -95,6 +96,13 @@ namespace GUI.FormMaster
             // Xử lý kết quả
             switch (add_OK)
             {
+                case "user_Add_Retail":
+                    MessageBox.Show("Tên tài khoản đã tồn tại!",
+                        "Thông báo",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                    return;
+                
                 case "name_error":
                     MessageBox.Show("Bạn chưa điền đầy đủ thông tin người dùng.Mời bạn kiểm tra lại thông tin!",
                             "Thông báo",
@@ -105,6 +113,7 @@ namespace GUI.FormMaster
                     MessageBox.Show("Chúc mừng bạn thêm thành công người dùng!");
                     HienThiThongTin();
                     XoaThongTin();
+                    grbThongTinChiTiet.Enabled = false;
                     return;
                 case "error_Add_Success":
                     MessageBox.Show("Lỗi khi thêm người dùng!");
@@ -202,7 +211,7 @@ namespace GUI.FormMaster
                         MessageBox.Show("Lỗi khi xóa người dùng.");
                         break;
                     default:
-                        MessageBox.Show("Có lỗi xảy ra.");
+                        MessageBox.Show("Có lỗi xảy ra khi thêm nguời dùng.");
                         break;
                 }
             
@@ -302,5 +311,20 @@ namespace GUI.FormMaster
             btn_Xoa.Enabled = true;
             grbThongTinChiTiet.Enabled = false;
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            HienThiThongTin();
+        }
+
+        private void txtMaQuyen_Click(object sender, EventArgs e)
+        {
+           
+                MessageBox.Show("Lưu ý về mã quyền cần biết!\n0.Quyền dành cho người dùng.\n1.Quyền dành cho quản lý tất cả hệ thống.\n2.Quyền dành cho nhân viên quản lý.",
+                    "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+               
+            }
     }
 }

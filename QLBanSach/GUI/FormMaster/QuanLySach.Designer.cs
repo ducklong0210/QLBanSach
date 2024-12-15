@@ -55,6 +55,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.grbChucNang = new System.Windows.Forms.GroupBox();
+            this.btnReset = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.numberTKGia = new System.Windows.Forms.NumericUpDown();
             this.lblTKGia = new System.Windows.Forms.Label();
@@ -100,7 +101,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(748, 52);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(338, 608);
+            this.panel3.Size = new System.Drawing.Size(338, 572);
             this.panel3.TabIndex = 8;
             // 
             // grbThongTinChiTiet
@@ -128,7 +129,7 @@
             this.grbThongTinChiTiet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbThongTinChiTiet.Location = new System.Drawing.Point(0, 0);
             this.grbThongTinChiTiet.Name = "grbThongTinChiTiet";
-            this.grbThongTinChiTiet.Size = new System.Drawing.Size(338, 608);
+            this.grbThongTinChiTiet.Size = new System.Drawing.Size(338, 572);
             this.grbThongTinChiTiet.TabIndex = 0;
             this.grbThongTinChiTiet.TabStop = false;
             this.grbThongTinChiTiet.Text = "Thông Tin Chi Tiết";
@@ -181,9 +182,9 @@
             // btnHuy
             // 
             this.btnHuy.Image = global::GUI.Properties.Resources.multiply__1_;
-            this.btnHuy.Location = new System.Drawing.Point(230, 521);
+            this.btnHuy.Location = new System.Drawing.Point(219, 518);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(75, 54);
+            this.btnHuy.Size = new System.Drawing.Size(75, 43);
             this.btnHuy.TabIndex = 29;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -193,9 +194,9 @@
             // btnLuu
             // 
             this.btnLuu.Image = global::GUI.Properties.Resources.diskette;
-            this.btnLuu.Location = new System.Drawing.Point(41, 521);
+            this.btnLuu.Location = new System.Drawing.Point(59, 519);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(72, 54);
+            this.btnLuu.Size = new System.Drawing.Size(72, 40);
             this.btnLuu.TabIndex = 28;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -246,7 +247,6 @@
             // 
             // numberGia
             // 
-            this.numberGia.DecimalPlaces = 2;
             this.numberGia.Location = new System.Drawing.Point(121, 223);
             this.numberGia.Maximum = new decimal(new int[] {
             2000000000,
@@ -347,7 +347,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 52);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(748, 608);
+            this.panel2.Size = new System.Drawing.Size(748, 572);
             this.panel2.TabIndex = 7;
             // 
             // panel5
@@ -356,11 +356,12 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 382);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(748, 226);
+            this.panel5.Size = new System.Drawing.Size(748, 190);
             this.panel5.TabIndex = 1;
             // 
             // grbChucNang
             // 
+            this.grbChucNang.Controls.Add(this.btnReset);
             this.grbChucNang.Controls.Add(this.btnThoat);
             this.grbChucNang.Controls.Add(this.numberTKGia);
             this.grbChucNang.Controls.Add(this.lblTKGia);
@@ -375,17 +376,27 @@
             this.grbChucNang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbChucNang.Location = new System.Drawing.Point(0, 0);
             this.grbChucNang.Name = "grbChucNang";
-            this.grbChucNang.Size = new System.Drawing.Size(748, 226);
+            this.grbChucNang.Size = new System.Drawing.Size(748, 190);
             this.grbChucNang.TabIndex = 0;
             this.grbChucNang.TabStop = false;
             this.grbChucNang.Text = "Chức Năng";
+            // 
+            // btnReset
+            // 
+            this.btnReset.Image = global::GUI.Properties.Resources.reset;
+            this.btnReset.Location = new System.Drawing.Point(679, 22);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(47, 47);
+            this.btnReset.TabIndex = 14;
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.LightCoral;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Image = global::GUI.Properties.Resources.logout;
-            this.btnThoat.Location = new System.Drawing.Point(620, 150);
+            this.btnThoat.Location = new System.Drawing.Point(576, 113);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(83, 43);
             this.btnThoat.TabIndex = 13;
@@ -396,8 +407,7 @@
             // 
             // numberTKGia
             // 
-            this.numberTKGia.DecimalPlaces = 2;
-            this.numberTKGia.Location = new System.Drawing.Point(426, 25);
+            this.numberTKGia.Location = new System.Drawing.Point(414, 25);
             this.numberTKGia.Maximum = new decimal(new int[] {
             2000000000,
             0,
@@ -410,7 +420,7 @@
             // lblTKGia
             // 
             this.lblTKGia.AutoSize = true;
-            this.lblTKGia.Location = new System.Drawing.Point(366, 28);
+            this.lblTKGia.Location = new System.Drawing.Point(361, 28);
             this.lblTKGia.Name = "lblTKGia";
             this.lblTKGia.Size = new System.Drawing.Size(38, 17);
             this.lblTKGia.TabIndex = 11;
@@ -435,7 +445,7 @@
             // btnTimKiem
             // 
             this.btnTimKiem.Image = global::GUI.Properties.Resources.search;
-            this.btnTimKiem.Location = new System.Drawing.Point(607, 28);
+            this.btnTimKiem.Location = new System.Drawing.Point(551, 22);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(108, 47);
             this.btnTimKiem.TabIndex = 8;
@@ -463,7 +473,7 @@
             // btnXoa
             // 
             this.btnXoa.Image = global::GUI.Properties.Resources.delete;
-            this.btnXoa.Location = new System.Drawing.Point(436, 150);
+            this.btnXoa.Location = new System.Drawing.Point(414, 113);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(85, 43);
             this.btnXoa.TabIndex = 5;
@@ -475,7 +485,7 @@
             // btnSua
             // 
             this.btnSua.Image = global::GUI.Properties.Resources.edit;
-            this.btnSua.Location = new System.Drawing.Point(243, 150);
+            this.btnSua.Location = new System.Drawing.Point(225, 113);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(85, 43);
             this.btnSua.TabIndex = 4;
@@ -487,7 +497,7 @@
             // btnThem
             // 
             this.btnThem.Image = global::GUI.Properties.Resources.user;
-            this.btnThem.Location = new System.Drawing.Point(41, 150);
+            this.btnThem.Location = new System.Drawing.Point(52, 113);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(85, 43);
             this.btnThem.TabIndex = 3;
@@ -530,6 +540,7 @@
             this.dgvThongTinSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvThongTinSach.Location = new System.Drawing.Point(3, 19);
             this.dgvThongTinSach.Name = "dgvThongTinSach";
+            this.dgvThongTinSach.ReadOnly = true;
             this.dgvThongTinSach.Size = new System.Drawing.Size(742, 360);
             this.dgvThongTinSach.TabIndex = 0;
             this.dgvThongTinSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinSach_CellContentClick);
@@ -558,6 +569,7 @@
             this.MaSach.DataPropertyName = "MaSach";
             this.MaSach.HeaderText = "Mã Sách";
             this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
             this.MaSach.Width = 80;
             // 
             // TenSach
@@ -565,6 +577,7 @@
             this.TenSach.DataPropertyName = "TenSach";
             this.TenSach.HeaderText = "Tên Sách";
             this.TenSach.Name = "TenSach";
+            this.TenSach.ReadOnly = true;
             this.TenSach.Width = 120;
             // 
             // MaLoaiSach
@@ -572,30 +585,35 @@
             this.MaLoaiSach.DataPropertyName = "MaLoaiSach";
             this.MaLoaiSach.HeaderText = "Mã Thể Loại";
             this.MaLoaiSach.Name = "MaLoaiSach";
+            this.MaLoaiSach.ReadOnly = true;
             // 
             // NamSanXuat
             // 
             this.NamSanXuat.DataPropertyName = "NamSanXuat";
             this.NamSanXuat.HeaderText = "Năm Sản Xuất";
             this.NamSanXuat.Name = "NamSanXuat";
+            this.NamSanXuat.ReadOnly = true;
             // 
             // Gia
             // 
             this.Gia.DataPropertyName = "Gia";
             this.Gia.HeaderText = "Giá";
             this.Gia.Name = "Gia";
+            this.Gia.ReadOnly = true;
             // 
             // SoLuong
             // 
             this.SoLuong.DataPropertyName = "SoLuong";
             this.SoLuong.HeaderText = "Số Lượng";
             this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
             // 
             // Poster
             // 
             this.Poster.DataPropertyName = "Poster";
             this.Poster.HeaderText = "Ảnh";
             this.Poster.Name = "Poster";
+            this.Poster.ReadOnly = true;
             this.Poster.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Poster.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
@@ -603,8 +621,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1086, 660);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(1086, 624);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlHeader);
@@ -680,6 +698,7 @@
         private System.Windows.Forms.TextBox txtDuongDanAnh;
         private System.Windows.Forms.TextBox txtMaSach;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiSach;

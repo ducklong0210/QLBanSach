@@ -110,7 +110,7 @@ namespace GUI.FormMaster
             // lấy đường dẫn ảnh từ cột "Poster"
             string relativePath = dtRow["Poster"].ToString().Trim();
             string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, relativePath);
-
+            txtDuongDanAnh.Text = relativePath;
             //Kiểm tra ảnh tồn tại k
             if (File.Exists(fullPath))
             {
@@ -176,6 +176,9 @@ namespace GUI.FormMaster
         private void btnXoaImg_Click(object sender, EventArgs e)
         {
             XoaAnh();
+            btnThemImg.Enabled = true;
+            btnSuaImg.Enabled = false;
+            btnXoaImg.Enabled = false;
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -191,7 +194,6 @@ namespace GUI.FormMaster
         {
             BookBLL bookBLL = new BookBLL();
             Sach sach = new Sach();
-            
             sach.TenSach = txtTenSach.Text;
             if (cbTheLoai.SelectedIndex == 0)
             {
@@ -219,6 +221,14 @@ namespace GUI.FormMaster
             string add_OK = bookBLL.ThemSach(sach);
             switch(add_OK)
             {
+                case "book_Add_Retail":
+                    {
+                        MessageBox.Show("Tên sách đã tồn tại!",
+                       "Thông báo",
+                       MessageBoxButtons.OK,
+                       MessageBoxIcon.Warning);
+                        return;
+                    } 
                 case "error_null_book":
                     {
                         MessageBox.Show("Bạn chưa điền đầy đủ thông tin.Mời bạn kiểm tra lại thông tin!",
@@ -242,7 +252,7 @@ namespace GUI.FormMaster
                     }
                 case "error_Add_Success":
                     {
-                        MessageBox.Show("Lỗi Không Thêm Được Sách!");
+                        MessageBox.Show("Lỗi không thêm được sách!");
                         return;
                     }
                 default:
@@ -279,6 +289,7 @@ namespace GUI.FormMaster
             sach.NamSanXuat = dtpNamSanXuat.Value;
             sach.Gia = (int)numberGia.Value;
             sach.SoLuong = (int)numberSoLuong.Value;
+            
             sach.Poster = txtDuongDanAnh.Text.Trim();
 
             // sự kiện sửa thông tin sách
@@ -301,7 +312,7 @@ namespace GUI.FormMaster
                     }
                 case "edit_Success":
                     {
-                        MessageBox.Show("Sửa Sách Thành Công!");
+                        MessageBox.Show("Sửa thông tin sách thành công!");
                         XoaThongTin();
                         HienThiThongTin();
                         grbThongTinChiTiet.Enabled = false;
@@ -311,7 +322,7 @@ namespace GUI.FormMaster
                     }
                 case "error_Edit_Success":
                     {
-                        MessageBox.Show("Lỗi Sửa Sách !");
+                        MessageBox.Show("Lỗi sửa thông tin sách !");
                         return;
                     }
                 default:
@@ -419,6 +430,11 @@ namespace GUI.FormMaster
             {
                 MessageBox.Show("Lỗi :" + ex.Message);
             }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            HienThiThongTin();
         }
     }
 }
