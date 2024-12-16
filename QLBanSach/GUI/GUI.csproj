@@ -118,6 +118,34 @@
     <Compile Include="FormMaster\BaoCaoThongKe.Designer.cs">
       <DependentUpon>BaoCaoThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMaster\DSHoaDon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSHoaDon.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaster\DSNguoiDung.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSNguoiDung.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaster\DSNhanVien.cs">
+      <DependentUpon>DSNhanVien.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaster\DSNhanVien.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSNhanVien.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaster\DSNhapHang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSNhapHang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaster\DSSach.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSSach.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormMaster\QuanLyLoaiSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +182,36 @@
     <Compile Include="FormMaster\ThongTinTaiKhoan.Designer.cs">
       <DependentUpon>ThongTinTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMaster\tkHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaster\tkHoaDon.Designer.cs">
+      <DependentUpon>tkHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaster\tkNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaster\tkNguoiDung.Designer.cs">
+      <DependentUpon>tkNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaster\tkNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaster\tkNhanVien.Designer.cs">
+      <DependentUpon>tkNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaster\tkNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaster\tkNhapHang.Designer.cs">
+      <DependentUpon>tkNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaster\tkSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaster\tkSach.Designer.cs">
+      <DependentUpon>tkSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -181,6 +239,12 @@
     <EmbeddedResource Include="FormCustomer\TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMaster\BaoCaoThongKe.resx">
+      <DependentUpon>BaoCaoThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaster\ReportNhanVien.rdlc" />
+    <EmbeddedResource Include="FormMaster\ReportNhapHang.rdlc" />
+    <EmbeddedResource Include="FormMaster\ReportSach.rdlc" />
     <EmbeddedResource Include="FormMaster\QuanLyLoaiSach.resx">
       <DependentUpon>QuanLyLoaiSach.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,8 +260,25 @@
     <EmbeddedResource Include="FormMaster\QuanTri.resx">
       <DependentUpon>QuanTri.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMaster\ReportHoaDon.rdlc" />
+    <EmbeddedResource Include="FormMaster\ReportNguoiDung.rdlc" />
     <EmbeddedResource Include="FormMaster\ThongTinTaiKhoan.resx">
       <DependentUpon>ThongTinTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaster\tkHoaDon.resx">
+      <DependentUpon>tkHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaster\tkNguoiDung.resx">
+      <DependentUpon>tkNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaster\tkNhanVien.resx">
+      <DependentUpon>tkNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaster\tkNhapHang.resx">
+      <DependentUpon>tkNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaster\tkSach.resx">
+      <DependentUpon>tkSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -209,6 +290,61 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="FormMaster\DSHoaDon.xsc">
+      <DependentUpon>DSHoaDon.xsd</DependentUpon>
+    </None>
+    <None Include="FormMaster\DSHoaDon.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSHoaDon.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="FormMaster\DSHoaDon.xss">
+      <DependentUpon>DSHoaDon.xsd</DependentUpon>
+    </None>
+    <None Include="FormMaster\DSNguoiDung.xsc">
+      <DependentUpon>DSNguoiDung.xsd</DependentUpon>
+    </None>
+    <None Include="FormMaster\DSNguoiDung.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSNguoiDung.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="FormMaster\DSNguoiDung.xss">
+      <DependentUpon>DSNguoiDung.xsd</DependentUpon>
+    </None>
+    <None Include="FormMaster\DSNhanVien.xsc">
+      <DependentUpon>DSNhanVien.xsd</DependentUpon>
+    </None>
+    <None Include="FormMaster\DSNhanVien.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSNhanVien.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="FormMaster\DSNhanVien.xss">
+      <DependentUpon>DSNhanVien.xsd</DependentUpon>
+    </None>
+    <None Include="FormMaster\DSNhapHang.xsc">
+      <DependentUpon>DSNhapHang.xsd</DependentUpon>
+    </None>
+    <None Include="FormMaster\DSNhapHang.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSNhapHang.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="FormMaster\DSNhapHang.xss">
+      <DependentUpon>DSNhapHang.xsd</DependentUpon>
+    </None>
+    <None Include="FormMaster\DSSach.xsc">
+      <DependentUpon>DSSach.xsd</DependentUpon>
+    </None>
+    <None Include="FormMaster\DSSach.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSach.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="FormMaster\DSSach.xss">
+      <DependentUpon>DSSach.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -304,6 +440,12 @@
     <None Include="Resources\result.png" />
     <None Include="Resources\man.png" />
     <None Include="Resources\reset.png" />
+    <None Include="Resources\description.png" />
+    <None Include="Resources\bill.png" />
+    <None Include="Resources\books.png" />
+    <None Include="Resources\transport.png" />
+    <None Include="Resources\grouping.png" />
+    <None Include="Resources\man %281%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

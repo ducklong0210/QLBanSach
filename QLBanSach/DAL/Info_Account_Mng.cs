@@ -21,8 +21,10 @@ namespace DAL
             SqlConnection sqlCon = db.sqlCon;
             string sql = "select * from tbl_NguoiDung where Username = @username";
             SqlCommand cmd = new SqlCommand(sql,sqlCon);
-            cmd.Parameters.AddWithValue("@username", username);
-            SqlDataReader reader = cmd.ExecuteReader();
+            try
+            {
+                cmd.Parameters.AddWithValue("@username", username);
+                SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
                     if (reader.Read())
@@ -41,8 +43,17 @@ namespace DAL
                         };
                     }
                 }
-                db.DongKetNoi();
+                cmd.ExecuteNonQuery();
                 reader.Close();
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine($"Lỗi :" + ex.Message);
+            }
+            finally
+            {
+                db.DongKetNoi();
+            }
             return user;
 
         }

@@ -390,7 +390,7 @@ namespace GUI.FormMaster
             chucNang = 2;
             grbThongTinChiTiet.Enabled = true;
             btnThemImg.Enabled = false;
-            btnXoaImg.Enabled = false;
+            btnXoaImg.Enabled = true;
             btnSuaImg.Enabled = true;
             
         }

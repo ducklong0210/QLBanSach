@@ -70,8 +70,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvThongTinSach = new System.Windows.Forms.DataGridView();
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaLoaiSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,6 +77,8 @@
             this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Poster = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.grbThongTinChiTiet.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -545,25 +545,6 @@
             this.dgvThongTinSach.TabIndex = 0;
             this.dgvThongTinSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinSach_CellContentClick);
             // 
-            // pnlHeader
-            // 
-            this.pnlHeader.Controls.Add(this.lblTitle);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1086, 52);
-            this.pnlHeader.TabIndex = 6;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(359, 9);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(173, 29);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Quản Lý Sách";
-            // 
             // MaSach
             // 
             this.MaSach.DataPropertyName = "MaSach";
@@ -616,6 +597,25 @@
             this.Poster.ReadOnly = true;
             this.Poster.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Poster.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.Controls.Add(this.lblTitle);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1086, 52);
+            this.pnlHeader.TabIndex = 6;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(359, 9);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(173, 29);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Quản Lý Sách";
             // 
             // QuanLySach
             // 

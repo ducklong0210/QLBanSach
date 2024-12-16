@@ -80,3 +80,9 @@ C:\Users\User\source\repos\QLBanSach\GUI\bin\Debug\ru\Microsoft.ReportViewer.Win
 C:\Users\User\source\repos\QLBanSach\GUI\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\User\source\repos\QLBanSach\GUI\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormMaster.QuanLyNhanVien.resources
+C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormMaster.BaoCaoThongKe.resources
+C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormMaster.tkHoaDon.resources
+C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormMaster.tkNguoiDung.resources
+C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormMaster.tkNhanVien.resources
+C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormMaster.tkNhapHang.resources
+C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormMaster.tkSach.resources

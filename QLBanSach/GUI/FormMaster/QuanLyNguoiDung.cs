@@ -20,7 +20,7 @@ namespace GUI.FormMaster
         private DataTable dtNguoiDung;
         private NguoiDungBLL taiKhoanBLL;
         private NguoiDungBLL nguoiDungBLL = new NguoiDungBLL();
-        NguoiDung users = new NguoiDung();
+        tkNguoiDung users = new tkNguoiDung();
         public QuanLyNguoiDung()
         {
             // Khởi tạo BLL
@@ -50,6 +50,8 @@ namespace GUI.FormMaster
             txtMaQuyen.Clear();
             txtDiaChi.Clear();
             txtSoDienThoai.Clear();
+            cbGioiTinh.SelectedIndex = 0;
+            dtpNamSinh.Value = DateTime.Now;
         }
 
         
@@ -83,6 +85,8 @@ namespace GUI.FormMaster
                 users.GioiTinh = "Nam";
             else if (cbGioiTinh.SelectedIndex == 1)
                 users.GioiTinh = "Nữ";
+            else
+                users.GioiTinh = "Không Xác Định";
             users.NamSinh = dtpNamSinh.Value;
             // sự kiện thêm người dùng
             string add_OK = tkBLL.ThemNguoiDung(users);
@@ -96,6 +100,9 @@ namespace GUI.FormMaster
             // Xử lý kết quả
             switch (add_OK)
             {
+                case "newUser_null_error":
+                    MessageBox.Show("Tên tài khoản lỗi null!");
+                    return;
                 case "user_Add_Retail":
                     MessageBox.Show("Tên tài khoản đã tồn tại!",
                         "Thông báo",
@@ -140,7 +147,8 @@ namespace GUI.FormMaster
                 users.GioiTinh = "Nam";
             else if (cbGioiTinh.SelectedIndex == 1)
                 users.GioiTinh = "Nữ";
-
+            else
+                users.GioiTinh = "Không Xác Định";
             users.NamSinh = dtpNamSinh.Value;
             // sự kiện chỉnh sửa thông tin người dùng
 
@@ -206,13 +214,13 @@ namespace GUI.FormMaster
                         HienThiThongTin();  // Cập nhật lại DataGridView
                         btn_Sua.Enabled = false;
                         btn_Xoa.Enabled = false;
-                        break;
+                        return;
                     case "error_Delete_Success":
                         MessageBox.Show("Lỗi khi xóa người dùng.");
-                        break;
+                        return;
                     default:
-                        MessageBox.Show("Có lỗi xảy ra khi thêm nguời dùng.");
-                        break;
+                        MessageBox.Show("Có lỗi xảy ra khi xóa nguời dùng.");
+                        return;
                 }
             
         }
@@ -253,6 +261,7 @@ namespace GUI.FormMaster
                 string HoTen = txtTKHoTen.Text.Trim();
                 DataTable dtUser = taiKhoanBLL.TimKiemUsers(Users);
                 DataTable dtHoTen = taiKhoanBLL.TimKiemUser(HoTen);
+                // tim kiem ưu tiên tìm bằng user
                 if (dtUser.Rows.Count > 0 )
                 {
                     dgvThongTinNguoiDung.DataSource = dtUser;
@@ -303,6 +312,8 @@ namespace GUI.FormMaster
                 cbGioiTinh.SelectedIndex = 0;
             else if (dtRow["GioiTinh"].ToString().Trim() == "Nữ")
                 cbGioiTinh.SelectedIndex = 1;
+            else
+                cbGioiTinh.SelectedIndex = 2;
             txtDiaChi.Text = dtRow["DiaChi"].ToString().Trim();
             txtSoDienThoai.Text = dtRow["SoDienThoai"].ToString().Trim();
             
@@ -326,5 +337,11 @@ namespace GUI.FormMaster
                     MessageBoxIcon.Warning);
                
             }
+
+        private void btn_ThongKeTaiKhoan_Click(object sender, EventArgs e)
+        {
+            tkNguoiDung tkNguoiDung = new tkNguoiDung();
+            tkNguoiDung.Show();
+        }
     }
 }

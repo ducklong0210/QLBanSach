@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongTinTaiKhoan));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlHeader = new System.Windows.Forms.Panel();
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.lbl_Title = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlThongTinTaiKhoan = new System.Windows.Forms.Panel();
             this.txtMaND = new System.Windows.Forms.TextBox();
             this.lblMaND = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
@@ -52,20 +52,20 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlHeader.SuspendLayout();
+            this.pnlThongTinTaiKhoan.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlHeader
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.btn_Thoat);
-            this.panel1.Controls.Add(this.lbl_Title);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(627, 73);
-            this.panel1.TabIndex = 0;
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.pnlHeader.Controls.Add(this.btn_Thoat);
+            this.pnlHeader.Controls.Add(this.lbl_Title);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(627, 73);
+            this.pnlHeader.TabIndex = 0;
             // 
             // btn_Thoat
             // 
@@ -88,33 +88,33 @@
             this.lbl_Title.TabIndex = 0;
             this.lbl_Title.Text = "Thông Tin Tài Khoản";
             // 
-            // panel2
+            // pnlThongTinTaiKhoan
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panel2.Controls.Add(this.txtMaND);
-            this.panel2.Controls.Add(this.lblMaND);
-            this.panel2.Controls.Add(this.txtDiaChi);
-            this.panel2.Controls.Add(this.lblDiaChi);
-            this.panel2.Controls.Add(this.cbGioiTinh);
-            this.panel2.Controls.Add(this.dtpNamSinh);
-            this.panel2.Controls.Add(this.btn_SuaTT);
-            this.panel2.Controls.Add(this.txtQuyenHan);
-            this.panel2.Controls.Add(this.lblQuyenHan);
-            this.panel2.Controls.Add(this.txtSoDienThoai);
-            this.panel2.Controls.Add(this.lblSoDienThoai);
-            this.panel2.Controls.Add(this.lblGioiTinh);
-            this.panel2.Controls.Add(this.lblNamSinh);
-            this.panel2.Controls.Add(this.txtHoTen);
-            this.panel2.Controls.Add(this.lblHoTen);
-            this.panel2.Controls.Add(this.txtPass);
-            this.panel2.Controls.Add(this.lblPassword);
-            this.panel2.Controls.Add(this.txtUser);
-            this.panel2.Controls.Add(this.lblUsername);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 73);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(627, 417);
-            this.panel2.TabIndex = 1;
+            this.pnlThongTinTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.pnlThongTinTaiKhoan.Controls.Add(this.txtMaND);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.lblMaND);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.txtDiaChi);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.lblDiaChi);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.cbGioiTinh);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.dtpNamSinh);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.btn_SuaTT);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.txtQuyenHan);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.lblQuyenHan);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.txtSoDienThoai);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.lblSoDienThoai);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.lblGioiTinh);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.lblNamSinh);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.txtHoTen);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.lblHoTen);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.txtPass);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.lblPassword);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.txtUser);
+            this.pnlThongTinTaiKhoan.Controls.Add(this.lblUsername);
+            this.pnlThongTinTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlThongTinTaiKhoan.Location = new System.Drawing.Point(0, 73);
+            this.pnlThongTinTaiKhoan.Name = "pnlThongTinTaiKhoan";
+            this.pnlThongTinTaiKhoan.Size = new System.Drawing.Size(627, 417);
+            this.pnlThongTinTaiKhoan.TabIndex = 1;
             // 
             // txtMaND
             // 
@@ -153,7 +153,8 @@
             this.cbGioiTinh.FormattingEnabled = true;
             this.cbGioiTinh.Items.AddRange(new object[] {
             "Nam",
-            "Nữ"});
+            "Nữ",
+            "Không Xác Định"});
             this.cbGioiTinh.Location = new System.Drawing.Point(304, 215);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(156, 24);
@@ -282,8 +283,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(627, 490);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlThongTinTaiKhoan);
+            this.Controls.Add(this.pnlHeader);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -291,19 +292,19 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThongTinTaiKhoan";
             this.Load += new System.EventHandler(this.ThongTinTaiKhoan_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
+            this.pnlThongTinTaiKhoan.ResumeLayout(false);
+            this.pnlThongTinTaiKhoan.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Label lbl_Title;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlThongTinTaiKhoan;
         private System.Windows.Forms.TextBox txtQuyenHan;
         private System.Windows.Forms.Label lblQuyenHan;
         private System.Windows.Forms.TextBox txtSoDienThoai;

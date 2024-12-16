@@ -84,5 +84,10 @@ namespace GUI.FormMaster
             QuanLyNhanVien quanLyNhanVien = new QuanLyNhanVien();
             quanLyNhanVien.Show();
         }
+
+        private void QuanTri_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

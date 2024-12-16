@@ -369,7 +369,6 @@ namespace DAL
             }
             if (kq > 0)
             {
-              
                 return "delete_Success";
             }
 

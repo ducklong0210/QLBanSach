@@ -31,10 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyNguoiDung));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btn_Thoat = new System.Windows.Forms.Button();
-            this.btn_Xoa = new System.Windows.Forms.Button();
-            this.btn_Sua = new System.Windows.Forms.Button();
-            this.btn_Them = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.grbThongTinNguoiDung = new System.Windows.Forms.GroupBox();
             this.dgvThongTinNguoiDung = new System.Windows.Forms.DataGridView();
@@ -48,8 +44,6 @@
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btn_TimKiem = new System.Windows.Forms.Button();
             this.txtTKHoTen = new System.Windows.Forms.TextBox();
             this.lblTKHoTen = new System.Windows.Forms.Label();
             this.txtTKUser = new System.Windows.Forms.TextBox();
@@ -58,8 +52,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.grbThongTinChiTiet = new System.Windows.Forms.GroupBox();
-            this.btn_Huy = new System.Windows.Forms.Button();
-            this.btn_Luu = new System.Windows.Forms.Button();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             this.dtpNamSinh = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
@@ -76,6 +68,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_Huy = new System.Windows.Forms.Button();
+            this.btn_Luu = new System.Windows.Forms.Button();
+            this.btn_ThongKeTaiKhoan = new System.Windows.Forms.Button();
+            this.btn_Thoat = new System.Windows.Forms.Button();
+            this.btn_Xoa = new System.Windows.Forms.Button();
+            this.btn_Sua = new System.Windows.Forms.Button();
+            this.btn_Them = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btn_TimKiem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -101,6 +102,7 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.btn_ThongKeTaiKhoan);
             this.panel6.Controls.Add(this.btn_Thoat);
             this.panel6.Controls.Add(this.btn_Xoa);
             this.panel6.Controls.Add(this.btn_Sua);
@@ -110,58 +112,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(777, 80);
             this.panel6.TabIndex = 3;
-            // 
-            // btn_Thoat
-            // 
-            this.btn_Thoat.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_Thoat.Image = global::GUI.Properties.Resources.log_out;
-            this.btn_Thoat.Location = new System.Drawing.Point(662, 16);
-            this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(86, 52);
-            this.btn_Thoat.TabIndex = 19;
-            this.btn_Thoat.Text = "Exit";
-            this.btn_Thoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Thoat.UseVisualStyleBackColor = false;
-            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
-            // 
-            // btn_Xoa
-            // 
-            this.btn_Xoa.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_Xoa.Image = global::GUI.Properties.Resources.delete;
-            this.btn_Xoa.Location = new System.Drawing.Point(493, 16);
-            this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(83, 52);
-            this.btn_Xoa.TabIndex = 2;
-            this.btn_Xoa.Text = "Xóa";
-            this.btn_Xoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Xoa.UseVisualStyleBackColor = false;
-            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
-            // 
-            // btn_Sua
-            // 
-            this.btn_Sua.BackColor = System.Drawing.Color.PowderBlue;
-            this.btn_Sua.Image = global::GUI.Properties.Resources.edit;
-            this.btn_Sua.Location = new System.Drawing.Point(257, 16);
-            this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(91, 52);
-            this.btn_Sua.TabIndex = 1;
-            this.btn_Sua.Text = "Sửa";
-            this.btn_Sua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Sua.UseVisualStyleBackColor = false;
-            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
-            // 
-            // btn_Them
-            // 
-            this.btn_Them.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btn_Them.Image = global::GUI.Properties.Resources.user;
-            this.btn_Them.Location = new System.Drawing.Point(40, 16);
-            this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(99, 52);
-            this.btn_Them.TabIndex = 0;
-            this.btn_Them.Text = "Thêm";
-            this.btn_Them.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Them.UseVisualStyleBackColor = false;
-            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // panel5
             // 
@@ -287,27 +237,6 @@
             this.panel4.Size = new System.Drawing.Size(777, 51);
             this.panel4.TabIndex = 1;
             // 
-            // btnReset
-            // 
-            this.btnReset.Image = global::GUI.Properties.Resources.reset;
-            this.btnReset.Location = new System.Drawing.Point(688, 5);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(47, 37);
-            this.btnReset.TabIndex = 5;
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // btn_TimKiem
-            // 
-            this.btn_TimKiem.Image = global::GUI.Properties.Resources.search;
-            this.btn_TimKiem.Location = new System.Drawing.Point(533, 4);
-            this.btn_TimKiem.Name = "btn_TimKiem";
-            this.btn_TimKiem.Size = new System.Drawing.Size(52, 42);
-            this.btn_TimKiem.TabIndex = 4;
-            this.btn_TimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_TimKiem.UseVisualStyleBackColor = true;
-            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
-            // 
             // txtTKHoTen
             // 
             this.txtTKHoTen.Location = new System.Drawing.Point(342, 14);
@@ -400,36 +329,13 @@
             this.grbThongTinChiTiet.TabStop = false;
             this.grbThongTinChiTiet.Text = "Thông Tin Chi Tiết";
             // 
-            // btn_Huy
-            // 
-            this.btn_Huy.Image = global::GUI.Properties.Resources.multiply__1_;
-            this.btn_Huy.Location = new System.Drawing.Point(176, 440);
-            this.btn_Huy.Name = "btn_Huy";
-            this.btn_Huy.Size = new System.Drawing.Size(84, 51);
-            this.btn_Huy.TabIndex = 18;
-            this.btn_Huy.Text = "Hủy";
-            this.btn_Huy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Huy.UseVisualStyleBackColor = true;
-            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
-            // 
-            // btn_Luu
-            // 
-            this.btn_Luu.Image = global::GUI.Properties.Resources.diskette;
-            this.btn_Luu.Location = new System.Drawing.Point(43, 440);
-            this.btn_Luu.Name = "btn_Luu";
-            this.btn_Luu.Size = new System.Drawing.Size(82, 51);
-            this.btn_Luu.TabIndex = 17;
-            this.btn_Luu.Text = "Lưu";
-            this.btn_Luu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Luu.UseVisualStyleBackColor = true;
-            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
-            // 
             // cbGioiTinh
             // 
             this.cbGioiTinh.FormattingEnabled = true;
             this.cbGioiTinh.Items.AddRange(new object[] {
             "Nam",
-            "Nữ"});
+            "Nữ",
+            "Không Xác Định"});
             this.cbGioiTinh.Location = new System.Drawing.Point(136, 291);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(124, 24);
@@ -558,6 +464,116 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Username : ";
             // 
+            // btn_Huy
+            // 
+            this.btn_Huy.Image = global::GUI.Properties.Resources.multiply__1_;
+            this.btn_Huy.Location = new System.Drawing.Point(176, 440);
+            this.btn_Huy.Name = "btn_Huy";
+            this.btn_Huy.Size = new System.Drawing.Size(84, 51);
+            this.btn_Huy.TabIndex = 18;
+            this.btn_Huy.Text = "Hủy";
+            this.btn_Huy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Huy.UseVisualStyleBackColor = true;
+            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
+            // 
+            // btn_Luu
+            // 
+            this.btn_Luu.Image = global::GUI.Properties.Resources.diskette;
+            this.btn_Luu.Location = new System.Drawing.Point(43, 440);
+            this.btn_Luu.Name = "btn_Luu";
+            this.btn_Luu.Size = new System.Drawing.Size(82, 51);
+            this.btn_Luu.TabIndex = 17;
+            this.btn_Luu.Text = "Lưu";
+            this.btn_Luu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
+            // 
+            // btn_ThongKeTaiKhoan
+            // 
+            this.btn_ThongKeTaiKhoan.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_ThongKeTaiKhoan.Image = global::GUI.Properties.Resources.description;
+            this.btn_ThongKeTaiKhoan.Location = new System.Drawing.Point(484, 16);
+            this.btn_ThongKeTaiKhoan.Name = "btn_ThongKeTaiKhoan";
+            this.btn_ThongKeTaiKhoan.Size = new System.Drawing.Size(119, 52);
+            this.btn_ThongKeTaiKhoan.TabIndex = 20;
+            this.btn_ThongKeTaiKhoan.Text = "Thống Kê Tài Khoản";
+            this.btn_ThongKeTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_ThongKeTaiKhoan.UseVisualStyleBackColor = false;
+            this.btn_ThongKeTaiKhoan.Click += new System.EventHandler(this.btn_ThongKeTaiKhoan_Click);
+            // 
+            // btn_Thoat
+            // 
+            this.btn_Thoat.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_Thoat.Image = global::GUI.Properties.Resources.log_out;
+            this.btn_Thoat.Location = new System.Drawing.Point(664, 16);
+            this.btn_Thoat.Name = "btn_Thoat";
+            this.btn_Thoat.Size = new System.Drawing.Size(86, 52);
+            this.btn_Thoat.TabIndex = 19;
+            this.btn_Thoat.Text = "Exit";
+            this.btn_Thoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Thoat.UseVisualStyleBackColor = false;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            // 
+            // btn_Xoa
+            // 
+            this.btn_Xoa.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Xoa.Image = global::GUI.Properties.Resources.delete;
+            this.btn_Xoa.Location = new System.Drawing.Point(332, 16);
+            this.btn_Xoa.Name = "btn_Xoa";
+            this.btn_Xoa.Size = new System.Drawing.Size(83, 52);
+            this.btn_Xoa.TabIndex = 2;
+            this.btn_Xoa.Text = "Xóa";
+            this.btn_Xoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Xoa.UseVisualStyleBackColor = false;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
+            // 
+            // btn_Sua
+            // 
+            this.btn_Sua.BackColor = System.Drawing.Color.PowderBlue;
+            this.btn_Sua.Image = global::GUI.Properties.Resources.edit;
+            this.btn_Sua.Location = new System.Drawing.Point(184, 16);
+            this.btn_Sua.Name = "btn_Sua";
+            this.btn_Sua.Size = new System.Drawing.Size(91, 52);
+            this.btn_Sua.TabIndex = 1;
+            this.btn_Sua.Text = "Sửa";
+            this.btn_Sua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Sua.UseVisualStyleBackColor = false;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
+            // 
+            // btn_Them
+            // 
+            this.btn_Them.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_Them.Image = global::GUI.Properties.Resources.user;
+            this.btn_Them.Location = new System.Drawing.Point(29, 16);
+            this.btn_Them.Name = "btn_Them";
+            this.btn_Them.Size = new System.Drawing.Size(99, 52);
+            this.btn_Them.TabIndex = 0;
+            this.btn_Them.Text = "Thêm";
+            this.btn_Them.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Them.UseVisualStyleBackColor = false;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Image = global::GUI.Properties.Resources.reset;
+            this.btnReset.Location = new System.Drawing.Point(688, 5);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(47, 37);
+            this.btnReset.TabIndex = 5;
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btn_TimKiem
+            // 
+            this.btn_TimKiem.Image = global::GUI.Properties.Resources.search;
+            this.btn_TimKiem.Location = new System.Drawing.Point(533, 4);
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.Size = new System.Drawing.Size(52, 42);
+            this.btn_TimKiem.TabIndex = 4;
+            this.btn_TimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_TimKiem.UseVisualStyleBackColor = true;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
+            // 
             // QuanLyNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -638,5 +654,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoDienThoai;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btn_ThongKeTaiKhoan;
     }
 }

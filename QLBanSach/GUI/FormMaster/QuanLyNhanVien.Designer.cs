@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyNhanVien));
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,10 +51,15 @@
             this.lblMaNV = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl = new System.Windows.Forms.Panel();
+            this.grbChucNang = new System.Windows.Forms.GroupBox();
+            this.btn_TamNgung = new System.Windows.Forms.Button();
+            this.btn_Thoat = new System.Windows.Forms.Button();
+            this.btn_Xoa = new System.Windows.Forms.Button();
+            this.btn_Sua = new System.Windows.Forms.Button();
+            this.btn_Them = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.grbThongTinNguoiDung = new System.Windows.Forms.GroupBox();
             this.dgvThongTinNguoiDung = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,29 +67,24 @@
             this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QueQuan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grbChucNang = new System.Windows.Forms.GroupBox();
-            this.btn_TamNgung = new System.Windows.Forms.Button();
-            this.btn_Thoat = new System.Windows.Forms.Button();
-            this.btn_Xoa = new System.Windows.Forms.Button();
-            this.btn_Sua = new System.Windows.Forms.Button();
-            this.btn_Them = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.grbTimKiem = new System.Windows.Forms.GroupBox();
+            this.cbTKTrangThai = new System.Windows.Forms.ComboBox();
             this.btnReset = new System.Windows.Forms.Button();
             this.btn_TimKiem = new System.Windows.Forms.Button();
             this.lblTKTrangThai = new System.Windows.Forms.Label();
             this.txtTKTenNV = new System.Windows.Forms.TextBox();
             this.lblTKTenNV = new System.Windows.Forms.Label();
-            this.cbTKTrangThai = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.grbThongTinChiTiet.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnl.SuspendLayout();
+            this.grbChucNang.SuspendLayout();
             this.panel5.SuspendLayout();
             this.grbThongTinNguoiDung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinNguoiDung)).BeginInit();
             this.panel4.SuspendLayout();
-            this.grbChucNang.SuspendLayout();
             this.grbTimKiem.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -173,8 +174,10 @@
             // 
             this.cbTrangThai.FormattingEnabled = true;
             this.cbTrangThai.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
+            "Hoạt Động",
+            "Tạm Ngưng",
+            "Đã Nghỉ",
+            "Không Xác Định"});
             this.cbTrangThai.Location = new System.Drawing.Point(152, 371);
             this.cbTrangThai.Name = "cbTrangThai";
             this.cbTrangThai.Size = new System.Drawing.Size(124, 24);
@@ -308,108 +311,6 @@
             this.pnl.Size = new System.Drawing.Size(777, 89);
             this.pnl.TabIndex = 3;
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.grbThongTinNguoiDung);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 109);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(777, 330);
-            this.panel5.TabIndex = 2;
-            // 
-            // grbThongTinNguoiDung
-            // 
-            this.grbThongTinNguoiDung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.grbThongTinNguoiDung.Controls.Add(this.dgvThongTinNguoiDung);
-            this.grbThongTinNguoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grbThongTinNguoiDung.Location = new System.Drawing.Point(0, 0);
-            this.grbThongTinNguoiDung.Name = "grbThongTinNguoiDung";
-            this.grbThongTinNguoiDung.Size = new System.Drawing.Size(777, 330);
-            this.grbThongTinNguoiDung.TabIndex = 0;
-            this.grbThongTinNguoiDung.TabStop = false;
-            this.grbThongTinNguoiDung.Text = "Thông Tin Người Dùng";
-            // 
-            // dgvThongTinNguoiDung
-            // 
-            this.dgvThongTinNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThongTinNguoiDung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaNV,
-            this.TenNV,
-            this.NamSinh,
-            this.CCCD,
-            this.SoDienThoai,
-            this.QueQuan,
-            this.TrangThai});
-            this.dgvThongTinNguoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvThongTinNguoiDung.Location = new System.Drawing.Point(3, 19);
-            this.dgvThongTinNguoiDung.Name = "dgvThongTinNguoiDung";
-            this.dgvThongTinNguoiDung.ReadOnly = true;
-            this.dgvThongTinNguoiDung.Size = new System.Drawing.Size(771, 308);
-            this.dgvThongTinNguoiDung.TabIndex = 0;
-            this.dgvThongTinNguoiDung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinNguoiDung_CellContentClick);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panel4.Controls.Add(this.grbTimKiem);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 58);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(777, 51);
-            this.panel4.TabIndex = 1;
-            // 
-            // MaNV
-            // 
-            this.MaNV.DataPropertyName = "MaNV";
-            this.MaNV.HeaderText = "Mã Nhân Viên";
-            this.MaNV.Name = "MaNV";
-            this.MaNV.ReadOnly = true;
-            this.MaNV.Width = 90;
-            // 
-            // TenNV
-            // 
-            this.TenNV.DataPropertyName = "TenNV";
-            this.TenNV.HeaderText = "Tên Nhân Viên";
-            this.TenNV.Name = "TenNV";
-            this.TenNV.ReadOnly = true;
-            this.TenNV.Width = 120;
-            // 
-            // NamSinh
-            // 
-            this.NamSinh.DataPropertyName = "NamSinh";
-            this.NamSinh.HeaderText = "Năm Sinh";
-            this.NamSinh.Name = "NamSinh";
-            this.NamSinh.ReadOnly = true;
-            // 
-            // CCCD
-            // 
-            this.CCCD.DataPropertyName = "CCCD";
-            this.CCCD.HeaderText = "Căn Cước Công Dân";
-            this.CCCD.Name = "CCCD";
-            this.CCCD.ReadOnly = true;
-            this.CCCD.Width = 117;
-            // 
-            // SoDienThoai
-            // 
-            this.SoDienThoai.DataPropertyName = "SoDienThoai";
-            this.SoDienThoai.HeaderText = "Số Điện Thoại";
-            this.SoDienThoai.Name = "SoDienThoai";
-            this.SoDienThoai.ReadOnly = true;
-            // 
-            // QueQuan
-            // 
-            this.QueQuan.DataPropertyName = "QueQuan";
-            this.QueQuan.HeaderText = "Quê Quán";
-            this.QueQuan.Name = "QueQuan";
-            this.QueQuan.ReadOnly = true;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
-            // 
             // grbChucNang
             // 
             this.grbChucNang.Controls.Add(this.btn_TamNgung);
@@ -490,6 +391,108 @@
             this.btn_Them.UseVisualStyleBackColor = false;
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.grbThongTinNguoiDung);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 109);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(777, 330);
+            this.panel5.TabIndex = 2;
+            // 
+            // grbThongTinNguoiDung
+            // 
+            this.grbThongTinNguoiDung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.grbThongTinNguoiDung.Controls.Add(this.dgvThongTinNguoiDung);
+            this.grbThongTinNguoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grbThongTinNguoiDung.Location = new System.Drawing.Point(0, 0);
+            this.grbThongTinNguoiDung.Name = "grbThongTinNguoiDung";
+            this.grbThongTinNguoiDung.Size = new System.Drawing.Size(777, 330);
+            this.grbThongTinNguoiDung.TabIndex = 0;
+            this.grbThongTinNguoiDung.TabStop = false;
+            this.grbThongTinNguoiDung.Text = "Thông Tin Người Dùng";
+            // 
+            // dgvThongTinNguoiDung
+            // 
+            this.dgvThongTinNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThongTinNguoiDung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaNV,
+            this.TenNV,
+            this.NamSinh,
+            this.CCCD,
+            this.SoDienThoai,
+            this.QueQuan,
+            this.TrangThai});
+            this.dgvThongTinNguoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvThongTinNguoiDung.Location = new System.Drawing.Point(3, 19);
+            this.dgvThongTinNguoiDung.Name = "dgvThongTinNguoiDung";
+            this.dgvThongTinNguoiDung.ReadOnly = true;
+            this.dgvThongTinNguoiDung.Size = new System.Drawing.Size(771, 308);
+            this.dgvThongTinNguoiDung.TabIndex = 0;
+            this.dgvThongTinNguoiDung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinNguoiDung_CellContentClick);
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã Nhân Viên";
+            this.MaNV.Name = "MaNV";
+            this.MaNV.ReadOnly = true;
+            this.MaNV.Width = 90;
+            // 
+            // TenNV
+            // 
+            this.TenNV.DataPropertyName = "TenNV";
+            this.TenNV.HeaderText = "Tên Nhân Viên";
+            this.TenNV.Name = "TenNV";
+            this.TenNV.ReadOnly = true;
+            this.TenNV.Width = 120;
+            // 
+            // NamSinh
+            // 
+            this.NamSinh.DataPropertyName = "NamSinh";
+            this.NamSinh.HeaderText = "Năm Sinh";
+            this.NamSinh.Name = "NamSinh";
+            this.NamSinh.ReadOnly = true;
+            // 
+            // CCCD
+            // 
+            this.CCCD.DataPropertyName = "CCCD";
+            this.CCCD.HeaderText = "Căn Cước Công Dân";
+            this.CCCD.Name = "CCCD";
+            this.CCCD.ReadOnly = true;
+            this.CCCD.Width = 117;
+            // 
+            // SoDienThoai
+            // 
+            this.SoDienThoai.DataPropertyName = "SoDienThoai";
+            this.SoDienThoai.HeaderText = "Số Điện Thoại";
+            this.SoDienThoai.Name = "SoDienThoai";
+            this.SoDienThoai.ReadOnly = true;
+            // 
+            // QueQuan
+            // 
+            this.QueQuan.DataPropertyName = "QueQuan";
+            this.QueQuan.HeaderText = "Quê Quán";
+            this.QueQuan.Name = "QueQuan";
+            this.QueQuan.ReadOnly = true;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel4.Controls.Add(this.grbTimKiem);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 58);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(777, 51);
+            this.panel4.TabIndex = 1;
+            // 
             // grbTimKiem
             // 
             this.grbTimKiem.Controls.Add(this.cbTKTrangThai);
@@ -505,6 +508,19 @@
             this.grbTimKiem.TabIndex = 0;
             this.grbTimKiem.TabStop = false;
             this.grbTimKiem.Text = "Tìm Kiếm";
+            // 
+            // cbTKTrangThai
+            // 
+            this.cbTKTrangThai.FormattingEnabled = true;
+            this.cbTKTrangThai.Items.AddRange(new object[] {
+            "Hoạt Động",
+            "Tạm Ngưng",
+            "Đã Nghỉ",
+            "Không Xác Định"});
+            this.cbTKTrangThai.Location = new System.Drawing.Point(410, 19);
+            this.cbTKTrangThai.Name = "cbTKTrangThai";
+            this.cbTKTrangThai.Size = new System.Drawing.Size(128, 24);
+            this.cbTKTrangThai.TabIndex = 12;
             // 
             // btnReset
             // 
@@ -552,19 +568,6 @@
             this.lblTKTenNV.TabIndex = 6;
             this.lblTKTenNV.Text = "Tên Nhân Viên :";
             // 
-            // cbTKTrangThai
-            // 
-            this.cbTKTrangThai.FormattingEnabled = true;
-            this.cbTKTrangThai.Items.AddRange(new object[] {
-            "Hoạt Động",
-            "Tạm Ngưng",
-            "Đã Nghỉ",
-            "Không Xác Định"});
-            this.cbTKTrangThai.Location = new System.Drawing.Point(410, 19);
-            this.cbTKTrangThai.Name = "cbTKTrangThai";
-            this.cbTKTrangThai.Size = new System.Drawing.Size(128, 24);
-            this.cbTKTrangThai.TabIndex = 12;
-            // 
             // QuanLyNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -573,8 +576,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLyNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLyNhanVien";
             this.Load += new System.EventHandler(this.QuanLyNhanVien_Load);
             this.panel3.ResumeLayout(false);
@@ -584,11 +589,11 @@
             this.grbThongTinChiTiet.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.pnl.ResumeLayout(false);
+            this.grbChucNang.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.grbThongTinNguoiDung.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinNguoiDung)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.grbChucNang.ResumeLayout(false);
             this.grbTimKiem.ResumeLayout(false);
             this.grbTimKiem.PerformLayout();
             this.ResumeLayout(false);

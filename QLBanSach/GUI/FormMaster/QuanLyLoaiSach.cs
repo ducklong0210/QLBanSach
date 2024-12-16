@@ -92,7 +92,7 @@ namespace GUI.FormMaster
                     }
                 case "edit_Success":
                     {
-                        MessageBox.Show(" Chúc mừng bạn thêm loại sách thành công!");
+                        MessageBox.Show(" Chúc mừng bạn sửa loại sách thành công!");
                         HienThiLoaiSach();
                         XoaThongTin();
                         grbThongTinChiTiet.Enabled = false;
@@ -100,7 +100,7 @@ namespace GUI.FormMaster
                     }
                 case "error_Edit_Success":
                     {
-                        MessageBox.Show("Lỗi không thêm được loại sách!");
+                        MessageBox.Show("Lỗi không sửa được loại sách!");
                         return;
                     }
                 default:

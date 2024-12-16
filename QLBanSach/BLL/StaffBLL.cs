@@ -11,10 +11,11 @@ namespace BLL
 {
     public class StaffBLL
     {
-        private StaffMng staffMng;
+        private StaffMng staffMngs;
+        StaffMng staffMng = new StaffMng();
         public StaffBLL()
         {
-            staffMng = new StaffMng();
+            staffMngs = new StaffMng();
         }
         public DataTable HienThiThongTin()
         {
@@ -39,9 +40,54 @@ namespace BLL
         {
             if (trangThai == null)
             {
-                throw new Exception("Tên nhân viên lỗi null!");
+                throw new Exception("Trạng thái nhân viên lỗi null!");
             }
             return staffMng.TimKiemTenNV(trangThai);
+        }
+        public string ThemNhanVien(NhanVien addStaff)
+        {
+            if(addStaff == null)
+            {
+                return "addStaff_null_error";
+            }
+            if(addStaff.MaNV == ""|| 
+               addStaff.TenNV == ""||
+               addStaff.CCCD == ""||
+               addStaff.TrangThai== ""||
+               addStaff.QueQuan==""||
+               addStaff.SoDienThoai=="")
+            {
+                return "error_Staff";
+            }
+            string Add_OK = staffMng.ThemNhanVien(addStaff);
+            return Add_OK;
+        }
+        public string SuaNhanVien(NhanVien editStaff)
+        {
+            if (editStaff == null)
+            {
+                return "editStaff_null_error";
+            }
+            string Edit_OK = staffMng.SuaNhanVien(editStaff);
+            return Edit_OK;
+        }
+        public string XoaNhanVien(NhanVien deleteStaff)
+        {
+            if (deleteStaff == null)
+            {
+                return "deleteStaff_null_error";
+            }
+            string Delete_OK = staffMng.XoaNhanVien(deleteStaff);
+            return Delete_OK;
+        }
+        public string TamNgungNhanVien(NhanVien pauseStaff)
+        {
+            if (pauseStaff == null)
+            {
+                return "pauseStaff_null_error";
+            }
+            string Pause_OK = staffMng.TamNgungNhanVien(pauseStaff);
+            return Pause_OK;
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyLoaiSach));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -52,6 +53,9 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.grbThongTinLoaiSach = new System.Windows.Forms.GroupBox();
             this.dgvThongTinLoaiSach = new System.Windows.Forms.DataGridView();
+            this.MaLoaiSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayThem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLoaiSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel9 = new System.Windows.Forms.Panel();
             this.grbTimKiem = new System.Windows.Forms.GroupBox();
             this.btnReset = new System.Windows.Forms.Button();
@@ -60,9 +64,6 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTKMaLoaiSach = new System.Windows.Forms.TextBox();
             this.lblTKMaLoaiSach = new System.Windows.Forms.Label();
-            this.MaLoaiSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayThem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLoaiSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -337,6 +338,30 @@
             this.dgvThongTinLoaiSach.TabIndex = 0;
             this.dgvThongTinLoaiSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinLoaiSach_CellContentClick);
             // 
+            // MaLoaiSach
+            // 
+            this.MaLoaiSach.DataPropertyName = "MaLoaiSach";
+            this.MaLoaiSach.HeaderText = "Mã Loại Sách";
+            this.MaLoaiSach.Name = "MaLoaiSach";
+            this.MaLoaiSach.ReadOnly = true;
+            this.MaLoaiSach.Width = 155;
+            // 
+            // NgayThem
+            // 
+            this.NgayThem.DataPropertyName = "NgayThem";
+            this.NgayThem.HeaderText = "Ngày Thêm";
+            this.NgayThem.Name = "NgayThem";
+            this.NgayThem.ReadOnly = true;
+            this.NgayThem.Width = 190;
+            // 
+            // TenLoaiSach
+            // 
+            this.TenLoaiSach.DataPropertyName = "TenLoaiSach";
+            this.TenLoaiSach.HeaderText = "Tên Loại Sách";
+            this.TenLoaiSach.Name = "TenLoaiSach";
+            this.TenLoaiSach.ReadOnly = true;
+            this.TenLoaiSach.Width = 230;
+            // 
             // panel9
             // 
             this.panel9.Controls.Add(this.grbTimKiem);
@@ -414,30 +439,6 @@
             this.lblTKMaLoaiSach.TabIndex = 0;
             this.lblTKMaLoaiSach.Text = "Mã Loại Sách";
             // 
-            // MaLoaiSach
-            // 
-            this.MaLoaiSach.DataPropertyName = "MaLoaiSach";
-            this.MaLoaiSach.HeaderText = "Mã Loại Sách";
-            this.MaLoaiSach.Name = "MaLoaiSach";
-            this.MaLoaiSach.ReadOnly = true;
-            this.MaLoaiSach.Width = 155;
-            // 
-            // NgayThem
-            // 
-            this.NgayThem.DataPropertyName = "NgayThem";
-            this.NgayThem.HeaderText = "Ngày Thêm";
-            this.NgayThem.Name = "NgayThem";
-            this.NgayThem.ReadOnly = true;
-            this.NgayThem.Width = 190;
-            // 
-            // TenLoaiSach
-            // 
-            this.TenLoaiSach.DataPropertyName = "TenLoaiSach";
-            this.TenLoaiSach.HeaderText = "Tên Loại Sách";
-            this.TenLoaiSach.Name = "TenLoaiSach";
-            this.TenLoaiSach.ReadOnly = true;
-            this.TenLoaiSach.Width = 230;
-            // 
             // QuanLyLoaiSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -447,6 +448,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLyLoaiSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

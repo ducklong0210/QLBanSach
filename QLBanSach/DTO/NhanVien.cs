@@ -33,7 +33,7 @@ namespace DTO
         public string getQueQuan() { return this.QueQuan; }
         public string getTrangThai() { return this.TrangThai; }
         public string getCCCD() {  return this.CCCD; }
-        public string getSoDienThoai() { return this.CCCD; }
+        public string getSoDienThoai() { return this.SoDienThoai; }
 
         public void setMaNV(string MaNV)
         {

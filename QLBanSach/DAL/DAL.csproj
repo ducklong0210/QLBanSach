@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillMng.cs" />
     <Compile Include="BookMng.cs" />
     <Compile Include="ConnectAccess.cs" />
     <Compile Include="Info_Account_Mng.cs" />

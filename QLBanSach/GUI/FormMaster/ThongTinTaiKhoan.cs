@@ -14,15 +14,14 @@ namespace GUI.FormMaster
 {
     public partial class ThongTinTaiKhoan : Form
     {
-        private NguoiDung taiKhoan;
-        NguoiDung tk = new NguoiDung();
+        NguoiDung taiKhoan = new NguoiDung();
         Info_Account_MngBLL info_Account = new Info_Account_MngBLL();
         
         public ThongTinTaiKhoan(NguoiDung user)
         {
             InitializeComponent();
             this.taiKhoan = user;
-            LoadThongTin();
+            
         }
 
         private void btn_Thoat_Click(object sender, EventArgs e)
@@ -51,20 +50,39 @@ namespace GUI.FormMaster
                 txtHoTen.Text = taiKhoan.HoVaTen;
                 txtQuyenHan.Text = taiKhoan.MaQuyen.ToString();
                 // Gán giá trị cho ComboBox Giới Tính
-                cbGioiTinh.SelectedItem = taiKhoan.GioiTinh; // Sử dụng SelectedItem thay vì Text
-
-                // Gán ngày sinh vào DateTimePicker
-                if (taiKhoan.NamSinh != DateTime.MinValue)
+                if (cbGioiTinh.Text == "Nam")
                 {
-                    try
-                    {
-                        dtpNamSinh.Value = taiKhoan.NamSinh;
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Ngày sinh không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    cbGioiTinh.SelectedIndex = 0;
                 }
+                else if (cbGioiTinh.Text == "Nữ")
+                {
+                    cbGioiTinh.SelectedIndex = 1;
+                }
+                else
+                {     
+                    cbGioiTinh.SelectedIndex = 2;
+                }
+                // Gán ngày sinh vào DateTimePicker
+                //string[] a = dtpNamSinh.ToString().Trim().Split(' ');
+                //string[] ns = a[0].Split('/');
+                //dtpNamSinh.Value = new DateTime(int.Parse(ns[2]), int.Parse(ns[0]), int.Parse(ns[1]));
+                // Kiểm tra trước khi thao tác
+                if (DateTime.TryParse(dtpNamSinh.Text, out DateTime dateValue))
+                {
+                    // Lấy ngày, tháng, năm từ DateTime
+                    int year = dateValue.Year;
+                    int month = dateValue.Month;
+                    int day = dateValue.Day;
+
+                    // Cập nhật lại giá trị của dtpNamSinh
+                    dtpNamSinh.Value = new DateTime(year, month, day);
+                }
+                else
+                {
+                    MessageBox.Show("Ngày sinh không hợp lệ.");
+                }
+
+
                 txtDiaChi.Text = taiKhoan.DiaChi;
                 txtSoDienThoai.Text = taiKhoan.SoDienThoai;
             }

@@ -81,7 +81,7 @@ namespace GUI
 
             this.Hide();
             int maQuyen = user.getMaQuyen();  // Lấy giá trị MaQuyen từ đối tượng user
-
+            
             if (maQuyen == 0)
             {
                 // Nếu MaQuyen = 0, người dùng sẽ vào Trang Chủ

@@ -202,6 +202,7 @@
             this.Name = "QuanTri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Trị Hệ Thống";
+            this.Load += new System.EventHandler(this.QuanTri_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlQuanLy.ResumeLayout(false);

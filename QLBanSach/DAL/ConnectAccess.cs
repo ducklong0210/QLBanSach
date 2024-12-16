@@ -62,13 +62,13 @@ namespace DAL
                     {
                         // Lấy MaQuyen từ CSDL
                         int maQuyen = dataReader.GetInt32(3); 
-                        taikhoan.setMaQuyen(maQuyen); // Gán giá trị vào đối tượng tai khoan
+                        taikhoan.setMaQuyen(maQuyen); //Gán giá trị mã quyền vào đối tượng tai khoan
                     } 
 
                     //Thêm if để kiểm tra null vì MaND là int 
-                    if (!dataReader.IsDBNull(1))
+                    if (!dataReader.IsDBNull(0))
                     {
-                        user = dataReader[0].ToString(); // Sử dụng ToString()
+                        user = dataReader[0].ToString(); 
                         return user;
                     }
                 }
