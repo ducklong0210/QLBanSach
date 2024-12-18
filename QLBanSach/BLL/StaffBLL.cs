@@ -42,8 +42,9 @@ namespace BLL
             {
                 throw new Exception("Trạng thái nhân viên lỗi null!");
             }
-            return staffMng.TimKiemTenNV(trangThai);
+            return staffMng.TimKiemTrangThai(trangThai);
         }
+        
         public string ThemNhanVien(NhanVien addStaff)
         {
             if(addStaff == null)

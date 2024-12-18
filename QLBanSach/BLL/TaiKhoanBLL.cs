@@ -26,6 +26,13 @@ namespace BLL
             string infoUserBLL = taiKhoanAccess.CheckLogin(taiKhoan);
             return infoUserBLL;
         }
+        //public string CHeckLoginStaff(NhanVien staff)
+        //{
+        //    if (staff.MaNV == "" || staff.Pass == "")
+        //        return "taikhoan_staff_null";
+        //    string infoStaffBLL = taiKhoanAccess.CheckLoginStaff(staff);
+        //    return infoStaffBLL;
+        //}
 
     }
 }

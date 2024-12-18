@@ -58,18 +58,19 @@
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pnlHeader.Controls.Add(this.btn_Thoat);
             this.pnlHeader.Controls.Add(this.lbl_Title);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(627, 73);
+            this.pnlHeader.Size = new System.Drawing.Size(627, 67);
             this.pnlHeader.TabIndex = 0;
             // 
             // btn_Thoat
             // 
             this.btn_Thoat.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_Thoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Thoat.Location = new System.Drawing.Point(565, 0);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(62, 37);
@@ -90,7 +91,7 @@
             // 
             // pnlThongTinTaiKhoan
             // 
-            this.pnlThongTinTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.pnlThongTinTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pnlThongTinTaiKhoan.Controls.Add(this.txtMaND);
             this.pnlThongTinTaiKhoan.Controls.Add(this.lblMaND);
             this.pnlThongTinTaiKhoan.Controls.Add(this.txtDiaChi);
@@ -111,15 +112,17 @@
             this.pnlThongTinTaiKhoan.Controls.Add(this.txtUser);
             this.pnlThongTinTaiKhoan.Controls.Add(this.lblUsername);
             this.pnlThongTinTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlThongTinTaiKhoan.Location = new System.Drawing.Point(0, 73);
+            this.pnlThongTinTaiKhoan.Location = new System.Drawing.Point(0, 67);
             this.pnlThongTinTaiKhoan.Name = "pnlThongTinTaiKhoan";
-            this.pnlThongTinTaiKhoan.Size = new System.Drawing.Size(627, 417);
+            this.pnlThongTinTaiKhoan.Size = new System.Drawing.Size(627, 423);
             this.pnlThongTinTaiKhoan.TabIndex = 1;
             // 
             // txtMaND
             // 
+            this.txtMaND.Cursor = System.Windows.Forms.Cursors.No;
             this.txtMaND.Location = new System.Drawing.Point(304, 10);
             this.txtMaND.Name = "txtMaND";
+            this.txtMaND.ReadOnly = true;
             this.txtMaND.Size = new System.Drawing.Size(156, 23);
             this.txtMaND.TabIndex = 20;
             // 
@@ -150,6 +153,7 @@
             // 
             // cbGioiTinh
             // 
+            this.cbGioiTinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbGioiTinh.FormattingEnabled = true;
             this.cbGioiTinh.Items.AddRange(new object[] {
             "Nam",
@@ -162,6 +166,7 @@
             // 
             // dtpNamSinh
             // 
+            this.dtpNamSinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpNamSinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNamSinh.Location = new System.Drawing.Point(304, 172);
             this.dtpNamSinh.Name = "dtpNamSinh";
@@ -170,13 +175,14 @@
             // 
             // btn_SuaTT
             // 
+            this.btn_SuaTT.BackColor = System.Drawing.Color.Silver;
             this.btn_SuaTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SuaTT.Location = new System.Drawing.Point(229, 372);
+            this.btn_SuaTT.Location = new System.Drawing.Point(229, 371);
             this.btn_SuaTT.Name = "btn_SuaTT";
             this.btn_SuaTT.Size = new System.Drawing.Size(127, 29);
             this.btn_SuaTT.TabIndex = 14;
             this.btn_SuaTT.Text = "Sửa Thông Tin";
-            this.btn_SuaTT.UseVisualStyleBackColor = true;
+            this.btn_SuaTT.UseVisualStyleBackColor = false;
             this.btn_SuaTT.Click += new System.EventHandler(this.btn_SuaTT_Click);
             // 
             // txtQuyenHan
@@ -185,6 +191,7 @@
             this.txtQuyenHan.Name = "txtQuyenHan";
             this.txtQuyenHan.Size = new System.Drawing.Size(156, 23);
             this.txtQuyenHan.TabIndex = 13;
+            this.txtQuyenHan.Click += new System.EventHandler(this.txtQuyenHan_Click);
             // 
             // lblQuyenHan
             // 
@@ -281,7 +288,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(627, 490);
             this.Controls.Add(this.pnlThongTinTaiKhoan);
             this.Controls.Add(this.pnlHeader);

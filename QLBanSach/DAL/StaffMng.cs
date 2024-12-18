@@ -55,7 +55,7 @@ namespace DAL
             SqlCommand cmd = new SqlCommand(sql, sqlCon);
             try
             {
-                cmd.Parameters.AddWithValue("@trangThai",trangThai);
+                cmd.Parameters.AddWithValue("@trangThai", trangThai) ;
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 adapter.Fill(dt);
             }
@@ -65,12 +65,13 @@ namespace DAL
             }
             return dt;
         }
-        public string ThemNhanVien(NhanVien addStaff)
-        {
+        
+            public string ThemNhanVien(NhanVien addStaff)
+            {
             //Ket noi csdl
             SqlConnectDatabase db = new SqlConnectDatabase();
             db.MoKetNoi();
-            SqlConnection sqlCon = db.sqlCon;
+
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = db.sqlCon;
             cmd.CommandType = CommandType.StoredProcedure;
@@ -78,6 +79,7 @@ namespace DAL
             int kq = 0;
             try
             {
+                cmd.Parameters.AddWithValue("@pass", addStaff.getPass());
                 cmd.Parameters.AddWithValue("@maNV", addStaff.getMaNV());
                 cmd.Parameters.AddWithValue("@tenNV", addStaff.getTenNV());
                 cmd.Parameters.AddWithValue("@namSinh", addStaff.getNamSinh());
@@ -110,7 +112,6 @@ namespace DAL
         {
             SqlConnectDatabase db = new SqlConnectDatabase();
             db.MoKetNoi();
-            SqlConnection sqlCon = db.sqlCon;
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = db.sqlCon;
             cmd.CommandType = CommandType.StoredProcedure;
@@ -118,6 +119,7 @@ namespace DAL
             int kq = 0;
             try
             {
+                cmd.Parameters.AddWithValue("@pass", editStaff.getPass());
                 cmd.Parameters.AddWithValue("@maNV", editStaff.getMaNV());
                 cmd.Parameters.AddWithValue("@tenNV", editStaff.getTenNV());
                 cmd.Parameters.AddWithValue("@namSinh", editStaff.getNamSinh());
@@ -146,7 +148,6 @@ namespace DAL
         {
             SqlConnectDatabase db = new SqlConnectDatabase();
             db.MoKetNoi();
-            SqlConnection sqlCon = db.sqlCon;
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = db.sqlCon;
             cmd.CommandType = CommandType.StoredProcedure;
@@ -184,6 +185,7 @@ namespace DAL
             try
             {
                 cmd.Parameters.AddWithValue("@maNV", pauseStaff.getMaNV());
+                cmd.Parameters.AddWithValue("@pass", pauseStaff.getPass());
                 cmd.Parameters.AddWithValue("@tenNV", pauseStaff.getTenNV());
                 cmd.Parameters.AddWithValue("@namSinh", pauseStaff.getNamSinh());
                 cmd.Parameters.AddWithValue("@CCCD", pauseStaff.getCCCD());

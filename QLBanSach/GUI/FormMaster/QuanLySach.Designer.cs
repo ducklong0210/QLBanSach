@@ -136,6 +136,7 @@
             // 
             // txtMaSach
             // 
+            this.txtMaSach.Cursor = System.Windows.Forms.Cursors.No;
             this.txtMaSach.Location = new System.Drawing.Point(121, 29);
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.ReadOnly = true;
@@ -153,6 +154,7 @@
             // 
             // txtDuongDanAnh
             // 
+            this.txtDuongDanAnh.Cursor = System.Windows.Forms.Cursors.No;
             this.txtDuongDanAnh.Location = new System.Drawing.Point(96, 444);
             this.txtDuongDanAnh.Name = "txtDuongDanAnh";
             this.txtDuongDanAnh.ReadOnly = true;
@@ -171,6 +173,7 @@
             // 
             // picImage
             // 
+            this.picImage.Cursor = System.Windows.Forms.Cursors.No;
             this.picImage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picImage.Location = new System.Drawing.Point(3, 19);
             this.picImage.Name = "picImage";
@@ -181,6 +184,7 @@
             // 
             // btnHuy
             // 
+            this.btnHuy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHuy.Image = global::GUI.Properties.Resources.multiply__1_;
             this.btnHuy.Location = new System.Drawing.Point(219, 518);
             this.btnHuy.Name = "btnHuy";
@@ -193,6 +197,7 @@
             // 
             // btnLuu
             // 
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.Image = global::GUI.Properties.Resources.diskette;
             this.btnLuu.Location = new System.Drawing.Point(59, 519);
             this.btnLuu.Name = "btnLuu";
@@ -205,6 +210,7 @@
             // 
             // btnXoaImg
             // 
+            this.btnXoaImg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoaImg.Location = new System.Drawing.Point(240, 480);
             this.btnXoaImg.Name = "btnXoaImg";
             this.btnXoaImg.Size = new System.Drawing.Size(53, 23);
@@ -215,6 +221,7 @@
             // 
             // btnSuaImg
             // 
+            this.btnSuaImg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSuaImg.Location = new System.Drawing.Point(168, 480);
             this.btnSuaImg.Name = "btnSuaImg";
             this.btnSuaImg.Size = new System.Drawing.Size(53, 23);
@@ -225,6 +232,7 @@
             // 
             // btnThemImg
             // 
+            this.btnThemImg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemImg.Location = new System.Drawing.Point(98, 479);
             this.btnThemImg.Name = "btnThemImg";
             this.btnThemImg.Size = new System.Drawing.Size(53, 24);
@@ -259,6 +267,7 @@
             // 
             // dtpNamSanXuat
             // 
+            this.dtpNamSanXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpNamSanXuat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNamSanXuat.Location = new System.Drawing.Point(120, 163);
             this.dtpNamSanXuat.Name = "dtpNamSanXuat";
@@ -267,10 +276,11 @@
             // 
             // cbTheLoai
             // 
+            this.cbTheLoai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbTheLoai.FormattingEnabled = true;
             this.cbTheLoai.Items.AddRange(new object[] {
             "Hoạt Hình",
-            "Kinh Dị",
+            "Kinh Doanh",
             "Bom Tấn",
             "Anime",
             "Không Xác Định"});
@@ -383,6 +393,7 @@
             // 
             // btnReset
             // 
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReset.Image = global::GUI.Properties.Resources.reset;
             this.btnReset.Location = new System.Drawing.Point(679, 22);
             this.btnReset.Name = "btnReset";
@@ -394,6 +405,7 @@
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.LightCoral;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Image = global::GUI.Properties.Resources.logout;
             this.btnThoat.Location = new System.Drawing.Point(576, 113);
@@ -444,6 +456,7 @@
             // 
             // btnTimKiem
             // 
+            this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTimKiem.Image = global::GUI.Properties.Resources.search;
             this.btnTimKiem.Location = new System.Drawing.Point(551, 22);
             this.btnTimKiem.Name = "btnTimKiem";
@@ -472,6 +485,7 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.Image = global::GUI.Properties.Resources.delete;
             this.btnXoa.Location = new System.Drawing.Point(414, 113);
             this.btnXoa.Name = "btnXoa";
@@ -484,6 +498,7 @@
             // 
             // btnSua
             // 
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.Image = global::GUI.Properties.Resources.edit;
             this.btnSua.Location = new System.Drawing.Point(225, 113);
             this.btnSua.Name = "btnSua";
@@ -496,6 +511,7 @@
             // 
             // btnThem
             // 
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.Image = global::GUI.Properties.Resources.user;
             this.btnThem.Location = new System.Drawing.Point(52, 113);
             this.btnThem.Name = "btnThem";
@@ -537,6 +553,7 @@
             this.Gia,
             this.SoLuong,
             this.Poster});
+            this.dgvThongTinSach.Cursor = System.Windows.Forms.Cursors.No;
             this.dgvThongTinSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvThongTinSach.Location = new System.Drawing.Point(3, 19);
             this.dgvThongTinSach.Name = "dgvThongTinSach";
@@ -621,7 +638,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1086, 624);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

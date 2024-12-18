@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKy));
-            this.picBackRegister = new System.Windows.Forms.PictureBox();
             this.lblHeaderRegister = new System.Windows.Forms.Label();
             this.grbRegister = new System.Windows.Forms.GroupBox();
+            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.comboGioiTinh = new System.Windows.Forms.ComboBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.txtSoDienThoai = new System.Windows.Forms.TextBox();
             this.lblSoDienThoai = new System.Windows.Forms.Label();
@@ -47,28 +46,19 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.btnBackLogin = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.picBackRegister)).BeginInit();
+            this.btnBackLogin = new CuoreUI.Controls.cuiButton();
+            this.picBackRegister = new System.Windows.Forms.PictureBox();
             this.grbRegister.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBackRegister)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picBackRegister
-            // 
-            this.picBackRegister.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.picBackRegister.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picBackRegister.Location = new System.Drawing.Point(0, 0);
-            this.picBackRegister.Name = "picBackRegister";
-            this.picBackRegister.Size = new System.Drawing.Size(721, 444);
-            this.picBackRegister.TabIndex = 0;
-            this.picBackRegister.TabStop = false;
             // 
             // lblHeaderRegister
             // 
             this.lblHeaderRegister.AutoSize = true;
-            this.lblHeaderRegister.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.lblHeaderRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.lblHeaderRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeaderRegister.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblHeaderRegister.Location = new System.Drawing.Point(240, 6);
+            this.lblHeaderRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(98)))), ((int)(((byte)(138)))));
+            this.lblHeaderRegister.Location = new System.Drawing.Point(270, 9);
             this.lblHeaderRegister.Name = "lblHeaderRegister";
             this.lblHeaderRegister.Size = new System.Drawing.Size(218, 29);
             this.lblHeaderRegister.TabIndex = 1;
@@ -76,9 +66,9 @@
             // 
             // grbRegister
             // 
-            this.grbRegister.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.grbRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.grbRegister.Controls.Add(this.cbGioiTinh);
             this.grbRegister.Controls.Add(this.dtpNgaySinh);
-            this.grbRegister.Controls.Add(this.comboGioiTinh);
             this.grbRegister.Controls.Add(this.btnRegister);
             this.grbRegister.Controls.Add(this.txtSoDienThoai);
             this.grbRegister.Controls.Add(this.lblSoDienThoai);
@@ -93,45 +83,45 @@
             this.grbRegister.Controls.Add(this.txtUsername);
             this.grbRegister.Controls.Add(this.lblUsername);
             this.grbRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbRegister.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.grbRegister.Location = new System.Drawing.Point(64, 41);
+            this.grbRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(98)))), ((int)(((byte)(138)))));
+            this.grbRegister.Location = new System.Drawing.Point(57, 41);
             this.grbRegister.Name = "grbRegister";
-            this.grbRegister.Size = new System.Drawing.Size(572, 341);
+            this.grbRegister.Size = new System.Drawing.Size(572, 362);
             this.grbRegister.TabIndex = 2;
             this.grbRegister.TabStop = false;
             this.grbRegister.Text = "Điền Thông Tin Tài Khoản";
+            // 
+            // cbGioiTinh
+            // 
+            this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ",
+            "Không Xác Định"});
+            this.cbGioiTinh.Location = new System.Drawing.Point(277, 181);
+            this.cbGioiTinh.Name = "cbGioiTinh";
+            this.cbGioiTinh.Size = new System.Drawing.Size(200, 28);
+            this.cbGioiTinh.TabIndex = 17;
             // 
             // dtpNgaySinh
             // 
             this.dtpNgaySinh.CalendarMonthBackground = System.Drawing.SystemColors.Info;
             this.dtpNgaySinh.CustomFormat = "";
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(277, 137);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(277, 141);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(200, 26);
             this.dtpNgaySinh.TabIndex = 16;
             this.dtpNgaySinh.Value = new System.DateTime(2024, 11, 27, 19, 30, 15, 0);
             // 
-            // comboGioiTinh
-            // 
-            this.comboGioiTinh.BackColor = System.Drawing.SystemColors.Window;
-            this.comboGioiTinh.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.comboGioiTinh.FormattingEnabled = true;
-            this.comboGioiTinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.comboGioiTinh.Location = new System.Drawing.Point(276, 174);
-            this.comboGioiTinh.Name = "comboGioiTinh";
-            this.comboGioiTinh.Size = new System.Drawing.Size(200, 28);
-            this.comboGioiTinh.TabIndex = 15;
-            // 
             // btnRegister
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(175)))), ((int)(((byte)(225)))));
+            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRegister.Location = new System.Drawing.Point(231, 291);
+            this.btnRegister.Location = new System.Drawing.Point(242, 312);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(109, 31);
+            this.btnRegister.Size = new System.Drawing.Size(109, 33);
             this.btnRegister.TabIndex = 14;
             this.btnRegister.Text = "Đăng ký";
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -141,7 +131,7 @@
             // 
             this.txtSoDienThoai.BackColor = System.Drawing.SystemColors.Window;
             this.txtSoDienThoai.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtSoDienThoai.Location = new System.Drawing.Point(277, 248);
+            this.txtSoDienThoai.Location = new System.Drawing.Point(277, 264);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(200, 26);
             this.txtSoDienThoai.TabIndex = 13;
@@ -150,7 +140,7 @@
             // 
             this.lblSoDienThoai.AutoSize = true;
             this.lblSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoDienThoai.Location = new System.Drawing.Point(138, 254);
+            this.lblSoDienThoai.Location = new System.Drawing.Point(138, 270);
             this.lblSoDienThoai.Name = "lblSoDienThoai";
             this.lblSoDienThoai.Size = new System.Drawing.Size(120, 20);
             this.lblSoDienThoai.TabIndex = 12;
@@ -160,7 +150,7 @@
             // 
             this.txtDiaChi.BackColor = System.Drawing.SystemColors.Window;
             this.txtDiaChi.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtDiaChi.Location = new System.Drawing.Point(277, 212);
+            this.txtDiaChi.Location = new System.Drawing.Point(277, 224);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(200, 26);
             this.txtDiaChi.TabIndex = 11;
@@ -169,7 +159,7 @@
             // 
             this.lblDiaChi.AutoSize = true;
             this.lblDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiaChi.Location = new System.Drawing.Point(139, 215);
+            this.lblDiaChi.Location = new System.Drawing.Point(139, 227);
             this.lblDiaChi.Name = "lblDiaChi";
             this.lblDiaChi.Size = new System.Drawing.Size(74, 20);
             this.lblDiaChi.TabIndex = 10;
@@ -179,7 +169,7 @@
             // 
             this.lblGioiTinh.AutoSize = true;
             this.lblGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGioiTinh.Location = new System.Drawing.Point(139, 180);
+            this.lblGioiTinh.Location = new System.Drawing.Point(139, 185);
             this.lblGioiTinh.Name = "lblGioiTinh";
             this.lblGioiTinh.Size = new System.Drawing.Size(86, 20);
             this.lblGioiTinh.TabIndex = 8;
@@ -189,7 +179,7 @@
             // 
             this.lblNamSinh.AutoSize = true;
             this.lblNamSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNamSinh.Location = new System.Drawing.Point(139, 138);
+            this.lblNamSinh.Location = new System.Drawing.Point(139, 144);
             this.lblNamSinh.Name = "lblNamSinh";
             this.lblNamSinh.Size = new System.Drawing.Size(93, 20);
             this.lblNamSinh.TabIndex = 6;
@@ -216,7 +206,7 @@
             // txtpassword
             // 
             this.txtpassword.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtpassword.Location = new System.Drawing.Point(277, 69);
+            this.txtpassword.Location = new System.Drawing.Point(277, 68);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(200, 26);
             this.txtpassword.TabIndex = 3;
@@ -225,7 +215,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(139, 69);
+            this.lblPassword.Location = new System.Drawing.Point(139, 67);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(96, 20);
             this.lblPassword.TabIndex = 2;
@@ -234,7 +224,7 @@
             // txtUsername
             // 
             this.txtUsername.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtUsername.Location = new System.Drawing.Point(276, 33);
+            this.txtUsername.Location = new System.Drawing.Point(276, 31);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(200, 26);
             this.txtUsername.TabIndex = 1;
@@ -243,7 +233,7 @@
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(138, 33);
+            this.lblUsername.Location = new System.Drawing.Point(138, 31);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(101, 20);
             this.lblUsername.TabIndex = 0;
@@ -251,21 +241,56 @@
             // 
             // btnBackLogin
             // 
-            this.btnBackLogin.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnBackLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBackLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBackLogin.Location = new System.Drawing.Point(608, 5);
+            this.btnBackLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnBackLogin.CheckButton = false;
+            this.btnBackLogin.Checked = false;
+            this.btnBackLogin.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.btnBackLogin.CheckedForeColor = System.Drawing.Color.White;
+            this.btnBackLogin.CheckedImageTint = System.Drawing.Color.White;
+            this.btnBackLogin.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.btnBackLogin.Content = "Trở Lại";
+            this.btnBackLogin.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnBackLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnBackLogin.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnBackLogin.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.btnBackLogin.HoveredImageTint = System.Drawing.Color.White;
+            this.btnBackLogin.HoverForeColor = System.Drawing.Color.White;
+            this.btnBackLogin.HoverOutline = System.Drawing.Color.Empty;
+            this.btnBackLogin.Image = null;
+            this.btnBackLogin.ImageAutoCenter = true;
+            this.btnBackLogin.ImageExpand = new System.Drawing.Point(0, 0);
+            this.btnBackLogin.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnBackLogin.ImageTint = System.Drawing.Color.White;
+            this.btnBackLogin.Location = new System.Drawing.Point(653, 1);
             this.btnBackLogin.Name = "btnBackLogin";
-            this.btnBackLogin.Size = new System.Drawing.Size(105, 29);
-            this.btnBackLogin.TabIndex = 3;
-            this.btnBackLogin.Text = "Trở Lại";
-            this.btnBackLogin.UseVisualStyleBackColor = false;
-            this.btnBackLogin.Click += new System.EventHandler(this.btnBackLogin_Click);
+            this.btnBackLogin.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
+            this.btnBackLogin.NormalOutline = System.Drawing.Color.Empty;
+            this.btnBackLogin.OutlineThickness = 1.6F;
+            this.btnBackLogin.PressedBackground = System.Drawing.Color.Transparent;
+            this.btnBackLogin.PressedForeColor = System.Drawing.Color.White;
+            this.btnBackLogin.PressedImageTint = System.Drawing.Color.White;
+            this.btnBackLogin.PressedOutline = System.Drawing.Color.Empty;
+            this.btnBackLogin.Rounding = new System.Windows.Forms.Padding(8);
+            this.btnBackLogin.Size = new System.Drawing.Size(66, 40);
+            this.btnBackLogin.TabIndex = 4;
+            this.btnBackLogin.TextOffset = new System.Drawing.Point(0, 0);
+            this.btnBackLogin.Click += new System.EventHandler(this.btnBackLogin_Click_1);
+            // 
+            // picBackRegister
+            // 
+            this.picBackRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.picBackRegister.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBackRegister.Location = new System.Drawing.Point(0, 0);
+            this.picBackRegister.Name = "picBackRegister";
+            this.picBackRegister.Size = new System.Drawing.Size(721, 444);
+            this.picBackRegister.TabIndex = 0;
+            this.picBackRegister.TabStop = false;
             // 
             // DangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(721, 444);
             this.Controls.Add(this.btnBackLogin);
             this.Controls.Add(this.grbRegister);
@@ -278,9 +303,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Ký Tài Khoản";
             this.Load += new System.EventHandler(this.DangKy_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picBackRegister)).EndInit();
             this.grbRegister.ResumeLayout(false);
             this.grbRegister.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBackRegister)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,8 +329,8 @@
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Button btnBackLogin;
-        private System.Windows.Forms.ComboBox comboGioiTinh;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
+        private System.Windows.Forms.ComboBox cbGioiTinh;
+        private CuoreUI.Controls.cuiButton btnBackLogin;
     }
 }

@@ -130,6 +130,7 @@ namespace DAL
             // Truyền tham số vào
             try
             {
+                cmd.Parameters.AddWithValue("@maND", editUser.getMaND());
                 cmd.Parameters.AddWithValue("@user", editUser.getUsername());
                 cmd.Parameters.AddWithValue("@pass", editUser.getPass());
                 cmd.Parameters.AddWithValue("@hoTen", editUser.getHoVaTen());

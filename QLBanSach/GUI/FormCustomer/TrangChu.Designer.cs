@@ -47,11 +47,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.btn_Exit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblHeaderUser = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblUser = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -79,54 +79,55 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(170, 481);
+            this.panel1.Size = new System.Drawing.Size(170, 602);
             this.panel1.TabIndex = 0;
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.btnExit);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 411);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(0, 542);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(170, 59);
+            this.panel9.Size = new System.Drawing.Size(170, 60);
             this.panel9.TabIndex = 6;
             // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft YaHei", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Image = global::GUI.Properties.Resources.logout;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.Location = new System.Drawing.Point(0, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnExit.Size = new System.Drawing.Size(170, 59);
+            this.btnExit.Size = new System.Drawing.Size(170, 60);
             this.btnExit.TabIndex = 1;
-            this.btnExit.Text = "Th&oát";
+            this.btnExit.Text = "Đăng &Xuất";
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.btnAddress);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 352);
+            this.panel8.Location = new System.Drawing.Point(0, 456);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(170, 59);
+            this.panel8.Size = new System.Drawing.Size(170, 85);
             this.panel8.TabIndex = 5;
             // 
             // btnAddress
             // 
             this.btnAddress.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddress.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddress.Image = global::GUI.Properties.Resources.address;
             this.btnAddress.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddress.Location = new System.Drawing.Point(0, 0);
             this.btnAddress.Name = "btnAddress";
             this.btnAddress.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnAddress.Size = new System.Drawing.Size(170, 59);
+            this.btnAddress.Size = new System.Drawing.Size(170, 85);
             this.btnAddress.TabIndex = 1;
             this.btnAddress.Text = "&Địa Chỉ";
             this.btnAddress.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -137,24 +138,24 @@
             // 
             this.panel7.Controls.Add(this.btnAccount);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 293);
+            this.panel7.Location = new System.Drawing.Point(0, 371);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(170, 59);
+            this.panel7.Size = new System.Drawing.Size(170, 85);
             this.panel7.TabIndex = 4;
             // 
             // btnAccount
             // 
             this.btnAccount.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAccount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccount.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccount.Image = global::GUI.Properties.Resources.profile;
             this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAccount.Location = new System.Drawing.Point(0, 0);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnAccount.Size = new System.Drawing.Size(170, 59);
+            this.btnAccount.Size = new System.Drawing.Size(170, 85);
             this.btnAccount.TabIndex = 1;
-            this.btnAccount.Text = "Thông Tin Cá &Nhân";
+            this.btnAccount.Text = "Thông Tin &Cá Nhân";
             this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAccount.UseVisualStyleBackColor = false;
@@ -164,24 +165,24 @@
             // 
             this.panel6.Controls.Add(this.btnHistory);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 234);
+            this.panel6.Location = new System.Drawing.Point(0, 286);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(170, 59);
+            this.panel6.Size = new System.Drawing.Size(170, 85);
             this.panel6.TabIndex = 3;
             // 
             // btnHistory
             // 
             this.btnHistory.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistory.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistory.Image = global::GUI.Properties.Resources.history;
             this.btnHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHistory.Location = new System.Drawing.Point(0, 0);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnHistory.Size = new System.Drawing.Size(170, 59);
+            this.btnHistory.Size = new System.Drawing.Size(170, 85);
             this.btnHistory.TabIndex = 1;
-            this.btnHistory.Text = "&Lịch sử";
+            this.btnHistory.Text = "&Lịch Sử Mua";
             this.btnHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHistory.UseVisualStyleBackColor = false;
             this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
@@ -190,22 +191,22 @@
             // 
             this.panel5.Controls.Add(this.btnCart);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 175);
+            this.panel5.Location = new System.Drawing.Point(0, 201);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(170, 59);
+            this.panel5.Size = new System.Drawing.Size(170, 85);
             this.panel5.TabIndex = 2;
             // 
             // btnCart
             // 
             this.btnCart.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCart.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCart.Image = global::GUI.Properties.Resources.cart1;
             this.btnCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCart.Location = new System.Drawing.Point(0, 0);
             this.btnCart.Name = "btnCart";
             this.btnCart.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCart.Size = new System.Drawing.Size(170, 59);
+            this.btnCart.Size = new System.Drawing.Size(170, 85);
             this.btnCart.TabIndex = 0;
             this.btnCart.Text = "&Giỏ Hàng";
             this.btnCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -218,21 +219,21 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 116);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(170, 59);
+            this.panel4.Size = new System.Drawing.Size(170, 85);
             this.panel4.TabIndex = 1;
             // 
             // btnHome
             // 
             this.btnHome.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Location = new System.Drawing.Point(0, 0);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(170, 59);
+            this.btnHome.Size = new System.Drawing.Size(170, 85);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "&Trang Chủ";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -266,7 +267,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(170, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(825, 481);
+            this.panel2.Size = new System.Drawing.Size(825, 602);
             this.panel2.TabIndex = 1;
             // 
             // panel12
@@ -275,50 +276,39 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(0, 64);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(825, 417);
+            this.panel12.Size = new System.Drawing.Size(825, 538);
             this.panel12.TabIndex = 1;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel10.Controls.Add(this.btn_Exit);
+            this.panel10.Controls.Add(this.lblUser);
             this.panel10.Controls.Add(this.label1);
             this.panel10.Controls.Add(this.lblHeaderUser);
             this.panel10.Controls.Add(this.panel11);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(825, 64);
             this.panel10.TabIndex = 0;
             // 
-            // btn_Exit
-            // 
-            this.btn_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Exit.BackColor = System.Drawing.Color.Crimson;
-            this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Exit.Location = new System.Drawing.Point(750, 0);
-            this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(75, 33);
-            this.btn_Exit.TabIndex = 3;
-            this.btn_Exit.Text = "Exit";
-            this.btn_Exit.UseVisualStyleBackColor = false;
-            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(123, 26);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(579, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(81, 17);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Xin Chào: ";
+            this.label1.Text = "Xin Chào :  ";
             // 
             // lblHeaderUser
             // 
             this.lblHeaderUser.AutoSize = true;
             this.lblHeaderUser.Location = new System.Drawing.Point(123, 26);
             this.lblHeaderUser.Name = "lblHeaderUser";
-            this.lblHeaderUser.Size = new System.Drawing.Size(0, 13);
+            this.lblHeaderUser.Size = new System.Drawing.Size(0, 21);
             this.lblHeaderUser.TabIndex = 1;
             // 
             // panel11
@@ -340,17 +330,30 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(647, 43);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(122, 17);
+            this.lblUser.TabIndex = 4;
+            this.lblUser.Text = "HoTenNguoiDung";
+            // 
             // TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(995, 481);
+            this.ClientSize = new System.Drawing.Size(995, 602);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.251F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TrangChu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang Chủ";
+            this.Load += new System.EventHandler(this.TrangChu_Load);
             this.panel1.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -394,6 +397,6 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblHeaderUser;
-        private System.Windows.Forms.Button btn_Exit;
+        private System.Windows.Forms.Label lblUser;
     }
 }

@@ -21,7 +21,7 @@ namespace BLL
             if(taiKhoan.Username == "" || taiKhoan.Pass == "" || taiKhoan.HoVaTen == "" 
                 || taiKhoan.GioiTinh == "" || taiKhoan.DiaChi == "" || taiKhoan.SoDienThoai == "")
             {
-                return "Bạn chưa điền đầy đủ thông tin!";
+                return "error_user_null";
             }
             
              string checkRegister = userRegister.CheckRegister(taiKhoan);

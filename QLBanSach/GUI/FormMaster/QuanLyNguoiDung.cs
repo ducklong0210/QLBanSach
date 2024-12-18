@@ -21,29 +21,19 @@ namespace GUI.FormMaster
         private NguoiDungBLL taiKhoanBLL;
         private NguoiDungBLL nguoiDungBLL = new NguoiDungBLL();
         tkNguoiDung users = new tkNguoiDung();
-        public QuanLyNguoiDung()
+        public QuanLyNguoiDung(NguoiDung user)
         {
             // Khởi tạo BLL
             taiKhoanBLL = new NguoiDungBLL();
+            taiKhoan = user;
             InitializeComponent();
         }
 
-        private void btn_Thoat_Click(object sender, EventArgs e)
-        {
-            DialogResult rs = MessageBox.Show("Bạn có trở về trang quản trị không?",
-                "Hộp thoại",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-            if (rs == DialogResult.Yes)
-            {
-                Close();
-                QuanTri quanTri = new QuanTri(this.taiKhoan);
-                quanTri.Show();
-            }
-        }
+        
         //sự kiện xóa thông tin chi tiết
         private void XoaThongTin()
         {
+            txtmaND.Clear();
             txtUser.Clear();
             txtPass.Clear();
             txtHoTen.Clear();
@@ -61,18 +51,13 @@ namespace GUI.FormMaster
             dtNguoiDung = nguoiDungBLL.HienThiDuLieuUser();
             dgvThongTinNguoiDung.DataSource = dtNguoiDung;
         }
-        private void btn_Them_Click(object sender, EventArgs e)
-        {
-            grbThongTinChiTiet.Enabled = true;
-            chucNang = 1; 
-            XoaThongTin();
-            txtUser.ReadOnly = false;
-        }
+       
         private void ThemSinhVien()
         {
             NguoiDungBLL tkBLL = new NguoiDungBLL();
             // Khởi tạo đối tượng users
             NguoiDung users = new NguoiDung();
+            users.MaND = int.Parse(txtmaND.Text);
             users.Username = txtUser.Text;
             users.Pass = txtPass.Text;
             users.HoVaTen = txtHoTen.Text;
@@ -135,6 +120,7 @@ namespace GUI.FormMaster
             NguoiDungBLL tkBLL = new NguoiDungBLL();
             // Khởi tạo đối tượng users
             NguoiDung users = new NguoiDung();
+            users.MaND = int.Parse(txtmaND.Text);
             users.Username = txtUser.Text;
             users.Pass = txtPass.Text;
             users.HoVaTen = txtHoTen.Text;
@@ -185,18 +171,8 @@ namespace GUI.FormMaster
                     return;
             }
         }
-
-        private void btn_Sua_Click(object sender, EventArgs e)
-        {
-            chucNang = 2;
-            grbThongTinChiTiet.Enabled = true;
-            txtUser.ReadOnly = true;
-        }
-
-        private void btn_Xoa_Click(object sender, EventArgs e)
-        {
-             XoaDuLieuUser();
-        }
+        
+        
 
         private void XoaDuLieuUser()
         {
@@ -210,10 +186,17 @@ namespace GUI.FormMaster
                 switch (Delete_OK)
                 {
                     case "delete_Success":
+                     DialogResult rs =  MessageBox.Show("Bạn chắc chắn muốn xóa dữ liệu người dùng không?",
+                        "Cảnh báo",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
+                        if(rs == DialogResult.Yes)
+                        {
                         MessageBox.Show("Xóa người dùng thành công!");
                         HienThiThongTin();  // Cập nhật lại DataGridView
                         btn_Sua.Enabled = false;
                         btn_Xoa.Enabled = false;
+                    }    
                         return;
                     case "error_Delete_Success":
                         MessageBox.Show("Lỗi khi xóa người dùng.");
@@ -253,35 +236,7 @@ namespace GUI.FormMaster
             }    
         }
 
-        private void btn_TimKiem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string Users = txtTKUser.Text.Trim();
-                string HoTen = txtTKHoTen.Text.Trim();
-                DataTable dtUser = taiKhoanBLL.TimKiemUsers(Users);
-                DataTable dtHoTen = taiKhoanBLL.TimKiemUser(HoTen);
-                // tim kiem ưu tiên tìm bằng user
-                if (dtUser.Rows.Count > 0 )
-                {
-                    dgvThongTinNguoiDung.DataSource = dtUser;
-                   
-                }
-                else if(dtHoTen.Rows.Count > 0)
-                {
-                    dgvThongTinNguoiDung.DataSource = dtHoTen;
-                }    
-                else
-                {
-                    MessageBox.Show("Không tìm thấy thông tin người dùng");
-                    dgvThongTinNguoiDung.DataSource = dtNguoiDung;
-                }
-            }
-            catch(Exception ex)  
-            {
-                MessageBox.Show("Lỗi :"+ ex.Message);
-            }
-        }
+       
         
         private void QuanLyNguoiDung_Load(object sender, EventArgs e)
         {
@@ -299,8 +254,9 @@ namespace GUI.FormMaster
             if(vt == -1) return;
            
             dgvThongTinNguoiDung.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            DataRow dtRow = dtNguoiDung.Rows[vt]; 
+            DataRow dtRow = dtNguoiDung.Rows[vt];
             // gán giá trị NguoiDung vào các ô textbox
+            txtmaND.Text = dtRow["MaND"].ToString().Trim();
             txtUser.Text=dtRow["Username"].ToString().Trim() ;
             txtPass.Text= dtRow["Pass"].ToString().Trim();
             txtMaQuyen.Text = dtRow["MaQuyen"].ToString().Trim();
@@ -342,6 +298,70 @@ namespace GUI.FormMaster
         {
             tkNguoiDung tkNguoiDung = new tkNguoiDung();
             tkNguoiDung.Show();
+        }
+
+        private void btn_Them_Click_1(object sender, EventArgs e)
+        {
+            grbThongTinChiTiet.Enabled = true;
+            chucNang = 1;
+            XoaThongTin();
+            txtUser.ReadOnly = false;
+        }
+
+        private void btn_Sua_Click_1(object sender, EventArgs e)
+        {
+            chucNang = 2;
+            grbThongTinChiTiet.Enabled = true;
+            txtmaND.ReadOnly = true;
+        }
+
+        private void btn_Xoa_Click_1(object sender, EventArgs e)
+        {
+            XoaDuLieuUser();
+        }
+
+        private void btn_Thoat_Click_1(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có trở về trang quản trị không?",
+                "Hộp thoại",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                this.Close();
+                QuanTri quanTri = new QuanTri(this.taiKhoan);
+                quanTri.Show();
+            }
+        }
+
+        private void btn_TimKiem_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string Users = txtTKUser.Text.Trim();
+                string HoTen = txtTKHoTen.Text.Trim();
+                DataTable dtUser = taiKhoanBLL.TimKiemUsers(Users);
+                DataTable dtHoTen = taiKhoanBLL.TimKiemUser(HoTen);
+                // tim kiem ưu tiên tìm bằng user
+                if (dtUser.Rows.Count > 0)
+                {
+                    dgvThongTinNguoiDung.DataSource = dtUser;
+
+                }
+                else if (dtHoTen.Rows.Count > 0)
+                {
+                    dgvThongTinNguoiDung.DataSource = dtHoTen;
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy thông tin người dùng");
+                    dgvThongTinNguoiDung.DataSource = dtNguoiDung;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi :" + ex.Message);
+            }
         }
     }
 }

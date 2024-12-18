@@ -9,6 +9,8 @@ namespace DTO
     public class NhanVien
     {
         public string MaNV {  get; set; }
+        
+        public string Pass {  get; set; }
         public string TenNV { get; set; }
         public  DateTime NamSinh { get; set; }
         public string CCCD {  get; set; }
@@ -16,7 +18,7 @@ namespace DTO
         public string QueQuan {  get; set; }
         public string TrangThai {  get; set; }
         public NhanVien() { }
-        public NhanVien(string maNV, string tenNV, DateTime namSinh, string cCCD, string soDienThoai, string queQuan, string trangThai)
+        public NhanVien(string maNV, string tenNV, DateTime namSinh, string cCCD, string soDienThoai, string queQuan, string trangThai, string pass)
         {
             this.MaNV = maNV;
             this.TenNV = tenNV;
@@ -25,9 +27,11 @@ namespace DTO
             this.SoDienThoai = soDienThoai;
             this.QueQuan = queQuan;
             this.TrangThai = trangThai;
+            this.Pass = pass;
         }
 
         public string getMaNV() { return this.MaNV; }
+        public string getPass() {  return this.Pass; }
         public string getTenNV() { return this.TenNV; }
         public DateTime getNamSinh() { return this.NamSinh; }
         public string getQueQuan() { return this.QueQuan; }
@@ -38,6 +42,10 @@ namespace DTO
         public void setMaNV(string MaNV)
         {
             this.MaNV = MaNV;   
+        }
+        public void setPass(string Pass) 
+        {
+            this.Pass = Pass; 
         }
         public void setTenNV(string TenNV)
         {

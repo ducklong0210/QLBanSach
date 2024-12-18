@@ -21,5 +21,10 @@ namespace GUI.FormCustomer
         {
 
         }
+
+        private void picbImageDiaChi_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -19,8 +19,9 @@ namespace GUI.FormMaster
         private StaffBLL staffBLLs;
         private StaffBLL nhanVienBLL = new StaffBLL();
 
-        public QuanLyNhanVien()
+        public QuanLyNhanVien(NguoiDung user)
         {
+            taiKhoan = user;
             staffBLLs = new StaffBLL();
             InitializeComponent();
         }
@@ -32,6 +33,7 @@ namespace GUI.FormMaster
         private void XoaThongTin()
         {
             txtMaNV.Clear();
+            txtPass.Clear();
             txtTenNV.Clear();
             txtQueQuan.Clear();
             txtCCCD.Clear();
@@ -45,6 +47,7 @@ namespace GUI.FormMaster
             StaffBLL staffBLL = new StaffBLL();
             // khởi tạo đối tượng nhan viên
             NhanVien nhanVien = new NhanVien();
+            nhanVien.Pass = txtPass.Text.Trim();
             nhanVien.MaNV = txtMaNV.Text.Trim();
             nhanVien.TenNV = txtTenNV.Text.Trim();
             nhanVien.NamSinh = dtpNamSinh.Value;
@@ -52,23 +55,15 @@ namespace GUI.FormMaster
             nhanVien.QueQuan = txtQueQuan.Text.Trim();
             nhanVien.CCCD = txtCCCD.Text.Trim();
             // sự kiện kiểm tra giới tính
-            if (cbTKTrangThai.SelectedIndex == 0)
-            {
+            if (cbTrangThai.SelectedIndex == 0)
                 nhanVien.TrangThai = "Hoạt Động";
-
-            }
-            else if (cbTKTrangThai.SelectedIndex == 1)
-            {
+            else if (cbTrangThai.SelectedIndex == 1)
                 nhanVien.TrangThai = "Tạm Ngưng";
-            }
-            else if (cbTKTrangThai.SelectedIndex == 2)
-            {
+            else if (cbTrangThai.SelectedIndex == 2)
                 nhanVien.TrangThai = "Đã Nghỉ";
-            }
             else
-            {
                 nhanVien.TrangThai = "Không Xác Định";
-            }
+            
             // sự kiện gán thêm nhân viên vào
             string add_OK = staffBLL.ThemNhanVien(nhanVien);
             // sự kiện giá trị của bll null thì trả về KXD
@@ -115,6 +110,7 @@ namespace GUI.FormMaster
             StaffBLL staffBLL = new StaffBLL();
             // khởi tạo đối tượng nhan viên
             NhanVien nhanVien = new NhanVien();
+            nhanVien.Pass = txtPass.Text.Trim();
             nhanVien.MaNV = txtMaNV.Text.Trim();
             nhanVien.TenNV = txtTenNV.Text.Trim();
             nhanVien.NamSinh = dtpNamSinh.Value;
@@ -122,23 +118,14 @@ namespace GUI.FormMaster
             nhanVien.QueQuan = txtQueQuan.Text.Trim();
             nhanVien.CCCD = txtCCCD.Text.Trim();
             // sự kiện kiểm tra giới tính
-            if (cbTKTrangThai.SelectedIndex == 0)
-            {
+            if (cbTrangThai.SelectedIndex == 0)
                 nhanVien.TrangThai = "Hoạt Động";
-
-            }
-            else if (cbTKTrangThai.SelectedIndex == 1)
-            {
+            else if (cbTrangThai.SelectedIndex == 1)
                 nhanVien.TrangThai = "Tạm Ngưng";
-            }
-            else if (cbTKTrangThai.SelectedIndex == 2)
-            {
+            else if (cbTrangThai.SelectedIndex == 2)
                 nhanVien.TrangThai = "Đã Nghỉ";
-            }
             else
-            {
                 nhanVien.TrangThai = "Không Xác Định";
-            }
             // sự kiện gán thêm nhân viên vào
             string edit_OK = staffBLL.SuaNhanVien(nhanVien);
             // sự kiện giá trị của bll null thì trả về KXD
@@ -226,6 +213,7 @@ namespace GUI.FormMaster
             StaffBLL staffBLL = new StaffBLL();
             // khởi tạo đối tượng nhan viên
             NhanVien nhanVien = new NhanVien();
+            nhanVien.Pass = txtPass.Text.Trim();
             nhanVien.MaNV = txtMaNV.Text.Trim();
             nhanVien.TenNV = txtTenNV.Text.Trim();
             nhanVien.NamSinh = dtpNamSinh.Value;
@@ -298,15 +286,18 @@ namespace GUI.FormMaster
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            string tenNV = txtTKTenNV.Text;
+            string tenNV = txtTKTenNV.Text.Trim();
             string trangThai = cbTKTrangThai.Text.Trim();
             // Kiểm tra giá trị ComboBox
-            if (string.IsNullOrWhiteSpace(trangThai))
-            {
-                MessageBox.Show("Vui lòng chọn trạng thái.");
-                return;
-            }
-
+            //if (cbTKTrangThai.SelectedIndex == 0)
+            //    trangThai = "Hoạt Động";
+            //else if (cbTKTrangThai.SelectedIndex == 1)
+            //    trangThai = "Tạm Ngưng";
+            //else if (cbTKTrangThai.SelectedIndex == 2)
+            //    trangThai = "Đã Nghỉ";
+            //else
+            //    trangThai = "Không Xác Định";
+            
             DataTable dtTenNV = nhanVienBLL.TimKiemTenNV(tenNV);
             DataTable dtTrangThai = nhanVienBLL.TimKiemTrangThai(trangThai);
             if (dtTenNV.Rows.Count > 0)
@@ -362,20 +353,21 @@ namespace GUI.FormMaster
             if (vt == -1) return;
             dgvThongTinNguoiDung.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DataRow dtRow = dtNhanVien.Rows[vt];
+            txtPass.Text = dtRow["Pass"].ToString().Trim();
             txtMaNV.Text = dtRow["MaNV"].ToString().Trim();
             txtTenNV.Text = dtRow["TenNV"].ToString().Trim();
             txtCCCD.Text = dtRow["CCCD"].ToString().Trim();
             txtSoDienThoai.Text = dtRow["SoDienThoai"].ToString().Trim();
             txtQueQuan.Text = dtRow["QueQuan"].ToString().Trim();
-            if (cbTrangThai.Text == "Hoạt Động")
+            if (dtRow["TrangThai"].ToString().Trim() == "Hoạt Động")
             {
                 cbTrangThai.SelectedIndex = 0;
             }
-            else if (cbTrangThai.Text == "Tạm Ngưng")
+            else if (dtRow["TrangThai"].ToString().Trim() == "Tạm Ngưng")
             {
                 cbTrangThai.SelectedIndex = 1;
             }
-            else if (cbTrangThai.Text == "Đã Nghỉ")
+            else if (dtRow["TrangThai"].ToString().Trim() == "Đã Nghỉ")
             {
                 cbTrangThai.SelectedIndex = 2;
             }
@@ -402,6 +394,10 @@ namespace GUI.FormMaster
             btn_Xoa.Enabled = false;
             btn_TamNgung.Enabled = false;
         }
-        
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

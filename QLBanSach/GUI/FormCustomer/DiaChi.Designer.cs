@@ -62,6 +62,7 @@
             this.picbImageDiaChi.Size = new System.Drawing.Size(267, 194);
             this.picbImageDiaChi.TabIndex = 0;
             this.picbImageDiaChi.TabStop = false;
+            this.picbImageDiaChi.Click += new System.EventHandler(this.picbImageDiaChi_Click);
             // 
             // panel2
             // 
@@ -69,7 +70,8 @@
             this.panel2.Controls.Add(this.lblSoDienThoai);
             this.panel2.Controls.Add(this.lblTTDiaChi);
             this.panel2.Controls.Add(this.lblDiaChi);
-            this.panel2.Location = new System.Drawing.Point(367, 107);
+            this.panel2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(309, 107);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(518, 137);
@@ -122,7 +124,8 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.lblThongTinCuaHang);
-            this.panel3.Location = new System.Drawing.Point(367, 50);
+            this.panel3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(307, 51);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(518, 59);
             this.panel3.TabIndex = 2;
@@ -143,7 +146,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 359);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(855, 367);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

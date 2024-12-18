@@ -30,26 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaoCaoThongKe));
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btn_Thoat = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlContainer = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_tkNhanVien = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.btn_tkSach = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btn_tkNguoiDung = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btn_tkNhapHang = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btn_tkHoaDon = new System.Windows.Forms.Button();
-            this.btn_Thoat = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlContainer.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -61,6 +61,19 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(788, 54);
             this.pnlHeader.TabIndex = 0;
+            // 
+            // btn_Thoat
+            // 
+            this.btn_Thoat.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_Thoat.Image = global::GUI.Properties.Resources.log_out;
+            this.btn_Thoat.Location = new System.Drawing.Point(702, 0);
+            this.btn_Thoat.Name = "btn_Thoat";
+            this.btn_Thoat.Size = new System.Drawing.Size(86, 52);
+            this.btn_Thoat.TabIndex = 20;
+            this.btn_Thoat.Text = "Exit";
+            this.btn_Thoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Thoat.UseVisualStyleBackColor = false;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
             // lblTitle
             // 
@@ -85,42 +98,6 @@
             this.pnlContainer.Size = new System.Drawing.Size(788, 318);
             this.pnlContainer.TabIndex = 1;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btn_tkHoaDon);
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(54, 51);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(152, 83);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btn_tkNhapHang);
-            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(571, 51);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(162, 83);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btn_tkNguoiDung);
-            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(432, 181);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(168, 83);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btn_tkSach);
-            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(305, 51);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(147, 83);
-            this.panel4.TabIndex = 1;
-            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.btn_tkNhanVien);
@@ -132,6 +109,7 @@
             // 
             // btn_tkNhanVien
             // 
+            this.btn_tkNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_tkNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_tkNhanVien.Image = global::GUI.Properties.Resources.grouping;
             this.btn_tkNhanVien.Location = new System.Drawing.Point(0, 0);
@@ -143,8 +121,18 @@
             this.btn_tkNhanVien.UseVisualStyleBackColor = true;
             this.btn_tkNhanVien.Click += new System.EventHandler(this.btn_tkNhanVien_Click);
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btn_tkSach);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Location = new System.Drawing.Point(305, 51);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(147, 83);
+            this.panel4.TabIndex = 1;
+            // 
             // btn_tkSach
             // 
+            this.btn_tkSach.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_tkSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_tkSach.Image = global::GUI.Properties.Resources.books;
             this.btn_tkSach.Location = new System.Drawing.Point(0, 0);
@@ -156,8 +144,18 @@
             this.btn_tkSach.UseVisualStyleBackColor = true;
             this.btn_tkSach.Click += new System.EventHandler(this.btn_tkSach_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btn_tkNguoiDung);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(432, 181);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(168, 83);
+            this.panel3.TabIndex = 1;
+            // 
             // btn_tkNguoiDung
             // 
+            this.btn_tkNguoiDung.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_tkNguoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_tkNguoiDung.Image = global::GUI.Properties.Resources.man__1_;
             this.btn_tkNguoiDung.Location = new System.Drawing.Point(0, 0);
@@ -169,8 +167,18 @@
             this.btn_tkNguoiDung.UseVisualStyleBackColor = true;
             this.btn_tkNguoiDung.Click += new System.EventHandler(this.btn_tkNguoiDung_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btn_tkNhapHang);
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(571, 51);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(162, 83);
+            this.panel2.TabIndex = 1;
+            // 
             // btn_tkNhapHang
             // 
+            this.btn_tkNhapHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_tkNhapHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_tkNhapHang.Image = global::GUI.Properties.Resources.transport;
             this.btn_tkNhapHang.Location = new System.Drawing.Point(0, 0);
@@ -182,8 +190,18 @@
             this.btn_tkNhapHang.UseVisualStyleBackColor = true;
             this.btn_tkNhapHang.Click += new System.EventHandler(this.btn_tkNhapHang_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btn_tkHoaDon);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(54, 51);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(152, 83);
+            this.panel1.TabIndex = 0;
+            // 
             // btn_tkHoaDon
             // 
+            this.btn_tkHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_tkHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_tkHoaDon.Image = global::GUI.Properties.Resources.bill;
             this.btn_tkHoaDon.Location = new System.Drawing.Point(0, 0);
@@ -194,19 +212,6 @@
             this.btn_tkHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_tkHoaDon.UseVisualStyleBackColor = true;
             this.btn_tkHoaDon.Click += new System.EventHandler(this.btn_tkHoaDon_Click);
-            // 
-            // btn_Thoat
-            // 
-            this.btn_Thoat.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_Thoat.Image = global::GUI.Properties.Resources.log_out;
-            this.btn_Thoat.Location = new System.Drawing.Point(702, 0);
-            this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(86, 52);
-            this.btn_Thoat.TabIndex = 20;
-            this.btn_Thoat.Text = "Exit";
-            this.btn_Thoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Thoat.UseVisualStyleBackColor = false;
-            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
             // BaoCaoThongKe
             // 
@@ -226,11 +231,11 @@
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.pnlContainer.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

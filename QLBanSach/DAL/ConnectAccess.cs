@@ -75,7 +75,6 @@ namespace DAL
                 dataReader.Close();
                 sqlCon.Close();
             }
-           
             // không có thì trả về tài khoản sai 
             else 
             {
@@ -83,6 +82,41 @@ namespace DAL
             }
 
             return user;
+        }
+        public string CheckLogin_Staff(NhanVien Staff)
+        {
+            string staff = null;
+            SqlConnectDatabase db = new SqlConnectDatabase();
+            db.MoKetNoi();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = db.sqlCon;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "proc_CheckLoginStaff";
+            cmd.Parameters.AddWithValue("@maNV", Staff.getMaNV());
+            cmd.Parameters.AddWithValue("@maNV",Staff.getPass());
+            SqlDataReader dataReader = cmd.ExecuteReader();
+
+            // nếu mà nó có data thì tiếp tục xử lý
+            if (dataReader.HasRows)
+            {
+                while (dataReader.Read())
+                {
+                    //Thêm if để kiểm tra null vì MaND là int 
+                    if (!dataReader.IsDBNull(0))
+                    {
+                        staff = dataReader[0].ToString();
+                        return staff;
+                    }
+                }
+                dataReader.Close();
+            }
+            // không có thì trả về tài khoản sai 
+            else
+            {
+                return "login_fail";
+            }
+            return "login_true";
         }
 
 

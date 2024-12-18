@@ -619,6 +619,7 @@
         <Border>
           <Style>None</Style>
         </Border>
+        <BackgroundColor>Orange</BackgroundColor>
       </Style>
     </PageHeader>
     <PageFooter>

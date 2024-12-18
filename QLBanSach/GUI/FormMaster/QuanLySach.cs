@@ -19,8 +19,9 @@ namespace GUI.FormMaster
         private NguoiDung taiKhoan;
         private DataTable dtSach;
         private BookBLL bookBLLs = new BookBLL();
-        public QuanLySach()
+        public QuanLySach( NguoiDung user)
         {
+            taiKhoan = user;    
             InitializeComponent();
         }
 
@@ -201,7 +202,7 @@ namespace GUI.FormMaster
             }
             else if (cbTheLoai.SelectedIndex == 1)
             {
-                sach.MaLoaiSach = "KD";//Kinh di
+                sach.MaLoaiSach = "KD";//Kinh  doanh
             }
             else if (cbTheLoai.SelectedIndex == 2)
             {
@@ -273,7 +274,7 @@ namespace GUI.FormMaster
             }
             else if (cbTheLoai.SelectedIndex == 1)
             {
-                sach.MaLoaiSach = "KD";//Kinh di
+                sach.MaLoaiSach = "KD";//Kinh doanh
             }
             else if (cbTheLoai.SelectedIndex == 2)
             {
@@ -312,12 +313,20 @@ namespace GUI.FormMaster
                     }
                 case "edit_Success":
                     {
-                        MessageBox.Show("Sửa thông tin sách thành công!");
-                        XoaThongTin();
-                        HienThiThongTin();
-                        grbThongTinChiTiet.Enabled = false;
-                        btnSua.Enabled = false;
-                        btnXoa.Enabled = false;
+                        DialogResult rs = MessageBox.Show("Bạn chắc chắn muốn thay đổi thông tin sách không?",
+                            "Cảnh báo",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Warning);
+                            if(rs == DialogResult.Yes)
+                            {
+                                MessageBox.Show("Sửa thông tin sách thành công!");
+                                XoaThongTin();
+                                HienThiThongTin();
+                                grbThongTinChiTiet.Enabled = false;
+                                btnSua.Enabled = false;
+                                btnXoa.Enabled = false;
+                            }    
+                        
                         return;
                     }
                 case "error_Edit_Success":
@@ -392,10 +401,7 @@ namespace GUI.FormMaster
             btnThemImg.Enabled = false;
             btnXoaImg.Enabled = true;
             btnSuaImg.Enabled = true;
-            
         }
-
-        
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {

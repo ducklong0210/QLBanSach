@@ -25,30 +25,29 @@ namespace GUI
             grbRegister.BackColor = Color.Transparent;
        
         }
-        NguoiDung user = new NguoiDung();
-        RegisterBLL DKBLL = new RegisterBLL();
+        
+        
         // sự kiện đăng ký tài khoản
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            NguoiDung user = new NguoiDung();
+            RegisterBLL DKBLL = new RegisterBLL();
             string tentk = txtUsername.Text;
             string pass = txtpassword.Text;
-            
-            if(comboGioiTinh.Text == "Nam")
-                comboGioiTinh.SelectedIndex = 0;
-            else
-                comboGioiTinh.SelectedIndex = 1;
-            string CheckRegister = DKBLL.CheckRegister(user);
-            CheckRegister = CheckRegister.Trim();
-            string ngaySinh = dtpNgaySinh.Value.Year + "-" + dtpNgaySinh.Value.Month +"-"+dtpNgaySinh.Value.Day;
-            //string[] ns = dtpNgaySinh.Text.Split('/');
-            //dtpNgaySinh.Value = new DateTime(int.Parse(ns[2]), int.Parse(ns[0]), int.Parse(ns[1]));---
             user.Username = txtUsername.Text;
             user.Pass = txtpassword.Text;
             user.HoVaTen = txtFullname.Text;
-            user.NamSinh = DateTime.Parse(ngaySinh);
-            user.GioiTinh = comboGioiTinh.Text;
+            user.NamSinh = dtpNgaySinh.Value;
+
+            if (cbGioiTinh.SelectedIndex == 0)
+                user.GioiTinh = "Nam";
+            else if (cbGioiTinh.SelectedIndex == 1)
+                user.GioiTinh = "Nữ";
+            else
+                user.GioiTinh = "Không Xác Định";
             user.DiaChi = txtDiaChi.Text;
             user.SoDienThoai = txtSoDienThoai.Text;
+            string CheckRegister = DKBLL.CheckRegister(user);
 
             // Sự kiện yêu cầu người dùng nhập đúng định dạng tài khoản và mật khẩu
             if (!CheckAccount(tentk))
@@ -60,24 +59,26 @@ namespace GUI
                 MessageBox.Show("Vui lòng mật khẩu có độ dài 6-24 ký tự, với các ký tự và chữ số,chữ hoa và chữ thường!");
             }
             else { 
+
             switch (CheckRegister)
             {
-                
+                case "error_user_null":
+                    {
+                        MessageBox.Show("Bạn chưa điền đầy đủ thông tin!");
+                        return;
+                    }
                 case "register_access":
                     {
-                            XoaDuLieu();
-                       DialogResult result = MessageBox.Show("Đăng ký tài khoản thành công!");
-                        MessageBox.Show("Bạn có muốn trở lại trang đăng nhập không",
+                       XoaDuLieu();
+                        MessageBox.Show("Đăng ký tài khoản thành công!");
+                       DialogResult result = MessageBox.Show("Bạn có muốn trở lại trang đăng nhập không",
                             "Hỏi Thoát",
-                        MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Question);
+                       MessageBoxButtons.YesNo,
+                       MessageBoxIcon.Question);
                             if(result == DialogResult.Yes)
                             {
-                                Close();
-                                DangNhap dangNhap = new DangNhap();
-                                dangNhap.Show();
+                                this.Close();
                             }
-                                
                         return;
                     }
                 case "register_retail":
@@ -90,7 +91,12 @@ namespace GUI
                         MessageBox.Show("Đăng ký tài khoản không thành công ");
                         return;
                     }
-            }
+                default:
+                    {
+                        MessageBox.Show("Lỗi không xác định" + CheckRegister);
+                        return;
+                    }
+                }
             }
         }
         // sự kiện check xem tài khoản và mật khẩu nhập đúng định dạng chưa
@@ -98,10 +104,7 @@ namespace GUI
         {
             return Regex.IsMatch(ac, "^[a-zA-Z0-9]{6,24}$");
         }
-        private void btnBackLogin_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+       
 
         //Sự kiện xóa dữ liệu khi người dùng đăng ký tài khoản thành công
         private void XoaDuLieu()
@@ -111,11 +114,18 @@ namespace GUI
             txtFullname.Clear();
             txtDiaChi.Clear();
             txtSoDienThoai.Clear();
+            cbGioiTinh.SelectedIndex = 2;
+            dtpNgaySinh.Value = DateTime.Now;
         }
 
         private void DangKy_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBackLogin_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

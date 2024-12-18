@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DTO;
+using GUI.FormMaster;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +14,10 @@ namespace GUI.FormCustomer
 {
     public partial class TrangChu : Form
     {
-        public TrangChu()
+        private NguoiDung taiKhoan;
+        public TrangChu(NguoiDung user)
         {
+            taiKhoan = user;
             InitializeComponent(); 
         }
         private Form currentChildForm;
@@ -55,7 +59,7 @@ namespace GUI.FormCustomer
         }
         private void btnAccount_Click(object sender, EventArgs e)
         {
-            OpenChillForm(new ThongTinCaNhan());
+            OpenChillForm(new ThongTinCaNhan(this.taiKhoan));
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)
@@ -69,6 +73,27 @@ namespace GUI.FormCustomer
                 Close();
                 DangNhap dangNhap = new DangNhap();
                 dangNhap.Show();
+            }
+        }
+
+        private void TrangChu_Load(object sender, EventArgs e)
+        {
+            string user = taiKhoan.getHoVaTen();
+            lblUser.Text = user;
+            btnHome_Click(sender, e);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có muốn đăng xuất tài khoản không?",
+                "Hộp thoại",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                DangNhap dangNhap = new DangNhap();
+                dangNhap.Show();
+                this.Close();
             }
         }
     }

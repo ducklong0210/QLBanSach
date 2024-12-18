@@ -17,8 +17,9 @@ namespace GUI.FormMaster
         private NguoiDung taiKhoan;
         private DataTable dtLoaiSach;
         private BookBLL bookBLLs = new BookBLL();
-        public QuanLyLoaiSach()
+        public QuanLyLoaiSach(NguoiDung user)
         {
+            taiKhoan = user;
             InitializeComponent();
         }
         int chucNang = 0;

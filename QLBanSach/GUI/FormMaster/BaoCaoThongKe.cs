@@ -16,8 +16,9 @@ namespace GUI.FormMaster
     {
         private NguoiDung taiKhoan;
         private BillBLL billBLL = new BillBLL();
-        public BaoCaoThongKe()
+        public BaoCaoThongKe(NguoiDung user)
         {
+            taiKhoan = user;
             InitializeComponent();
         }
 

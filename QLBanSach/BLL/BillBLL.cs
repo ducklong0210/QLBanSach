@@ -19,5 +19,9 @@ namespace BLL
         {
             return billMng.HoaDon();
         }
+        public DataTable NhapHang()
+        {
+            return billMng.NhapHang();
+        }
     }
 }

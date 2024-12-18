@@ -21,6 +21,41 @@ namespace BLL
             NguoiDung user = info_account.Info_Account(username);
             return user;
         }
-        
+        public NhanVien Check_Info_Account_Staff(string maND)
+        {
+            NhanVien staff = info_account.Info_Account_Staff(maND);
+            return staff;
+        }
+        public string SuaTTNguoiDung(NguoiDung editUser)
+        {
+            if (editUser == null)
+            {
+                return "editUser_error_null";
+            }
+            Info_Account_Mng infoMng = new Info_Account_Mng();
+
+            string Edit_OK = infoMng.SuaTTTaiKhoan(editUser);
+            return Edit_OK;
+        }
+        public string SuaTTTaiKhoanUser(NguoiDung editUser)
+        {
+            if (editUser == null)
+            {
+                return "editUser_error_null";
+            }
+            Info_Account_Mng infoMng = new Info_Account_Mng();
+
+            string Edit_OK = infoMng.SuaTTTaiKhoanUser(editUser);
+            return Edit_OK;
+        }
+        public string SuaTTTaiKhoanNhanVien(NhanVien editStaff)
+        {
+            if (editStaff == null)
+            {
+                return "editStaff_null_error";
+            }
+            string Edit_OK = info_account.SuaTTTaiKhoanNV(editStaff);
+            return Edit_OK;
+        }
     }
 }

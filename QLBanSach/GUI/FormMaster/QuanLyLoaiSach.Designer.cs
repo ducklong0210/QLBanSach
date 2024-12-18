@@ -104,7 +104,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(925, 558);
+            this.panel2.Size = new System.Drawing.Size(925, 549);
             this.panel2.TabIndex = 1;
             // 
             // panel6
@@ -113,7 +113,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(626, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(299, 558);
+            this.panel6.Size = new System.Drawing.Size(299, 549);
             this.panel6.TabIndex = 8;
             // 
             // grbThongTinChiTiet
@@ -130,7 +130,7 @@
             this.grbThongTinChiTiet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbThongTinChiTiet.Location = new System.Drawing.Point(0, 0);
             this.grbThongTinChiTiet.Name = "grbThongTinChiTiet";
-            this.grbThongTinChiTiet.Size = new System.Drawing.Size(299, 558);
+            this.grbThongTinChiTiet.Size = new System.Drawing.Size(299, 549);
             this.grbThongTinChiTiet.TabIndex = 0;
             this.grbThongTinChiTiet.TabStop = false;
             this.grbThongTinChiTiet.Text = "Thông Tin Chi Tiết";
@@ -148,6 +148,7 @@
             // 
             // dtpNgayThem
             // 
+            this.dtpNgayThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpNgayThem.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayThem.Location = new System.Drawing.Point(134, 204);
             this.dtpNgayThem.Name = "dtpNgayThem";
@@ -165,6 +166,7 @@
             // 
             // btnHuy
             // 
+            this.btnHuy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHuy.Image = global::GUI.Properties.Resources.multiply__1_;
             this.btnHuy.Location = new System.Drawing.Point(174, 440);
             this.btnHuy.Name = "btnHuy";
@@ -177,6 +179,7 @@
             // 
             // btnLuu
             // 
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.Image = global::GUI.Properties.Resources.diskette;
             this.btnLuu.Location = new System.Drawing.Point(32, 440);
             this.btnLuu.Name = "btnLuu";
@@ -226,7 +229,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(626, 558);
+            this.panel11.Size = new System.Drawing.Size(626, 549);
             this.panel11.TabIndex = 7;
             // 
             // panel10
@@ -235,7 +238,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(0, 461);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(626, 97);
+            this.panel10.Size = new System.Drawing.Size(626, 88);
             this.panel10.TabIndex = 1;
             // 
             // grbChucNang
@@ -247,7 +250,7 @@
             this.grbChucNang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbChucNang.Location = new System.Drawing.Point(0, 0);
             this.grbChucNang.Name = "grbChucNang";
-            this.grbChucNang.Size = new System.Drawing.Size(626, 97);
+            this.grbChucNang.Size = new System.Drawing.Size(626, 88);
             this.grbChucNang.TabIndex = 0;
             this.grbChucNang.TabStop = false;
             this.grbChucNang.Text = "Chức Năng";
@@ -255,9 +258,10 @@
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.LightCoral;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Image = global::GUI.Properties.Resources.logout;
-            this.btnThoat.Location = new System.Drawing.Point(495, 32);
+            this.btnThoat.Location = new System.Drawing.Point(509, 22);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(83, 43);
             this.btnThoat.TabIndex = 14;
@@ -268,8 +272,9 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.Image = global::GUI.Properties.Resources.delete;
-            this.btnXoa.Location = new System.Drawing.Point(349, 32);
+            this.btnXoa.Location = new System.Drawing.Point(362, 22);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(85, 43);
             this.btnXoa.TabIndex = 8;
@@ -280,8 +285,9 @@
             // 
             // btnSua
             // 
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.Image = global::GUI.Properties.Resources.edit;
-            this.btnSua.Location = new System.Drawing.Point(194, 32);
+            this.btnSua.Location = new System.Drawing.Point(220, 22);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(85, 43);
             this.btnSua.TabIndex = 7;
@@ -292,8 +298,9 @@
             // 
             // btnThem
             // 
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.Image = global::GUI.Properties.Resources.user;
-            this.btnThem.Location = new System.Drawing.Point(49, 32);
+            this.btnThem.Location = new System.Drawing.Point(89, 22);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(85, 43);
             this.btnThem.TabIndex = 6;
@@ -330,6 +337,7 @@
             this.MaLoaiSach,
             this.NgayThem,
             this.TenLoaiSach});
+            this.dgvThongTinLoaiSach.Cursor = System.Windows.Forms.Cursors.No;
             this.dgvThongTinLoaiSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvThongTinLoaiSach.Location = new System.Drawing.Point(3, 19);
             this.dgvThongTinLoaiSach.Name = "dgvThongTinLoaiSach";
@@ -389,8 +397,9 @@
             // 
             // btnReset
             // 
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReset.Image = global::GUI.Properties.Resources.reset;
-            this.btnReset.Location = new System.Drawing.Point(574, 13);
+            this.btnReset.Location = new System.Drawing.Point(572, 12);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(40, 35);
             this.btnReset.TabIndex = 6;
@@ -415,10 +424,11 @@
             // 
             // btnTimKiem
             // 
+            this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTimKiem.Image = global::GUI.Properties.Resources.search;
-            this.btnTimKiem.Location = new System.Drawing.Point(498, 13);
+            this.btnTimKiem.Location = new System.Drawing.Point(498, 8);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(51, 35);
+            this.btnTimKiem.Size = new System.Drawing.Size(51, 42);
             this.btnTimKiem.TabIndex = 2;
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
@@ -443,8 +453,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(925, 622);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClientSize = new System.Drawing.Size(925, 613);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

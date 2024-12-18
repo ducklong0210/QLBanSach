@@ -14,6 +14,11 @@ namespace DAL
             string infoUser = CheckLoginUser(taikhoan);
             return infoUser;
         }
+        //public string CheckLoginStaff(NhanVien staff)
+        //{
+        //    string infoStaff = CheckLoginStaff(staff);
+        //    return infoStaff;
+        //}
 
     }
 }

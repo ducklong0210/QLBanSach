@@ -33,6 +33,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Licensing.6.0.4\lib\net472\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="CuoreUI, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CuoreUI.Winforms.2024.12.16\lib\netstandard2.0\CuoreUI.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Winform.Metroframework.1.4.0\lib\net20\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Winform.Metroframework.Design.1.4.0\lib\net20\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -51,8 +66,45 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.CodeDom.8.0.0\lib\net462\System.CodeDom.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -136,6 +188,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSNhanVien.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FormMaster\DSNhapHang.cs">
+      <DependentUpon>DSNhapHang.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormMaster\DSNhapHang.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -182,6 +237,12 @@
     <Compile Include="FormMaster\ThongTinTaiKhoan.Designer.cs">
       <DependentUpon>ThongTinTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMaster\ThongTinTaiKhoanStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaster\ThongTinTaiKhoanStaff.Designer.cs">
+      <DependentUpon>ThongTinTaiKhoanStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMaster\tkHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +276,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TestControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestControl.Designer.cs">
+      <DependentUpon>TestControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +332,9 @@
     <EmbeddedResource Include="FormMaster\ThongTinTaiKhoan.resx">
       <DependentUpon>ThongTinTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMaster\ThongTinTaiKhoanStaff.resx">
+      <DependentUpon>ThongTinTaiKhoanStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMaster\tkHoaDon.resx">
       <DependentUpon>tkHoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +360,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TestControl.resx">
+      <DependentUpon>TestControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="FormMaster\DSHoaDon.xsc">
       <DependentUpon>DSHoaDon.xsd</DependentUpon>
     </None>
@@ -446,6 +519,10 @@
     <None Include="Resources\transport.png" />
     <None Include="Resources\grouping.png" />
     <None Include="Resources\man %281%29.png" />
+    <Content Include="Image\dungviecdungthoidiem.png" />
+    <Content Include="Image\nobitavahanhtinhmuongthu.jpg" />
+    <Content Include="Image\vodaotrongkinhdoanhvacuocsong.png" />
+    <None Include="Resources\background.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

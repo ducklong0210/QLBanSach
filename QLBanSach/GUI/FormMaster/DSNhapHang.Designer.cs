@@ -435,6 +435,9 @@ namespace GUI.FormMaster {
                 base.Columns.Add(this.columnNhaCC);
                 this.columnTongTien = new global::System.Data.DataColumn("TongTien", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTongTien);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("NhapHangKey1", new global::System.Data.DataColumn[] {
+                                this.columnMaPN}, false));
+                this.columnMaPN.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
