@@ -53,7 +53,9 @@ namespace GUI
             if (string.IsNullOrWhiteSpace(txtUsername.Text) ||
                 string.IsNullOrWhiteSpace(txtFullname.Text) ||
                 string.IsNullOrWhiteSpace(txtpassword.Text) ||
-                string.IsNullOrWhiteSpace(txtSoDienThoai.Text))
+                string.IsNullOrWhiteSpace(txtSoDienThoai.Text) ||
+                string.IsNullOrWhiteSpace(cbGioiTinh.Text) ||
+                string.IsNullOrWhiteSpace(txtDiaChi.Text))
             {
                 MessageBox.Show("Bạn chưa điền đầy đủ thông tin!");
 

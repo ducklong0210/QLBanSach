@@ -346,9 +346,16 @@ namespace GUI.FormMaster
             {
                 ThemThongTinSach();
             }
-            if(chucNang == 2)
+            if (chucNang == 2)
             {
-                SuaThongTinSach();
+                DialogResult rs = MessageBox.Show("Bạn có muốn sửa thông tin sách không ?",
+                    "Xác nhận",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+                if (rs == DialogResult.Yes)
+                {
+                    SuaThongTinSach();
+                }
             }
         }
 

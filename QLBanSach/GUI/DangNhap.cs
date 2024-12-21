@@ -162,7 +162,9 @@ namespace GUI
 
         private void llblFogotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Chúc mừng bạn đã quay vào ô mất tài khoản -.-\n XIN CHIA BUỒN");
+            this.Hide();
+            QuenMK quenMK = new QuenMK();
+            quenMK.Show();
         }
 
         // sự kiện nuts đâng ký

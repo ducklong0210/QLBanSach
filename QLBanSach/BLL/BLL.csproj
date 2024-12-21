@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BillBLL.cs" />
     <Compile Include="BookBLL.cs" />
+    <Compile Include="ForgotPassBLL.cs" />
     <Compile Include="Info_Account_MngBLL.cs" />
     <Compile Include="NguoiDungBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

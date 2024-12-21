@@ -31,7 +31,14 @@ namespace GUI.FormMaster
             }
             if (chucNang == 2)
             {
-                SuaTTLoaiSach();
+                DialogResult rs = MessageBox.Show("Bạn có muốn sửa thông tin loại sách không ?",
+                    "Xác nhận",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+                if(rs == DialogResult.Yes)
+                {     
+                    SuaTTLoaiSach();
+                }
             }
         }
         private void ThemLoaiSach()

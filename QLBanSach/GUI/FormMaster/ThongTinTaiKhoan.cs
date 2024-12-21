@@ -77,7 +77,7 @@ namespace GUI.FormMaster
                     MessageBoxIcon.Error);
             }
         }
-        private void btn_SuaTT_Click(object sender, EventArgs e)
+        private void SuaThongTin()
         {
             Info_Account_MngBLL infoBLL = new Info_Account_MngBLL();
             NguoiDung user = new NguoiDung();
@@ -113,7 +113,7 @@ namespace GUI.FormMaster
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                         LoadThongTin();
-                        
+
                         return;
                     }
                 case "error_Edit_Success":
@@ -129,6 +129,17 @@ namespace GUI.FormMaster
                 default:
                     MessageBox.Show("Lỗi không xác định được: " + Edit_OK);
                     return;
+            }
+        }
+        private void btn_SuaTT_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có muốn sửa thông tin tài khoản cá nhân không ?",
+                    "Xác nhận",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                SuaThongTin();
             }
         }
         

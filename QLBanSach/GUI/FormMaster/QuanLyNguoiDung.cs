@@ -57,7 +57,6 @@ namespace GUI.FormMaster
             NguoiDungBLL tkBLL = new NguoiDungBLL();
             // Khởi tạo đối tượng users
             NguoiDung users = new NguoiDung();
-            users.MaND = int.Parse(txtmaND.Text);
             users.Username = txtUser.Text;
             users.Pass = txtPass.Text;
             users.HoVaTen = txtHoTen.Text;
@@ -215,7 +214,15 @@ namespace GUI.FormMaster
             }
             if(chucNang == 2)
             {
-                SuaTTSinhVien();
+                DialogResult rs = MessageBox.Show("Bạn có muốn sửa thông tin sinh viên không ?",
+                    "Xác nhận",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+                if (rs == DialogResult.Yes)
+                {
+                    SuaTTSinhVien();
+
+                }
             }
         }
 

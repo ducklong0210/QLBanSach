@@ -116,3 +116,4 @@ C:\Users\User\source\repos\QLBanSach\GUI\bin\Debug\System.Threading.Tasks.Extens
 C:\Users\User\source\repos\QLBanSach\GUI\bin\Debug\System.ValueTuple.xml
 C:\Users\User\source\repos\QLBanSach\GUI\bin\Debug\CuoreUI.dll
 C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.FormMaster.ThongTinTaiKhoanStaff.resources
+C:\Users\User\source\repos\QLBanSach\GUI\obj\Debug\GUI.QuenMK.resources

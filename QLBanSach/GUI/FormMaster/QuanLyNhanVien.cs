@@ -321,7 +321,15 @@ namespace GUI.FormMaster
             }
             if(chucNang == 2)
             {
-                SuaNhanVien();
+                DialogResult rs = MessageBox.Show("Bạn có muốn sửa thông tin nhân viên không ?",
+                    "Xác nhận",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+                if (rs == DialogResult.Yes)
+                {
+                    SuaNhanVien();
+
+                }
             }    
         }
         
