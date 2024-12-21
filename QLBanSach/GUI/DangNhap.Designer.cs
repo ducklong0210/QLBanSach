@@ -39,10 +39,10 @@ namespace GUI
             this.panelLogin = new System.Windows.Forms.Panel();
             this.picLoginAvt = new System.Windows.Forms.PictureBox();
             this.btn_Login = new CuoreUI.Controls.cuiButton();
-            this.btn_Register = new CuoreUI.Controls.cuiButton();
             this.txtUsername = new CuoreUI.Controls.cuiTextBox2();
             this.txtPassword = new CuoreUI.Controls.cuiTextBox2();
             this.picLogin = new System.Windows.Forms.PictureBox();
+            this.lblDangKy = new System.Windows.Forms.Label();
             this.panelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLoginAvt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogin)).BeginInit();
@@ -54,7 +54,7 @@ namespace GUI
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblUsername.Location = new System.Drawing.Point(283, 144);
+            this.lblUsername.Location = new System.Drawing.Point(284, 147);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(111, 24);
             this.lblUsername.TabIndex = 2;
@@ -66,7 +66,7 @@ namespace GUI
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPassword.Location = new System.Drawing.Point(283, 205);
+            this.lblPassword.Location = new System.Drawing.Point(283, 206);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(112, 24);
             this.lblPassword.TabIndex = 4;
@@ -88,10 +88,10 @@ namespace GUI
             // 
             this.chkShowPass.AutoSize = true;
             this.chkShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkShowPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkShowPass.Location = new System.Drawing.Point(476, 237);
+            this.chkShowPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkShowPass.Location = new System.Drawing.Point(455, 235);
             this.chkShowPass.Name = "chkShowPass";
-            this.chkShowPass.Size = new System.Drawing.Size(149, 22);
+            this.chkShowPass.Size = new System.Drawing.Size(139, 21);
             this.chkShowPass.TabIndex = 2;
             this.chkShowPass.Text = "Show Password";
             this.chkShowPass.UseVisualStyleBackColor = true;
@@ -100,16 +100,19 @@ namespace GUI
             // llblFogotPass
             // 
             this.llblFogotPass.AutoSize = true;
-            this.llblFogotPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblFogotPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.llblFogotPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblFogotPass.LinkColor = System.Drawing.SystemColors.Desktop;
-            this.llblFogotPass.Location = new System.Drawing.Point(378, 354);
+            this.llblFogotPass.Location = new System.Drawing.Point(444, 338);
             this.llblFogotPass.MaximumSize = new System.Drawing.Size(161, 0);
             this.llblFogotPass.Name = "llblFogotPass";
-            this.llblFogotPass.Size = new System.Drawing.Size(161, 22);
+            this.llblFogotPass.Size = new System.Drawing.Size(123, 18);
             this.llblFogotPass.TabIndex = 5;
             this.llblFogotPass.TabStop = true;
             this.llblFogotPass.Text = "Forgot Password";
             this.llblFogotPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblFogotPass_LinkClicked);
+            this.llblFogotPass.MouseLeave += new System.EventHandler(this.llblFogotPass_MouseLeave);
+            this.llblFogotPass.MouseHover += new System.EventHandler(this.llblFogotPass_MouseHover);
             // 
             // panelLogin
             // 
@@ -138,10 +141,10 @@ namespace GUI
             this.btn_Login.CheckedForeColor = System.Drawing.Color.White;
             this.btn_Login.CheckedImageTint = System.Drawing.Color.White;
             this.btn_Login.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.btn_Login.Content = "Đăng Nhập";
+            this.btn_Login.Content = "SignIn";
             this.btn_Login.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Login.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.btn_Login.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Login.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Login.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
             this.btn_Login.HoveredImageTint = System.Drawing.Color.White;
@@ -152,7 +155,7 @@ namespace GUI
             this.btn_Login.ImageExpand = new System.Drawing.Point(0, 0);
             this.btn_Login.ImageOffset = new System.Drawing.Point(0, 0);
             this.btn_Login.ImageTint = System.Drawing.Color.White;
-            this.btn_Login.Location = new System.Drawing.Point(498, 283);
+            this.btn_Login.Location = new System.Drawing.Point(306, 279);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(255)))), ((int)(((byte)(216)))));
             this.btn_Login.NormalOutline = System.Drawing.Color.Empty;
@@ -162,47 +165,10 @@ namespace GUI
             this.btn_Login.PressedImageTint = System.Drawing.Color.White;
             this.btn_Login.PressedOutline = System.Drawing.Color.Empty;
             this.btn_Login.Rounding = new System.Windows.Forms.Padding(8);
-            this.btn_Login.Size = new System.Drawing.Size(97, 32);
-            this.btn_Login.TabIndex = 4;
+            this.btn_Login.Size = new System.Drawing.Size(251, 40);
+            this.btn_Login.TabIndex = 3;
             this.btn_Login.TextOffset = new System.Drawing.Point(0, 0);
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
-            // 
-            // btn_Register
-            // 
-            this.btn_Register.CheckButton = false;
-            this.btn_Register.Checked = false;
-            this.btn_Register.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.btn_Register.CheckedForeColor = System.Drawing.Color.White;
-            this.btn_Register.CheckedImageTint = System.Drawing.Color.White;
-            this.btn_Register.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.btn_Register.Content = "Đăng Ký";
-            this.btn_Register.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Register.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.btn_Register.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Register.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.btn_Register.HoveredImageTint = System.Drawing.Color.White;
-            this.btn_Register.HoverForeColor = System.Drawing.Color.White;
-            this.btn_Register.HoverOutline = System.Drawing.Color.Empty;
-            this.btn_Register.Image = null;
-            this.btn_Register.ImageAutoCenter = true;
-            this.btn_Register.ImageExpand = new System.Drawing.Point(0, 0);
-            this.btn_Register.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_Register.ImageTint = System.Drawing.Color.White;
-            this.btn_Register.Location = new System.Drawing.Point(309, 283);
-            this.btn_Register.Name = "btn_Register";
-            this.btn_Register.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(255)))), ((int)(((byte)(216)))));
-            this.btn_Register.NormalOutline = System.Drawing.Color.Empty;
-            this.btn_Register.OutlineThickness = 1.6F;
-            this.btn_Register.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.btn_Register.PressedForeColor = System.Drawing.Color.White;
-            this.btn_Register.PressedImageTint = System.Drawing.Color.White;
-            this.btn_Register.PressedOutline = System.Drawing.Color.Empty;
-            this.btn_Register.Rounding = new System.Windows.Forms.Padding(8);
-            this.btn_Register.Size = new System.Drawing.Size(97, 32);
-            this.btn_Register.TabIndex = 3;
-            this.btn_Register.TextOffset = new System.Drawing.Point(0, 0);
-            this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
             // txtUsername
             // 
@@ -214,7 +180,7 @@ namespace GUI
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.DimGray;
-            this.txtUsername.Location = new System.Drawing.Point(458, 140);
+            this.txtUsername.Location = new System.Drawing.Point(425, 140);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Multiline = false;
             this.txtUsername.Name = "txtUsername";
@@ -238,12 +204,12 @@ namespace GUI
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPassword.Location = new System.Drawing.Point(458, 199);
+            this.txtPassword.Location = new System.Drawing.Point(429, 201);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Multiline = false;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Padding = new System.Windows.Forms.Padding(16, 7, 16, 0);
-            this.txtPassword.PasswordChar = false;
+            this.txtPassword.PasswordChar = true;
             this.txtPassword.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.Rounding = 8;
@@ -259,18 +225,33 @@ namespace GUI
             this.picLogin.Image = global::GUI.Properties.Resources.background;
             this.picLogin.Location = new System.Drawing.Point(0, 0);
             this.picLogin.Name = "picLogin";
-            this.picLogin.Size = new System.Drawing.Size(734, 411);
+            this.picLogin.Size = new System.Drawing.Size(730, 408);
             this.picLogin.TabIndex = 7;
             this.picLogin.TabStop = false;
+            // 
+            // lblDangKy
+            // 
+            this.lblDangKy.AutoSize = true;
+            this.lblDangKy.BackColor = System.Drawing.SystemColors.Control;
+            this.lblDangKy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblDangKy.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDangKy.Location = new System.Drawing.Point(294, 338);
+            this.lblDangKy.Name = "lblDangKy";
+            this.lblDangKy.Size = new System.Drawing.Size(133, 18);
+            this.lblDangKy.TabIndex = 4;
+            this.lblDangKy.Text = "Create to Account?";
+            this.lblDangKy.Click += new System.EventHandler(this.lblDangKy_Click_1);
+            this.lblDangKy.MouseLeave += new System.EventHandler(this.lblDangKy_MouseLeave);
+            this.lblDangKy.MouseHover += new System.EventHandler(this.lblDangKy_MouseHover);
             // 
             // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 411);
+            this.ClientSize = new System.Drawing.Size(730, 408);
+            this.Controls.Add(this.lblDangKy);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.btn_Register);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.panelLogin);
             this.Controls.Add(this.llblFogotPass);
@@ -285,6 +266,7 @@ namespace GUI
             this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
+            this.Load += new System.EventHandler(this.DangNhap_Load);
             this.panelLogin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLoginAvt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogin)).EndInit();
@@ -304,8 +286,8 @@ namespace GUI
         private System.Windows.Forms.Panel panelLogin;
         private System.Windows.Forms.PictureBox picLoginAvt;
         private CuoreUI.Controls.cuiButton btn_Login;
-        private CuoreUI.Controls.cuiButton btn_Register;
         private CuoreUI.Controls.cuiTextBox2 txtUsername;
         private CuoreUI.Controls.cuiTextBox2 txtPassword;
+        private System.Windows.Forms.Label lblDangKy;
     }
 }

@@ -153,7 +153,7 @@
             this.dtpNgayThem.Location = new System.Drawing.Point(134, 204);
             this.dtpNgayThem.Name = "dtpNgayThem";
             this.dtpNgayThem.Size = new System.Drawing.Size(153, 23);
-            this.dtpNgayThem.TabIndex = 32;
+            this.dtpNgayThem.TabIndex = 2;
             // 
             // label1
             // 
@@ -171,7 +171,7 @@
             this.btnHuy.Location = new System.Drawing.Point(174, 440);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 54);
-            this.btnHuy.TabIndex = 30;
+            this.btnHuy.TabIndex = 4;
             this.btnHuy.Text = "&Hủy";
             this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -184,7 +184,7 @@
             this.btnLuu.Location = new System.Drawing.Point(32, 440);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(72, 54);
-            this.btnLuu.TabIndex = 29;
+            this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "&Lưu";
             this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -195,7 +195,7 @@
             this.txtTenLoaiSach.Location = new System.Drawing.Point(134, 142);
             this.txtTenLoaiSach.Name = "txtTenLoaiSach";
             this.txtTenLoaiSach.Size = new System.Drawing.Size(153, 23);
-            this.txtTenLoaiSach.TabIndex = 5;
+            this.txtTenLoaiSach.TabIndex = 1;
             // 
             // lblTenLoaiSach
             // 
@@ -211,7 +211,7 @@
             this.txtMaLoaiSach.Location = new System.Drawing.Point(134, 70);
             this.txtMaLoaiSach.Name = "txtMaLoaiSach";
             this.txtMaLoaiSach.Size = new System.Drawing.Size(153, 23);
-            this.txtMaLoaiSach.TabIndex = 3;
+            this.txtMaLoaiSach.TabIndex = 0;
             // 
             // lblMaLoaiSach
             // 
@@ -264,7 +264,7 @@
             this.btnThoat.Location = new System.Drawing.Point(509, 22);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(83, 43);
-            this.btnThoat.TabIndex = 14;
+            this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "Th&oát";
             this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThoat.UseVisualStyleBackColor = false;
@@ -277,7 +277,7 @@
             this.btnXoa.Location = new System.Drawing.Point(362, 22);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(85, 43);
-            this.btnXoa.TabIndex = 8;
+            this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "&Xóa";
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -290,7 +290,7 @@
             this.btnSua.Location = new System.Drawing.Point(220, 22);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(85, 43);
-            this.btnSua.TabIndex = 7;
+            this.btnSua.TabIndex = 1;
             this.btnSua.Text = "&Sửa";
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSua.UseVisualStyleBackColor = true;
@@ -303,7 +303,7 @@
             this.btnThem.Location = new System.Drawing.Point(89, 22);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(85, 43);
-            this.btnThem.TabIndex = 6;
+            this.btnThem.TabIndex = 0;
             this.btnThem.Text = "&Thêm ";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = true;
@@ -402,7 +402,7 @@
             this.btnReset.Location = new System.Drawing.Point(572, 12);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(40, 35);
-            this.btnReset.TabIndex = 6;
+            this.btnReset.TabIndex = 3;
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
@@ -411,7 +411,7 @@
             this.txtTKTenLoaiSach.Location = new System.Drawing.Point(349, 21);
             this.txtTKTenLoaiSach.Name = "txtTKTenLoaiSach";
             this.txtTKTenLoaiSach.Size = new System.Drawing.Size(138, 23);
-            this.txtTKTenLoaiSach.TabIndex = 4;
+            this.txtTKTenLoaiSach.TabIndex = 1;
             // 
             // lblTKTenLoaiSach
             // 
@@ -438,7 +438,7 @@
             this.txtTKMaLoaiSach.Location = new System.Drawing.Point(112, 20);
             this.txtTKMaLoaiSach.Name = "txtTKMaLoaiSach";
             this.txtTKMaLoaiSach.Size = new System.Drawing.Size(125, 23);
-            this.txtTKMaLoaiSach.TabIndex = 1;
+            this.txtTKMaLoaiSach.TabIndex = 0;
             // 
             // lblTKMaLoaiSach
             // 

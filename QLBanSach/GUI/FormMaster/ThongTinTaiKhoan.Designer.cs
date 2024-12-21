@@ -74,7 +74,7 @@
             this.btn_Thoat.Location = new System.Drawing.Point(565, 0);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(62, 37);
-            this.btn_Thoat.TabIndex = 2;
+            this.btn_Thoat.TabIndex = 0;
             this.btn_Thoat.Text = "Exit";
             this.btn_Thoat.UseVisualStyleBackColor = false;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
@@ -115,7 +115,7 @@
             this.pnlThongTinTaiKhoan.Location = new System.Drawing.Point(0, 67);
             this.pnlThongTinTaiKhoan.Name = "pnlThongTinTaiKhoan";
             this.pnlThongTinTaiKhoan.Size = new System.Drawing.Size(627, 423);
-            this.pnlThongTinTaiKhoan.TabIndex = 1;
+            this.pnlThongTinTaiKhoan.TabIndex = 0;
             // 
             // txtMaND
             // 
@@ -124,7 +124,7 @@
             this.txtMaND.Name = "txtMaND";
             this.txtMaND.ReadOnly = true;
             this.txtMaND.Size = new System.Drawing.Size(156, 23);
-            this.txtMaND.TabIndex = 20;
+            this.txtMaND.TabIndex = 0;
             // 
             // lblMaND
             // 
@@ -140,7 +140,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(304, 294);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(156, 23);
-            this.txtDiaChi.TabIndex = 18;
+            this.txtDiaChi.TabIndex = 7;
             // 
             // lblDiaChi
             // 
@@ -162,7 +162,7 @@
             this.cbGioiTinh.Location = new System.Drawing.Point(304, 215);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(156, 24);
-            this.cbGioiTinh.TabIndex = 16;
+            this.cbGioiTinh.TabIndex = 5;
             // 
             // dtpNamSinh
             // 
@@ -171,7 +171,7 @@
             this.dtpNamSinh.Location = new System.Drawing.Point(304, 172);
             this.dtpNamSinh.Name = "dtpNamSinh";
             this.dtpNamSinh.Size = new System.Drawing.Size(156, 23);
-            this.dtpNamSinh.TabIndex = 15;
+            this.dtpNamSinh.TabIndex = 4;
             // 
             // btn_SuaTT
             // 
@@ -180,7 +180,7 @@
             this.btn_SuaTT.Location = new System.Drawing.Point(229, 371);
             this.btn_SuaTT.Name = "btn_SuaTT";
             this.btn_SuaTT.Size = new System.Drawing.Size(127, 29);
-            this.btn_SuaTT.TabIndex = 14;
+            this.btn_SuaTT.TabIndex = 9;
             this.btn_SuaTT.Text = "&Sửa Thông Tin";
             this.btn_SuaTT.UseVisualStyleBackColor = false;
             this.btn_SuaTT.Click += new System.EventHandler(this.btn_SuaTT_Click);
@@ -191,7 +191,7 @@
             this.txtQuyenHan.Location = new System.Drawing.Point(304, 331);
             this.txtQuyenHan.Name = "txtQuyenHan";
             this.txtQuyenHan.Size = new System.Drawing.Size(156, 23);
-            this.txtQuyenHan.TabIndex = 13;
+            this.txtQuyenHan.TabIndex = 8;
             this.txtQuyenHan.Click += new System.EventHandler(this.txtQuyenHan_Click);
             // 
             // lblQuyenHan
@@ -208,7 +208,7 @@
             this.txtSoDienThoai.Location = new System.Drawing.Point(304, 259);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(156, 23);
-            this.txtSoDienThoai.TabIndex = 11;
+            this.txtSoDienThoai.TabIndex = 6;
             // 
             // lblSoDienThoai
             // 
@@ -242,7 +242,7 @@
             this.txtHoTen.Location = new System.Drawing.Point(304, 128);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(156, 23);
-            this.txtHoTen.TabIndex = 5;
+            this.txtHoTen.TabIndex = 3;
             // 
             // lblHoTen
             // 
@@ -258,7 +258,7 @@
             this.txtPass.Location = new System.Drawing.Point(304, 84);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(156, 23);
-            this.txtPass.TabIndex = 3;
+            this.txtPass.TabIndex = 2;
             // 
             // lblPassword
             // 

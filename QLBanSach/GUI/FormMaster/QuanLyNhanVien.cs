@@ -297,7 +297,7 @@ namespace GUI.FormMaster
             {
                 dgvThongTinNguoiDung.DataSource = dtTenNV;
             }
-            else if (dtTrangThai.Rows.Count > 0)
+            if (dtTrangThai.Rows.Count > 0)
             {
                 dgvThongTinNguoiDung.DataSource= dtTrangThai;
             }

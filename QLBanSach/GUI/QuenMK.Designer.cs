@@ -57,7 +57,7 @@
             this.dtpNgayGui.Location = new System.Drawing.Point(285, 133);
             this.dtpNgayGui.Name = "dtpNgayGui";
             this.dtpNgayGui.Size = new System.Drawing.Size(216, 29);
-            this.dtpNgayGui.TabIndex = 32;
+            this.dtpNgayGui.TabIndex = 1;
             // 
             // btn_Gui
             // 
@@ -93,7 +93,7 @@
             this.btn_Gui.PressedOutline = System.Drawing.Color.Empty;
             this.btn_Gui.Rounding = new System.Windows.Forms.Padding(8);
             this.btn_Gui.Size = new System.Drawing.Size(87, 45);
-            this.btn_Gui.TabIndex = 31;
+            this.btn_Gui.TabIndex = 5;
             this.btn_Gui.TextOffset = new System.Drawing.Point(0, 0);
             this.btn_Gui.Click += new System.EventHandler(this.btn_Gui_Click);
             // 
@@ -118,7 +118,7 @@
             this.txtNoiDung.PlaceholderText = "";
             this.txtNoiDung.Rounding = 8;
             this.txtNoiDung.Size = new System.Drawing.Size(216, 102);
-            this.txtNoiDung.TabIndex = 30;
+            this.txtNoiDung.TabIndex = 4;
             this.txtNoiDung.TextOffset = new System.Drawing.Size(0, 0);
             this.txtNoiDung.UnderlinedStyle = false;
             // 
@@ -153,7 +153,7 @@
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.Rounding = 8;
             this.txtEmail.Size = new System.Drawing.Size(216, 39);
-            this.txtEmail.TabIndex = 28;
+            this.txtEmail.TabIndex = 3;
             this.txtEmail.TextOffset = new System.Drawing.Size(0, 0);
             this.txtEmail.UnderlinedStyle = false;
             // 
@@ -188,7 +188,7 @@
             this.txtSoDienThoai.PlaceholderText = "";
             this.txtSoDienThoai.Rounding = 8;
             this.txtSoDienThoai.Size = new System.Drawing.Size(216, 39);
-            this.txtSoDienThoai.TabIndex = 26;
+            this.txtSoDienThoai.TabIndex = 2;
             this.txtSoDienThoai.TextOffset = new System.Drawing.Size(0, 0);
             this.txtSoDienThoai.UnderlinedStyle = false;
             // 
@@ -234,7 +234,7 @@
             this.txtUsername.PlaceholderText = "";
             this.txtUsername.Rounding = 8;
             this.txtUsername.Size = new System.Drawing.Size(216, 39);
-            this.txtUsername.TabIndex = 23;
+            this.txtUsername.TabIndex = 0;
             this.txtUsername.TextOffset = new System.Drawing.Size(0, 0);
             this.txtUsername.UnderlinedStyle = false;
             // 
@@ -294,7 +294,7 @@
             this.btnBackLogin.PressedOutline = System.Drawing.Color.Empty;
             this.btnBackLogin.Rounding = new System.Windows.Forms.Padding(8);
             this.btnBackLogin.Size = new System.Drawing.Size(66, 40);
-            this.btnBackLogin.TabIndex = 20;
+            this.btnBackLogin.TabIndex = 6;
             this.btnBackLogin.TextOffset = new System.Drawing.Point(0, 0);
             this.btnBackLogin.Click += new System.EventHandler(this.btnBackLogin_Click);
             // 

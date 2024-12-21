@@ -35,8 +35,8 @@ namespace GUI
             llblFogotPass.BackColor = Color.Transparent;
             btn_Login.Parent = picLogin;
             btn_Login.BackColor = Color.Transparent;
-            btn_Register.Parent = picLogin;
-            btn_Register.BackColor = Color.Transparent;
+            lblDangKy.Parent = picLogin;
+            lblDangKy.BackColor = Color.Transparent;
            
         }
 
@@ -179,6 +179,41 @@ namespace GUI
         private void txtPassword_ContentChanged(object sender, EventArgs e)
         {
             txtPassword.PasswordChar = true;
+        }
+
+      
+
+        private void DangNhap_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lblDangKy_MouseHover(object sender, EventArgs e)
+        {
+            lblDangKy.BackColor = Color.Orange;
+        }
+
+        private void lblDangKy_MouseLeave(object sender, EventArgs e)
+        {
+            lblDangKy.BackColor = Color.Transparent;
+        }
+
+        private void llblFogotPass_MouseHover(object sender, EventArgs e)
+        {
+            llblFogotPass.BackColor = Color.Orange;
+        }
+
+        private void llblFogotPass_MouseLeave(object sender, EventArgs e)
+        {
+            llblFogotPass.BackColor = Color.Transparent;
+        }
+
+        private void lblDangKy_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            DangKy dangKy = new DangKy();
+            dangKy.ShowDialog();
+            this.Show();
         }
     }
 }

@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using DTO;
 using DAL;
 using System.Data;
+using static System.Net.Mime.MediaTypeNames;
+using System.IO;
 namespace BLL
 {
     public class BookBLL
@@ -76,6 +78,7 @@ namespace BLL
             string Add_OK = bookMng.ThemSach(addBook);
             return Add_OK;
         }
+        
         // sua sach
         public string SuaTTSach(Sach editBook)
         {

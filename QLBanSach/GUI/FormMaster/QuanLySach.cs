@@ -43,8 +43,6 @@ namespace GUI.FormMaster
             dtSach = bookBLLs.HienThiDuLieuBook();
             dgvThongTinSach.DataSource = dtSach;
             dgvThongTinSach.Columns["Gia"].DefaultCellStyle.Format = "C2";
-
-
         }
         private void XoaThongTin()
         {
@@ -80,9 +78,10 @@ namespace GUI.FormMaster
         {
             vt = e.RowIndex;
             if (vt == -1) return;
-            dgvThongTinSach.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
+            dgvThongTinSach.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DataRow dtRow = dtSach.Rows[vt];
+
             txtMaSach.Text = dtRow["MaSach"].ToString().Trim();
             txtTenSach.Text = dtRow["TenSach"].ToString().Trim();
             numberGia.Value = decimal.Parse(dtRow["Gia"].ToString().Trim());
@@ -90,6 +89,7 @@ namespace GUI.FormMaster
             string[] a = dtRow["NamSanXuat"].ToString().Trim().Split(' ');
             string[] ns = a[0].Split('/');
             dtpNamSanXuat.Value = new DateTime(int.Parse(ns[2]), int.Parse(ns[0]), int.Parse(ns[1]));
+
             if (dtRow["MaLoaiSach"].ToString().Trim() == "HH")
             {
                 cbTheLoai.SelectedIndex = 0;
@@ -108,10 +108,12 @@ namespace GUI.FormMaster
             }
             else 
                 cbTheLoai.SelectedIndex = 4;
+
             // lấy đường dẫn ảnh từ cột "Poster"
             string relativePath = dtRow["Poster"].ToString().Trim();
             string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, relativePath);
             txtDuongDanAnh.Text = relativePath;
+
             //Kiểm tra ảnh tồn tại k
             if (File.Exists(fullPath))
             {
@@ -191,6 +193,7 @@ namespace GUI.FormMaster
             XoaThongTin();
             
         }
+        
         private void ThemThongTinSach()
         {
             BookBLL bookBLL = new BookBLL();

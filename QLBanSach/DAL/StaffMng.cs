@@ -51,11 +51,11 @@ namespace DAL
             SqlConnectDatabase db = new SqlConnectDatabase();
             db.MoKetNoi();
             SqlConnection sqlCon = db.sqlCon;
-            string sql = "select * from tbl_NhanVien where TrangThai = @trangThai";
+            string sql = "select * from tbl_NhanVien where TrangThai LIKE @trangThai";
             SqlCommand cmd = new SqlCommand(sql, sqlCon);
             try
             {
-                cmd.Parameters.AddWithValue("@trangThai", trangThai) ;
+                cmd.Parameters.AddWithValue("@trangThai","%" + trangThai + "%");
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 adapter.Fill(dt);
             }

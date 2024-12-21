@@ -102,7 +102,7 @@
             this.cbGioiTinh.Location = new System.Drawing.Point(277, 181);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(200, 28);
-            this.cbGioiTinh.TabIndex = 17;
+            this.cbGioiTinh.TabIndex = 4;
             // 
             // dtpNgaySinh
             // 
@@ -113,7 +113,7 @@
             this.dtpNgaySinh.Location = new System.Drawing.Point(277, 141);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(200, 26);
-            this.dtpNgaySinh.TabIndex = 16;
+            this.dtpNgaySinh.TabIndex = 3;
             this.dtpNgaySinh.Value = new System.DateTime(2024, 11, 27, 19, 30, 15, 0);
             // 
             // btnRegister
@@ -125,7 +125,7 @@
             this.btnRegister.Location = new System.Drawing.Point(242, 312);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(109, 33);
-            this.btnRegister.TabIndex = 14;
+            this.btnRegister.TabIndex = 7;
             this.btnRegister.Text = "&Đăng ký";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -137,7 +137,7 @@
             this.txtSoDienThoai.Location = new System.Drawing.Point(277, 264);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(200, 26);
-            this.txtSoDienThoai.TabIndex = 13;
+            this.txtSoDienThoai.TabIndex = 6;
             // 
             // lblSoDienThoai
             // 
@@ -156,7 +156,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(277, 224);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(200, 26);
-            this.txtDiaChi.TabIndex = 11;
+            this.txtDiaChi.TabIndex = 5;
             // 
             // lblDiaChi
             // 
@@ -194,7 +194,7 @@
             this.txtFullname.Location = new System.Drawing.Point(277, 104);
             this.txtFullname.Name = "txtFullname";
             this.txtFullname.Size = new System.Drawing.Size(200, 26);
-            this.txtFullname.TabIndex = 5;
+            this.txtFullname.TabIndex = 2;
             // 
             // lblFullname
             // 
@@ -212,7 +212,7 @@
             this.txtpassword.Location = new System.Drawing.Point(277, 68);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(200, 26);
-            this.txtpassword.TabIndex = 3;
+            this.txtpassword.TabIndex = 1;
             // 
             // lblPassword
             // 
@@ -230,7 +230,7 @@
             this.txtUsername.Location = new System.Drawing.Point(276, 31);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(200, 26);
-            this.txtUsername.TabIndex = 1;
+            this.txtUsername.TabIndex = 0;
             // 
             // lblUsername
             // 
@@ -276,7 +276,7 @@
             this.btnBackLogin.PressedOutline = System.Drawing.Color.Empty;
             this.btnBackLogin.Rounding = new System.Windows.Forms.Padding(8);
             this.btnBackLogin.Size = new System.Drawing.Size(66, 40);
-            this.btnBackLogin.TabIndex = 4;
+            this.btnBackLogin.TabIndex = 0;
             this.btnBackLogin.TextOffset = new System.Drawing.Point(0, 0);
             this.btnBackLogin.Click += new System.EventHandler(this.btnBackLogin_Click_1);
             // 

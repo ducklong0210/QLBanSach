@@ -148,7 +148,7 @@
             this.btn_Thoat.PressedOutline = System.Drawing.Color.Empty;
             this.btn_Thoat.Rounding = new System.Windows.Forms.Padding(8);
             this.btn_Thoat.Size = new System.Drawing.Size(86, 52);
-            this.btn_Thoat.TabIndex = 24;
+            this.btn_Thoat.TabIndex = 3;
             this.btn_Thoat.TextOffset = new System.Drawing.Point(0, 0);
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click_1);
             // 
@@ -186,7 +186,7 @@
             this.btn_Xoa.PressedOutline = System.Drawing.Color.Empty;
             this.btn_Xoa.Rounding = new System.Windows.Forms.Padding(8);
             this.btn_Xoa.Size = new System.Drawing.Size(99, 52);
-            this.btn_Xoa.TabIndex = 23;
+            this.btn_Xoa.TabIndex = 2;
             this.btn_Xoa.TextOffset = new System.Drawing.Point(0, 0);
             this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click_1);
             // 
@@ -224,7 +224,7 @@
             this.btn_Sua.PressedOutline = System.Drawing.Color.Empty;
             this.btn_Sua.Rounding = new System.Windows.Forms.Padding(8);
             this.btn_Sua.Size = new System.Drawing.Size(99, 52);
-            this.btn_Sua.TabIndex = 22;
+            this.btn_Sua.TabIndex = 1;
             this.btn_Sua.TextOffset = new System.Drawing.Point(0, 0);
             this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click_1);
             // 
@@ -262,7 +262,7 @@
             this.btn_Them.PressedOutline = System.Drawing.Color.Empty;
             this.btn_Them.Rounding = new System.Windows.Forms.Padding(8);
             this.btn_Them.Size = new System.Drawing.Size(99, 52);
-            this.btn_Them.TabIndex = 21;
+            this.btn_Them.TabIndex = 0;
             this.btn_Them.TextOffset = new System.Drawing.Point(0, 0);
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click_1);
             // 
@@ -424,7 +424,7 @@
             this.btn_TimKiem.PressedOutline = System.Drawing.Color.Empty;
             this.btn_TimKiem.Rounding = new System.Windows.Forms.Padding(8);
             this.btn_TimKiem.Size = new System.Drawing.Size(49, 45);
-            this.btn_TimKiem.TabIndex = 6;
+            this.btn_TimKiem.TabIndex = 2;
             this.btn_TimKiem.TextOffset = new System.Drawing.Point(0, 0);
             this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click_1);
             // 
@@ -435,7 +435,7 @@
             this.btnReset.Location = new System.Drawing.Point(682, 2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(45, 45);
-            this.btnReset.TabIndex = 5;
+            this.btnReset.TabIndex = 3;
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
@@ -444,7 +444,7 @@
             this.txtTKHoTen.Location = new System.Drawing.Point(342, 14);
             this.txtTKHoTen.Name = "txtTKHoTen";
             this.txtTKHoTen.Size = new System.Drawing.Size(133, 23);
-            this.txtTKHoTen.TabIndex = 3;
+            this.txtTKHoTen.TabIndex = 1;
             // 
             // lblTKHoTen
             // 
@@ -460,7 +460,7 @@
             this.txtTKUser.Location = new System.Drawing.Point(103, 14);
             this.txtTKUser.Name = "txtTKUser";
             this.txtTKUser.Size = new System.Drawing.Size(133, 23);
-            this.txtTKUser.TabIndex = 1;
+            this.txtTKUser.TabIndex = 0;
             // 
             // lblTKUser
             // 
@@ -540,7 +540,7 @@
             this.txtmaND.Name = "txtmaND";
             this.txtmaND.ReadOnly = true;
             this.txtmaND.Size = new System.Drawing.Size(124, 23);
-            this.txtmaND.TabIndex = 20;
+            this.txtmaND.TabIndex = 0;
             // 
             // label10
             // 
@@ -558,7 +558,7 @@
             this.btn_Huy.Location = new System.Drawing.Point(176, 440);
             this.btn_Huy.Name = "btn_Huy";
             this.btn_Huy.Size = new System.Drawing.Size(84, 51);
-            this.btn_Huy.TabIndex = 18;
+            this.btn_Huy.TabIndex = 10;
             this.btn_Huy.Text = "&Hủy";
             this.btn_Huy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Huy.UseVisualStyleBackColor = true;
@@ -571,7 +571,7 @@
             this.btn_Luu.Location = new System.Drawing.Point(43, 440);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(82, 51);
-            this.btn_Luu.TabIndex = 17;
+            this.btn_Luu.TabIndex = 9;
             this.btn_Luu.Text = "&Lưu";
             this.btn_Luu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Luu.UseVisualStyleBackColor = true;
@@ -588,7 +588,7 @@
             this.cbGioiTinh.Location = new System.Drawing.Point(136, 291);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(124, 24);
-            this.cbGioiTinh.TabIndex = 16;
+            this.cbGioiTinh.TabIndex = 6;
             // 
             // dtpNamSinh
             // 
@@ -597,7 +597,7 @@
             this.dtpNamSinh.Location = new System.Drawing.Point(136, 250);
             this.dtpNamSinh.Name = "dtpNamSinh";
             this.dtpNamSinh.Size = new System.Drawing.Size(124, 23);
-            this.dtpNamSinh.TabIndex = 15;
+            this.dtpNamSinh.TabIndex = 5;
             // 
             // label9
             // 
@@ -613,7 +613,7 @@
             this.txtSoDienThoai.Location = new System.Drawing.Point(136, 378);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(124, 23);
-            this.txtSoDienThoai.TabIndex = 13;
+            this.txtSoDienThoai.TabIndex = 8;
             // 
             // label8
             // 
@@ -629,7 +629,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(136, 334);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(124, 23);
-            this.txtDiaChi.TabIndex = 11;
+            this.txtDiaChi.TabIndex = 7;
             // 
             // label7
             // 
@@ -654,7 +654,7 @@
             this.txtMaQuyen.Location = new System.Drawing.Point(136, 161);
             this.txtMaQuyen.Name = "txtMaQuyen";
             this.txtMaQuyen.Size = new System.Drawing.Size(124, 23);
-            this.txtMaQuyen.TabIndex = 7;
+            this.txtMaQuyen.TabIndex = 3;
             this.txtMaQuyen.Click += new System.EventHandler(this.txtMaQuyen_Click);
             // 
             // label5
@@ -671,7 +671,7 @@
             this.txtHoTen.Location = new System.Drawing.Point(136, 206);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(124, 23);
-            this.txtHoTen.TabIndex = 5;
+            this.txtHoTen.TabIndex = 4;
             // 
             // label4
             // 
@@ -687,7 +687,7 @@
             this.txtPass.Location = new System.Drawing.Point(136, 116);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(124, 23);
-            this.txtPass.TabIndex = 3;
+            this.txtPass.TabIndex = 2;
             // 
             // label3
             // 

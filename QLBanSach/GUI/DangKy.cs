@@ -72,8 +72,6 @@ namespace GUI
             {
             switch (CheckRegister)
                 {
-                
-                
                 case "register_access":
                     {
                        XoaDuLieu();
