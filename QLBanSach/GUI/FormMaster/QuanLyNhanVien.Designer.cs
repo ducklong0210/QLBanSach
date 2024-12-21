@@ -33,6 +33,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.grbThongTinChiTiet = new System.Windows.Forms.GroupBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.lblPass = new System.Windows.Forms.Label();
+            this.btn_Huy = new System.Windows.Forms.Button();
+            this.btn_Luu = new System.Windows.Forms.Button();
             this.cbTrangThai = new System.Windows.Forms.ComboBox();
             this.dtpNamSinh = new System.Windows.Forms.DateTimePicker();
             this.lblNamSinh = new System.Windows.Forms.Label();
@@ -50,26 +54,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl = new System.Windows.Forms.Panel();
             this.grbChucNang = new System.Windows.Forms.GroupBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.grbThongTinNguoiDung = new System.Windows.Forms.GroupBox();
-            this.dgvThongTinNguoiDung = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.grbTimKiem = new System.Windows.Forms.GroupBox();
-            this.cbTKTrangThai = new System.Windows.Forms.ComboBox();
-            this.lblTKTrangThai = new System.Windows.Forms.Label();
-            this.txtTKTenNV = new System.Windows.Forms.TextBox();
-            this.lblTKTenNV = new System.Windows.Forms.Label();
-            this.btn_Huy = new System.Windows.Forms.Button();
-            this.btn_Luu = new System.Windows.Forms.Button();
             this.btn_TamNgung = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btn_TimKiem = new System.Windows.Forms.Button();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.grbThongTinNguoiDung = new System.Windows.Forms.GroupBox();
+            this.dgvThongTinNguoiDung = new System.Windows.Forms.DataGridView();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,6 +70,14 @@
             this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QueQuan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.grbTimKiem = new System.Windows.Forms.GroupBox();
+            this.cbTKTrangThai = new System.Windows.Forms.ComboBox();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btn_TimKiem = new System.Windows.Forms.Button();
+            this.lblTKTrangThai = new System.Windows.Forms.Label();
+            this.txtTKTenNV = new System.Windows.Forms.TextBox();
+            this.lblTKTenNV = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.grbThongTinChiTiet.SuspendLayout();
@@ -126,7 +126,7 @@
             // 
             this.grbThongTinChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.grbThongTinChiTiet.Controls.Add(this.txtPass);
-            this.grbThongTinChiTiet.Controls.Add(this.label2);
+            this.grbThongTinChiTiet.Controls.Add(this.lblPass);
             this.grbThongTinChiTiet.Controls.Add(this.btn_Huy);
             this.grbThongTinChiTiet.Controls.Add(this.btn_Luu);
             this.grbThongTinChiTiet.Controls.Add(this.cbTrangThai);
@@ -150,6 +150,48 @@
             this.grbThongTinChiTiet.TabIndex = 0;
             this.grbThongTinChiTiet.TabStop = false;
             this.grbThongTinChiTiet.Text = "Thông Tin Chi Tiết";
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(152, 95);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(124, 23);
+            this.txtPass.TabIndex = 20;
+            // 
+            // lblPass
+            // 
+            this.lblPass.AutoSize = true;
+            this.lblPass.Location = new System.Drawing.Point(15, 97);
+            this.lblPass.Name = "lblPass";
+            this.lblPass.Size = new System.Drawing.Size(47, 17);
+            this.lblPass.TabIndex = 19;
+            this.lblPass.Text = "Pass :";
+            // 
+            // btn_Huy
+            // 
+            this.btn_Huy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Huy.Image = global::GUI.Properties.Resources.multiply__1_;
+            this.btn_Huy.Location = new System.Drawing.Point(176, 440);
+            this.btn_Huy.Name = "btn_Huy";
+            this.btn_Huy.Size = new System.Drawing.Size(84, 51);
+            this.btn_Huy.TabIndex = 18;
+            this.btn_Huy.Text = "&Hủy";
+            this.btn_Huy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Huy.UseVisualStyleBackColor = true;
+            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
+            // 
+            // btn_Luu
+            // 
+            this.btn_Luu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Luu.Image = global::GUI.Properties.Resources.diskette;
+            this.btn_Luu.Location = new System.Drawing.Point(43, 440);
+            this.btn_Luu.Name = "btn_Luu";
+            this.btn_Luu.Size = new System.Drawing.Size(82, 51);
+            this.btn_Luu.TabIndex = 17;
+            this.btn_Luu.Text = "&Lưu";
+            this.btn_Luu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // cbTrangThai
             // 
@@ -310,6 +352,76 @@
             this.grbChucNang.TabStop = false;
             this.grbChucNang.Text = "Chức Năng";
             // 
+            // btn_TamNgung
+            // 
+            this.btn_TamNgung.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_TamNgung.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_TamNgung.Image = global::GUI.Properties.Resources.delete;
+            this.btn_TamNgung.Location = new System.Drawing.Point(480, 24);
+            this.btn_TamNgung.Name = "btn_TamNgung";
+            this.btn_TamNgung.Size = new System.Drawing.Size(103, 52);
+            this.btn_TamNgung.TabIndex = 25;
+            this.btn_TamNgung.Text = "Tạm &Ngưng";
+            this.btn_TamNgung.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_TamNgung.UseVisualStyleBackColor = false;
+            this.btn_TamNgung.Click += new System.EventHandler(this.btn_TamNgung_Click);
+            // 
+            // btn_Thoat
+            // 
+            this.btn_Thoat.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_Thoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Thoat.Image = global::GUI.Properties.Resources.log_out;
+            this.btn_Thoat.Location = new System.Drawing.Point(647, 24);
+            this.btn_Thoat.Name = "btn_Thoat";
+            this.btn_Thoat.Size = new System.Drawing.Size(86, 52);
+            this.btn_Thoat.TabIndex = 24;
+            this.btn_Thoat.Text = "&Exit";
+            this.btn_Thoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Thoat.UseVisualStyleBackColor = false;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            // 
+            // btn_Xoa
+            // 
+            this.btn_Xoa.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Xoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Xoa.Image = global::GUI.Properties.Resources.delete;
+            this.btn_Xoa.Location = new System.Drawing.Point(343, 24);
+            this.btn_Xoa.Name = "btn_Xoa";
+            this.btn_Xoa.Size = new System.Drawing.Size(83, 52);
+            this.btn_Xoa.TabIndex = 23;
+            this.btn_Xoa.Text = "&Xóa";
+            this.btn_Xoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Xoa.UseVisualStyleBackColor = false;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
+            // 
+            // btn_Sua
+            // 
+            this.btn_Sua.BackColor = System.Drawing.Color.PowderBlue;
+            this.btn_Sua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Sua.Image = global::GUI.Properties.Resources.edit;
+            this.btn_Sua.Location = new System.Drawing.Point(196, 24);
+            this.btn_Sua.Name = "btn_Sua";
+            this.btn_Sua.Size = new System.Drawing.Size(91, 52);
+            this.btn_Sua.TabIndex = 22;
+            this.btn_Sua.Text = "&Sửa";
+            this.btn_Sua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Sua.UseVisualStyleBackColor = false;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
+            // 
+            // btn_Them
+            // 
+            this.btn_Them.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_Them.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Them.Image = global::GUI.Properties.Resources.user;
+            this.btn_Them.Location = new System.Drawing.Point(44, 24);
+            this.btn_Them.Name = "btn_Them";
+            this.btn_Them.Size = new System.Drawing.Size(99, 52);
+            this.btn_Them.TabIndex = 21;
+            this.btn_Them.Text = "&Thêm";
+            this.btn_Them.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Them.UseVisualStyleBackColor = false;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.grbThongTinNguoiDung);
@@ -351,208 +463,6 @@
             this.dgvThongTinNguoiDung.Size = new System.Drawing.Size(771, 308);
             this.dgvThongTinNguoiDung.TabIndex = 0;
             this.dgvThongTinNguoiDung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinNguoiDung_CellContentClick);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panel4.Controls.Add(this.grbTimKiem);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 58);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(777, 51);
-            this.panel4.TabIndex = 1;
-            // 
-            // grbTimKiem
-            // 
-            this.grbTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.grbTimKiem.Controls.Add(this.cbTKTrangThai);
-            this.grbTimKiem.Controls.Add(this.btnReset);
-            this.grbTimKiem.Controls.Add(this.btn_TimKiem);
-            this.grbTimKiem.Controls.Add(this.lblTKTrangThai);
-            this.grbTimKiem.Controls.Add(this.txtTKTenNV);
-            this.grbTimKiem.Controls.Add(this.lblTKTenNV);
-            this.grbTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grbTimKiem.Location = new System.Drawing.Point(0, 0);
-            this.grbTimKiem.Name = "grbTimKiem";
-            this.grbTimKiem.Size = new System.Drawing.Size(777, 51);
-            this.grbTimKiem.TabIndex = 0;
-            this.grbTimKiem.TabStop = false;
-            this.grbTimKiem.Text = "Tìm Kiếm";
-            // 
-            // cbTKTrangThai
-            // 
-            this.cbTKTrangThai.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbTKTrangThai.FormattingEnabled = true;
-            this.cbTKTrangThai.Items.AddRange(new object[] {
-            "Hoạt Động",
-            "Tạm Ngưng",
-            "Đã Nghỉ",
-            "Không Xác Định"});
-            this.cbTKTrangThai.Location = new System.Drawing.Point(410, 19);
-            this.cbTKTrangThai.Name = "cbTKTrangThai";
-            this.cbTKTrangThai.Size = new System.Drawing.Size(128, 24);
-            this.cbTKTrangThai.TabIndex = 12;
-            // 
-            // lblTKTrangThai
-            // 
-            this.lblTKTrangThai.AutoSize = true;
-            this.lblTKTrangThai.Location = new System.Drawing.Point(315, 22);
-            this.lblTKTrangThai.Name = "lblTKTrangThai";
-            this.lblTKTrangThai.Size = new System.Drawing.Size(86, 17);
-            this.lblTKTrangThai.TabIndex = 8;
-            this.lblTKTrangThai.Text = "Trạng Thái :";
-            // 
-            // txtTKTenNV
-            // 
-            this.txtTKTenNV.Location = new System.Drawing.Point(147, 19);
-            this.txtTKTenNV.Name = "txtTKTenNV";
-            this.txtTKTenNV.Size = new System.Drawing.Size(133, 23);
-            this.txtTKTenNV.TabIndex = 7;
-            // 
-            // lblTKTenNV
-            // 
-            this.lblTKTenNV.AutoSize = true;
-            this.lblTKTenNV.Location = new System.Drawing.Point(29, 20);
-            this.lblTKTenNV.Name = "lblTKTenNV";
-            this.lblTKTenNV.Size = new System.Drawing.Size(111, 17);
-            this.lblTKTenNV.TabIndex = 6;
-            this.lblTKTenNV.Text = "Tên Nhân Viên :";
-            // 
-            // btn_Huy
-            // 
-            this.btn_Huy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Huy.Image = global::GUI.Properties.Resources.multiply__1_;
-            this.btn_Huy.Location = new System.Drawing.Point(176, 440);
-            this.btn_Huy.Name = "btn_Huy";
-            this.btn_Huy.Size = new System.Drawing.Size(84, 51);
-            this.btn_Huy.TabIndex = 18;
-            this.btn_Huy.Text = "Hủy";
-            this.btn_Huy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Huy.UseVisualStyleBackColor = true;
-            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
-            // 
-            // btn_Luu
-            // 
-            this.btn_Luu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Luu.Image = global::GUI.Properties.Resources.diskette;
-            this.btn_Luu.Location = new System.Drawing.Point(43, 440);
-            this.btn_Luu.Name = "btn_Luu";
-            this.btn_Luu.Size = new System.Drawing.Size(82, 51);
-            this.btn_Luu.TabIndex = 17;
-            this.btn_Luu.Text = "Lưu";
-            this.btn_Luu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Luu.UseVisualStyleBackColor = true;
-            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
-            // 
-            // btn_TamNgung
-            // 
-            this.btn_TamNgung.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_TamNgung.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TamNgung.Image = global::GUI.Properties.Resources.delete;
-            this.btn_TamNgung.Location = new System.Drawing.Point(480, 24);
-            this.btn_TamNgung.Name = "btn_TamNgung";
-            this.btn_TamNgung.Size = new System.Drawing.Size(103, 52);
-            this.btn_TamNgung.TabIndex = 25;
-            this.btn_TamNgung.Text = "Tạm Ngưng";
-            this.btn_TamNgung.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_TamNgung.UseVisualStyleBackColor = false;
-            this.btn_TamNgung.Click += new System.EventHandler(this.btn_TamNgung_Click);
-            // 
-            // btn_Thoat
-            // 
-            this.btn_Thoat.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_Thoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Thoat.Image = global::GUI.Properties.Resources.log_out;
-            this.btn_Thoat.Location = new System.Drawing.Point(647, 24);
-            this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(86, 52);
-            this.btn_Thoat.TabIndex = 24;
-            this.btn_Thoat.Text = "Exit";
-            this.btn_Thoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Thoat.UseVisualStyleBackColor = false;
-            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
-            // 
-            // btn_Xoa
-            // 
-            this.btn_Xoa.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_Xoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Xoa.Image = global::GUI.Properties.Resources.delete;
-            this.btn_Xoa.Location = new System.Drawing.Point(343, 24);
-            this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(83, 52);
-            this.btn_Xoa.TabIndex = 23;
-            this.btn_Xoa.Text = "Xóa";
-            this.btn_Xoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Xoa.UseVisualStyleBackColor = false;
-            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
-            // 
-            // btn_Sua
-            // 
-            this.btn_Sua.BackColor = System.Drawing.Color.PowderBlue;
-            this.btn_Sua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Sua.Image = global::GUI.Properties.Resources.edit;
-            this.btn_Sua.Location = new System.Drawing.Point(196, 24);
-            this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(91, 52);
-            this.btn_Sua.TabIndex = 22;
-            this.btn_Sua.Text = "Sửa";
-            this.btn_Sua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Sua.UseVisualStyleBackColor = false;
-            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
-            // 
-            // btn_Them
-            // 
-            this.btn_Them.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btn_Them.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Them.Image = global::GUI.Properties.Resources.user;
-            this.btn_Them.Location = new System.Drawing.Point(44, 24);
-            this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(99, 52);
-            this.btn_Them.TabIndex = 21;
-            this.btn_Them.Text = "Thêm";
-            this.btn_Them.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Them.UseVisualStyleBackColor = false;
-            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
-            // 
-            // btnReset
-            // 
-            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReset.Image = global::GUI.Properties.Resources.reset;
-            this.btnReset.Location = new System.Drawing.Point(701, 10);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(47, 37);
-            this.btnReset.TabIndex = 11;
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // btn_TimKiem
-            // 
-            this.btn_TimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TimKiem.Image = global::GUI.Properties.Resources.search;
-            this.btn_TimKiem.Location = new System.Drawing.Point(580, 9);
-            this.btn_TimKiem.Name = "btn_TimKiem";
-            this.btn_TimKiem.Size = new System.Drawing.Size(52, 42);
-            this.btn_TimKiem.TabIndex = 10;
-            this.btn_TimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_TimKiem.UseVisualStyleBackColor = true;
-            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
-            // 
-            // txtPass
-            // 
-            this.txtPass.Location = new System.Drawing.Point(152, 95);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(124, 23);
-            this.txtPass.TabIndex = 20;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 97);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 17);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Pass :";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // MaNV
             // 
@@ -612,6 +522,95 @@
             this.TrangThai.HeaderText = "Trạng Thái";
             this.TrangThai.Name = "TrangThai";
             this.TrangThai.ReadOnly = true;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel4.Controls.Add(this.grbTimKiem);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 58);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(777, 51);
+            this.panel4.TabIndex = 1;
+            // 
+            // grbTimKiem
+            // 
+            this.grbTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.grbTimKiem.Controls.Add(this.cbTKTrangThai);
+            this.grbTimKiem.Controls.Add(this.btnReset);
+            this.grbTimKiem.Controls.Add(this.btn_TimKiem);
+            this.grbTimKiem.Controls.Add(this.lblTKTrangThai);
+            this.grbTimKiem.Controls.Add(this.txtTKTenNV);
+            this.grbTimKiem.Controls.Add(this.lblTKTenNV);
+            this.grbTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grbTimKiem.Location = new System.Drawing.Point(0, 0);
+            this.grbTimKiem.Name = "grbTimKiem";
+            this.grbTimKiem.Size = new System.Drawing.Size(777, 51);
+            this.grbTimKiem.TabIndex = 0;
+            this.grbTimKiem.TabStop = false;
+            this.grbTimKiem.Text = "Tìm Kiếm";
+            // 
+            // cbTKTrangThai
+            // 
+            this.cbTKTrangThai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbTKTrangThai.FormattingEnabled = true;
+            this.cbTKTrangThai.Items.AddRange(new object[] {
+            "Hoạt Động",
+            "Tạm Ngưng",
+            "Đã Nghỉ",
+            "Không Xác Định"});
+            this.cbTKTrangThai.Location = new System.Drawing.Point(410, 19);
+            this.cbTKTrangThai.Name = "cbTKTrangThai";
+            this.cbTKTrangThai.Size = new System.Drawing.Size(128, 24);
+            this.cbTKTrangThai.TabIndex = 12;
+            // 
+            // btnReset
+            // 
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReset.Image = global::GUI.Properties.Resources.reset;
+            this.btnReset.Location = new System.Drawing.Point(701, 10);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(47, 37);
+            this.btnReset.TabIndex = 11;
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btn_TimKiem
+            // 
+            this.btn_TimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_TimKiem.Image = global::GUI.Properties.Resources.search;
+            this.btn_TimKiem.Location = new System.Drawing.Point(580, 9);
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.Size = new System.Drawing.Size(52, 42);
+            this.btn_TimKiem.TabIndex = 10;
+            this.btn_TimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_TimKiem.UseVisualStyleBackColor = true;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
+            // 
+            // lblTKTrangThai
+            // 
+            this.lblTKTrangThai.AutoSize = true;
+            this.lblTKTrangThai.Location = new System.Drawing.Point(315, 22);
+            this.lblTKTrangThai.Name = "lblTKTrangThai";
+            this.lblTKTrangThai.Size = new System.Drawing.Size(86, 17);
+            this.lblTKTrangThai.TabIndex = 8;
+            this.lblTKTrangThai.Text = "Trạng Thái :";
+            // 
+            // txtTKTenNV
+            // 
+            this.txtTKTenNV.Location = new System.Drawing.Point(147, 19);
+            this.txtTKTenNV.Name = "txtTKTenNV";
+            this.txtTKTenNV.Size = new System.Drawing.Size(133, 23);
+            this.txtTKTenNV.TabIndex = 7;
+            // 
+            // lblTKTenNV
+            // 
+            this.lblTKTenNV.AutoSize = true;
+            this.lblTKTenNV.Location = new System.Drawing.Point(29, 20);
+            this.lblTKTenNV.Name = "lblTKTenNV";
+            this.lblTKTenNV.Size = new System.Drawing.Size(111, 17);
+            this.lblTKTenNV.TabIndex = 6;
+            this.lblTKTenNV.Text = "Tên Nhân Viên :";
             // 
             // QuanLyNhanVien
             // 
@@ -688,7 +687,7 @@
         private System.Windows.Forms.Label lblTKTenNV;
         private System.Windows.Forms.ComboBox cbTKTrangThai;
         private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pass;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;

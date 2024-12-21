@@ -17,17 +17,14 @@ namespace BLL
         public string CheckRegister(NguoiDung taiKhoan)
         {
             
-            //Kiểm tra thông tin người dùng nhập vào hay chưa
-            if(taiKhoan.Username == "" || taiKhoan.Pass == "" || taiKhoan.HoVaTen == "" 
-                || taiKhoan.GioiTinh == "" || taiKhoan.DiaChi == "" || taiKhoan.SoDienThoai == "")
-            {
-                return "error_user_null";
-            }
-            
              string checkRegister = userRegister.CheckRegister(taiKhoan);
             return checkRegister;
         }
-        
-        
+        public bool CheckAccount(string ac)
+        {
+            bool checkTKMK = Regex.IsMatch(ac, "^[a-zA-Z0-9]{6,24}$");
+            return checkTKMK;
+        }
+
     }
 }

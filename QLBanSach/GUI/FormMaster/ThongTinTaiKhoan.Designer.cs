@@ -181,12 +181,13 @@
             this.btn_SuaTT.Name = "btn_SuaTT";
             this.btn_SuaTT.Size = new System.Drawing.Size(127, 29);
             this.btn_SuaTT.TabIndex = 14;
-            this.btn_SuaTT.Text = "Sửa Thông Tin";
+            this.btn_SuaTT.Text = "&Sửa Thông Tin";
             this.btn_SuaTT.UseVisualStyleBackColor = false;
             this.btn_SuaTT.Click += new System.EventHandler(this.btn_SuaTT_Click);
             // 
             // txtQuyenHan
             // 
+            this.txtQuyenHan.Cursor = System.Windows.Forms.Cursors.No;
             this.txtQuyenHan.Location = new System.Drawing.Point(304, 331);
             this.txtQuyenHan.Name = "txtQuyenHan";
             this.txtQuyenHan.Size = new System.Drawing.Size(156, 23);

@@ -499,7 +499,7 @@
   <Width>8.44792in</Width>
   <Page>
     <PageHeader>
-      <Height>1.02778in</Height>
+      <Height>1.13195in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -510,7 +510,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>  Hóa Đơn</Value>
+                  <Value>  Thống Kê Hóa Đơn</Value>
                   <Style>
                     <FontFamily>Times New Roman</FontFamily>
                     <FontSize>30pt</FontSize>
@@ -522,10 +522,10 @@
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>0.48959in</Top>
-          <Left>3.29042in</Left>
-          <Height>0.46875in</Height>
-          <Width>2.01041in</Width>
+          <Top>0.50348in</Top>
+          <Left>2.81125in</Left>
+          <Height>0.57291in</Height>
+          <Width>3.78124in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -541,8 +541,8 @@
           <Value>header</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.01389in</Top>
-          <Height>1.01389in</Height>
-          <Width>2.02084in</Width>
+          <Height>1.11806in</Height>
+          <Width>2.28126in</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>

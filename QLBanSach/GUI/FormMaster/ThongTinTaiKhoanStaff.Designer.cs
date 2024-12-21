@@ -118,7 +118,7 @@
             this.btn_SuaTT.Name = "btn_SuaTT";
             this.btn_SuaTT.Size = new System.Drawing.Size(127, 29);
             this.btn_SuaTT.TabIndex = 14;
-            this.btn_SuaTT.Text = "Sửa Thông Tin";
+            this.btn_SuaTT.Text = "&Sửa Thông Tin";
             this.btn_SuaTT.UseVisualStyleBackColor = false;
             // 
             // txtCCCD

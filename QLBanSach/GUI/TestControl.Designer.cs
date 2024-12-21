@@ -42,6 +42,8 @@
             this.cuiComboBox1 = new CuoreUI.Controls.cuiComboBox();
             this.cuiTextBox3 = new cuiTextBox();
             this.cuiTextBox4 = new cuiTextBox();
+            this.cuiComboBox2 = new CuoreUI.Controls.cuiComboBox();
+            this.cuiCheckbox2 = new CuoreUI.Controls.cuiCheckbox();
             this.SuspendLayout();
             // 
             // metroCheckBox1
@@ -85,7 +87,7 @@
             this.cuiButton1.ImageExpand = new System.Drawing.Point(0, 0);
             this.cuiButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.cuiButton1.ImageTint = System.Drawing.Color.White;
-            this.cuiButton1.Location = new System.Drawing.Point(269, 188);
+            this.cuiButton1.Location = new System.Drawing.Point(236, 151);
             this.cuiButton1.Name = "cuiButton1";
             this.cuiButton1.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
             this.cuiButton1.NormalOutline = System.Drawing.Color.Empty;
@@ -108,7 +110,7 @@
             this.cuiCheckbox1.CheckedSymbolColor = System.Drawing.Color.White;
             this.cuiCheckbox1.Content = "cuiCheckbox";
             this.cuiCheckbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.cuiCheckbox1.Location = new System.Drawing.Point(188, 252);
+            this.cuiCheckbox1.Location = new System.Drawing.Point(236, 250);
             this.cuiCheckbox1.MinimumSize = new System.Drawing.Size(16, 16);
             this.cuiCheckbox1.Name = "cuiCheckbox1";
             this.cuiCheckbox1.OutlineStyle = true;
@@ -307,12 +309,61 @@
             this.cuiTextBox4.UsePasswordChar = true;
             this.cuiTextBox4.ContentChanged += new System.EventHandler(this.cuiTextBox4_ContentChanged);
             // 
+            // cuiComboBox2
+            // 
+            this.cuiComboBox2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.cuiComboBox2.ButtonHoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiComboBox2.ButtonHoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiComboBox2.ButtonNormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiComboBox2.ButtonNormalOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiComboBox2.ButtonPressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiComboBox2.ButtonPressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiComboBox2.DropDownBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
+            this.cuiComboBox2.DropDownOutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cuiComboBox2.ExpandArrowColor = System.Drawing.Color.White;
+            this.cuiComboBox2.ForeColor = System.Drawing.SystemColors.Control;
+            this.cuiComboBox2.Items = new string[0];
+            this.cuiComboBox2.Location = new System.Drawing.Point(131, 18);
+            this.cuiComboBox2.Name = "cuiComboBox2";
+            this.cuiComboBox2.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cuiComboBox2.OutlineThickness = 1F;
+            this.cuiComboBox2.Rounding = 0;
+            this.cuiComboBox2.Size = new System.Drawing.Size(169, 45);
+            this.cuiComboBox2.TabIndex = 14;
+            this.cuiComboBox2.Load += new System.EventHandler(this.cuiComboBox2_Load);
+            // 
+            // cuiCheckbox2
+            // 
+            this.cuiCheckbox2.Checked = false;
+            this.cuiCheckbox2.CheckedBackground = System.Drawing.Color.Black;
+            this.cuiCheckbox2.CheckedForeground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiCheckbox2.CheckedOutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiCheckbox2.CheckedSymbolColor = System.Drawing.Color.White;
+            this.cuiCheckbox2.Content = "cuiCheckbox";
+            this.cuiCheckbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.cuiCheckbox2.Location = new System.Drawing.Point(131, 233);
+            this.cuiCheckbox2.MinimumSize = new System.Drawing.Size(16, 16);
+            this.cuiCheckbox2.Name = "cuiCheckbox2";
+            this.cuiCheckbox2.OutlineStyle = true;
+            this.cuiCheckbox2.OutlineThickness = 1F;
+            this.cuiCheckbox2.Rounding = 5;
+            this.cuiCheckbox2.ShowSymbols = true;
+            this.cuiCheckbox2.Size = new System.Drawing.Size(16, 16);
+            this.cuiCheckbox2.TabIndex = 15;
+            this.cuiCheckbox2.ThumbSizeModifier = new System.Drawing.Size(0, 0);
+            this.cuiCheckbox2.UncheckedBackground = System.Drawing.Color.Black;
+            this.cuiCheckbox2.UncheckedForeground = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.cuiCheckbox2.UncheckedOutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.cuiCheckbox2.UncheckedSymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
             // TestControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cuiCheckbox2);
+            this.Controls.Add(this.cuiComboBox2);
             this.Controls.Add(this.cuiTextBox4);
             this.Controls.Add(this.cuiTextBox3);
             this.Controls.Add(this.cuiComboBox1);
@@ -350,5 +401,7 @@
         private CuoreUI.Controls.cuiComboBox cuiComboBox1;
         private cuiTextBox cuiTextBox3;
         private cuiTextBox cuiTextBox4;
+        private CuoreUI.Controls.cuiComboBox cuiComboBox2;
+        private CuoreUI.Controls.cuiCheckbox cuiCheckbox2;
     }
 }

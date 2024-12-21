@@ -26,5 +26,10 @@ namespace GUI
         {
 
         }
+
+        private void cuiComboBox2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace GUI.FormMaster
 {
     public partial class QuanLyNhanVien : Form
     {
+        //khởi tạo đối tượng người dùng
         private NguoiDung taiKhoan;
         private DataTable dtNhanVien;
         NhanVien staff = new NhanVien();
@@ -170,7 +171,7 @@ namespace GUI.FormMaster
             {
                 case "delete_Success":
                     MessageBox.Show("Xóa nhân viên thành công!");
-                    HienThiThongTin();  // Cập nhật lại DataGridView
+                    HienThiThongTin();  
                     btn_Sua.Enabled = false;
                     btn_Xoa.Enabled = false;
                     return;
@@ -286,18 +287,10 @@ namespace GUI.FormMaster
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
+            
             string tenNV = txtTKTenNV.Text.Trim();
             string trangThai = cbTKTrangThai.Text.Trim();
-            // Kiểm tra giá trị ComboBox
-            //if (cbTKTrangThai.SelectedIndex == 0)
-            //    trangThai = "Hoạt Động";
-            //else if (cbTKTrangThai.SelectedIndex == 1)
-            //    trangThai = "Tạm Ngưng";
-            //else if (cbTKTrangThai.SelectedIndex == 2)
-            //    trangThai = "Đã Nghỉ";
-            //else
-            //    trangThai = "Không Xác Định";
-            
+            // khoi tao bien datatable để hiển thị lên dgv
             DataTable dtTenNV = nhanVienBLL.TimKiemTenNV(tenNV);
             DataTable dtTrangThai = nhanVienBLL.TimKiemTrangThai(trangThai);
             if (dtTenNV.Rows.Count > 0)
@@ -388,16 +381,10 @@ namespace GUI.FormMaster
         {
             HienThiThongTin();
             grbThongTinChiTiet.Enabled = false;
-           
             btn_Them.Enabled = true;
             btn_Sua.Enabled = false;
             btn_Xoa.Enabled = false;
             btn_TamNgung.Enabled = false;
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

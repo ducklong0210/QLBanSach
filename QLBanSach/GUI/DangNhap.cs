@@ -40,7 +40,6 @@ namespace GUI
            
         }
 
-       
         // sự kiện đăng nhập
         NguoiDung user = new NguoiDung();
         TaiKhoanBLL tkBLL = new TaiKhoanBLL();
@@ -113,6 +112,7 @@ namespace GUI
                 MessageBox.Show("Mã quyền không hợp lệ.");
             }
         }
+        //lay thong tin nguoi dung
         private void FrmQuanTriVien()
         {
             string username = txtUsername.Content;
@@ -129,6 +129,7 @@ namespace GUI
                 MessageBox.Show("Không tìm thấy người dùng với username này.");
             }
         }
+        // lay thong tin nguoi dung
         private void FrmNguoiDung()
         {
             string username = txtUsername.Content;
@@ -164,12 +165,6 @@ namespace GUI
             MessageBox.Show("Chúc mừng bạn đã quay vào ô mất tài khoản -.-\n XIN CHIA BUỒN");
         }
 
-        private void btn_Exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        
         // sự kiện nuts đâng ký
         private void btn_Register_Click(object sender, EventArgs e)
         {
@@ -179,21 +174,9 @@ namespace GUI
             this.Show();
         }
 
-        private void DangNhap_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void txtPassword_ContentChanged(object sender, EventArgs e)
         {
             txtPassword.PasswordChar = true;
         }
-
-        private void lblHeaderLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }

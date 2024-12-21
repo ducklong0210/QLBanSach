@@ -65,6 +65,7 @@ namespace GUI.FormMaster
             users.DiaChi = txtDiaChi.Text;
             users.SoDienThoai = txtSoDienThoai.Text;
 
+
             // Kiểm tra giới tính
             if (cbGioiTinh.SelectedIndex == 0)
                 users.GioiTinh = "Nam";
@@ -150,7 +151,6 @@ namespace GUI.FormMaster
                         MessageBox.Show("Chỉnh sửa thông tin người dùng thành công!");
                         XoaThongTin();
                         HienThiThongTin();
-
                         grbThongTinChiTiet.Enabled = false;
                         btn_Sua.Enabled = false;
                         btn_Xoa.Enabled = false;
@@ -171,8 +171,6 @@ namespace GUI.FormMaster
                     return;
             }
         }
-        
-        
 
         private void XoaDuLieuUser()
         {
@@ -235,8 +233,6 @@ namespace GUI.FormMaster
                 btn_Xoa.Enabled = false;
             }    
         }
-
-       
         
         private void QuanLyNguoiDung_Load(object sender, EventArgs e)
         {
@@ -244,7 +240,6 @@ namespace GUI.FormMaster
             btn_Sua.Enabled = false;
             btn_Xoa.Enabled = false;
             grbThongTinChiTiet.Enabled = false;
-            
         }
         int vt = -1;
 

@@ -50,23 +50,28 @@ namespace GUI
             string CheckRegister = DKBLL.CheckRegister(user);
 
             // Sự kiện yêu cầu người dùng nhập đúng định dạng tài khoản và mật khẩu
-            if (!CheckAccount(tentk))
+            if (string.IsNullOrWhiteSpace(txtUsername.Text) ||
+                string.IsNullOrWhiteSpace(txtFullname.Text) ||
+                string.IsNullOrWhiteSpace(txtpassword.Text) ||
+                string.IsNullOrWhiteSpace(txtSoDienThoai.Text))
+            {
+                MessageBox.Show("Bạn chưa điền đầy đủ thông tin!");
+
+            }
+            else if (!DKBLL.CheckAccount(tentk))
             {
                 MessageBox.Show("Vui lòng nhập tên tài khoản có độ dài 6-24 ký tự, với các ký tự và chữ số,chữ hoa và chữ thường!");
             }
-            else if (!CheckAccount(pass))
+            else if (!DKBLL.CheckAccount(pass))
             {
                 MessageBox.Show("Vui lòng mật khẩu có độ dài 6-24 ký tự, với các ký tự và chữ số,chữ hoa và chữ thường!");
             }
-            else { 
-
-            switch (CheckRegister)
+            else
             {
-                case "error_user_null":
-                    {
-                        MessageBox.Show("Bạn chưa điền đầy đủ thông tin!");
-                        return;
-                    }
+            switch (CheckRegister)
+                {
+                
+                
                 case "register_access":
                     {
                        XoaDuLieu();
@@ -100,10 +105,7 @@ namespace GUI
             }
         }
         // sự kiện check xem tài khoản và mật khẩu nhập đúng định dạng chưa
-        public bool CheckAccount(string ac)
-        {
-            return Regex.IsMatch(ac, "^[a-zA-Z0-9]{6,24}$");
-        }
+        
        
 
         //Sự kiện xóa dữ liệu khi người dùng đăng ký tài khoản thành công
@@ -116,11 +118,6 @@ namespace GUI
             txtSoDienThoai.Clear();
             cbGioiTinh.SelectedIndex = 2;
             dtpNgaySinh.Value = DateTime.Now;
-        }
-
-        private void DangKy_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnBackLogin_Click_1(object sender, EventArgs e)

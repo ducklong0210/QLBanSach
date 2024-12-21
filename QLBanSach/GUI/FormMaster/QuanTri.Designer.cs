@@ -35,6 +35,7 @@
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlQuanLy = new System.Windows.Forms.Panel();
+            this.btnThongTinTaiKhoanNV = new System.Windows.Forms.Button();
             this.btn_QuanLyNhanVien = new System.Windows.Forms.Button();
             this.btn_QuanLyLoaiSach = new System.Windows.Forms.Button();
             this.lblHeader = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.btn_BaoCaoThongKe = new System.Windows.Forms.Button();
             this.btn_QLSach = new System.Windows.Forms.Button();
             this.btn_QLNguoiDung = new System.Windows.Forms.Button();
-            this.btnThongTinTaiKhoanNV = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlQuanLy.SuspendLayout();
             this.SuspendLayout();
@@ -120,8 +120,23 @@
             this.pnlQuanLy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlQuanLy.Location = new System.Drawing.Point(0, 85);
             this.pnlQuanLy.Name = "pnlQuanLy";
-            this.pnlQuanLy.Size = new System.Drawing.Size(728, 469);
+            this.pnlQuanLy.Size = new System.Drawing.Size(728, 337);
             this.pnlQuanLy.TabIndex = 1;
+            // 
+            // btnThongTinTaiKhoanNV
+            // 
+            this.btnThongTinTaiKhoanNV.BackColor = System.Drawing.Color.Silver;
+            this.btnThongTinTaiKhoanNV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongTinTaiKhoanNV.Image = global::GUI.Properties.Resources.info_account;
+            this.btnThongTinTaiKhoanNV.Location = new System.Drawing.Point(59, 342);
+            this.btnThongTinTaiKhoanNV.Name = "btnThongTinTaiKhoanNV";
+            this.btnThongTinTaiKhoanNV.Size = new System.Drawing.Size(158, 105);
+            this.btnThongTinTaiKhoanNV.TabIndex = 10;
+            this.btnThongTinTaiKhoanNV.Text = "Thông Tin Tài Khoản Nhân Viên";
+            this.btnThongTinTaiKhoanNV.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnThongTinTaiKhoanNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnThongTinTaiKhoanNV.UseVisualStyleBackColor = false;
+            this.btnThongTinTaiKhoanNV.Click += new System.EventHandler(this.btnThongTinTaiKhoanNV_Click);
             // 
             // btn_QuanLyNhanVien
             // 
@@ -224,27 +239,12 @@
             this.btn_QLNguoiDung.UseVisualStyleBackColor = false;
             this.btn_QLNguoiDung.Click += new System.EventHandler(this.btn_QLNguoiDung_Click);
             // 
-            // btnThongTinTaiKhoanNV
-            // 
-            this.btnThongTinTaiKhoanNV.BackColor = System.Drawing.Color.Silver;
-            this.btnThongTinTaiKhoanNV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThongTinTaiKhoanNV.Image = global::GUI.Properties.Resources.info_account;
-            this.btnThongTinTaiKhoanNV.Location = new System.Drawing.Point(59, 342);
-            this.btnThongTinTaiKhoanNV.Name = "btnThongTinTaiKhoanNV";
-            this.btnThongTinTaiKhoanNV.Size = new System.Drawing.Size(158, 105);
-            this.btnThongTinTaiKhoanNV.TabIndex = 10;
-            this.btnThongTinTaiKhoanNV.Text = "Thông Tin Tài Khoản Nhân Viên";
-            this.btnThongTinTaiKhoanNV.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnThongTinTaiKhoanNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnThongTinTaiKhoanNV.UseVisualStyleBackColor = false;
-            this.btnThongTinTaiKhoanNV.Click += new System.EventHandler(this.btnThongTinTaiKhoanNV_Click);
-            // 
             // QuanTri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(728, 554);
+            this.ClientSize = new System.Drawing.Size(728, 422);
             this.Controls.Add(this.pnlQuanLy);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

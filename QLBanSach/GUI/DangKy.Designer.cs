@@ -93,6 +93,7 @@
             // 
             // cbGioiTinh
             // 
+            this.cbGioiTinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbGioiTinh.FormattingEnabled = true;
             this.cbGioiTinh.Items.AddRange(new object[] {
             "Nam",
@@ -106,6 +107,7 @@
             // dtpNgaySinh
             // 
             this.dtpNgaySinh.CalendarMonthBackground = System.Drawing.SystemColors.Info;
+            this.dtpNgaySinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpNgaySinh.CustomFormat = "";
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgaySinh.Location = new System.Drawing.Point(277, 141);
@@ -117,13 +119,14 @@
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(175)))), ((int)(((byte)(225)))));
+            this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRegister.Location = new System.Drawing.Point(242, 312);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(109, 33);
             this.btnRegister.TabIndex = 14;
-            this.btnRegister.Text = "Đăng ký";
+            this.btnRegister.Text = "&Đăng ký";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
@@ -249,6 +252,7 @@
             this.btnBackLogin.CheckedImageTint = System.Drawing.Color.White;
             this.btnBackLogin.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
             this.btnBackLogin.Content = "Trở Lại";
+            this.btnBackLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBackLogin.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnBackLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnBackLogin.ForeColor = System.Drawing.Color.Cornsilk;
@@ -282,7 +286,7 @@
             this.picBackRegister.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picBackRegister.Location = new System.Drawing.Point(0, 0);
             this.picBackRegister.Name = "picBackRegister";
-            this.picBackRegister.Size = new System.Drawing.Size(721, 444);
+            this.picBackRegister.Size = new System.Drawing.Size(720, 429);
             this.picBackRegister.TabIndex = 0;
             this.picBackRegister.TabStop = false;
             // 
@@ -291,7 +295,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(721, 444);
+            this.ClientSize = new System.Drawing.Size(720, 429);
             this.Controls.Add(this.btnBackLogin);
             this.Controls.Add(this.grbRegister);
             this.Controls.Add(this.lblHeaderRegister);
@@ -302,7 +306,6 @@
             this.Name = "DangKy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Ký Tài Khoản";
-            this.Load += new System.EventHandler(this.DangKy_Load);
             this.grbRegister.ResumeLayout(false);
             this.grbRegister.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBackRegister)).EndInit();

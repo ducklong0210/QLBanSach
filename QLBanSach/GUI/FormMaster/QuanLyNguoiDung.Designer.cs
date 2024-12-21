@@ -559,7 +559,7 @@
             this.btn_Huy.Name = "btn_Huy";
             this.btn_Huy.Size = new System.Drawing.Size(84, 51);
             this.btn_Huy.TabIndex = 18;
-            this.btn_Huy.Text = "Hủy";
+            this.btn_Huy.Text = "&Hủy";
             this.btn_Huy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Huy.UseVisualStyleBackColor = true;
             this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
@@ -572,7 +572,7 @@
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(82, 51);
             this.btn_Luu.TabIndex = 17;
-            this.btn_Luu.Text = "Lưu";
+            this.btn_Luu.Text = "&Lưu";
             this.btn_Luu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Luu.UseVisualStyleBackColor = true;
             this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);

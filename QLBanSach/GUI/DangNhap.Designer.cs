@@ -37,12 +37,11 @@ namespace GUI
             this.chkShowPass = new System.Windows.Forms.CheckBox();
             this.llblFogotPass = new System.Windows.Forms.LinkLabel();
             this.panelLogin = new System.Windows.Forms.Panel();
-            this.btn_Exit = new System.Windows.Forms.Button();
+            this.picLoginAvt = new System.Windows.Forms.PictureBox();
             this.btn_Login = new CuoreUI.Controls.cuiButton();
             this.btn_Register = new CuoreUI.Controls.cuiButton();
             this.txtUsername = new CuoreUI.Controls.cuiTextBox2();
             this.txtPassword = new CuoreUI.Controls.cuiTextBox2();
-            this.picLoginAvt = new System.Windows.Forms.PictureBox();
             this.picLogin = new System.Windows.Forms.PictureBox();
             this.panelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLoginAvt)).BeginInit();
@@ -84,14 +83,13 @@ namespace GUI
             this.lblHeaderLogin.Size = new System.Drawing.Size(388, 29);
             this.lblHeaderLogin.TabIndex = 0;
             this.lblHeaderLogin.Text = "Welcome to Book Store Group 4";
-            this.lblHeaderLogin.Click += new System.EventHandler(this.lblHeaderLogin_Click);
             // 
             // chkShowPass
             // 
             this.chkShowPass.AutoSize = true;
             this.chkShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkShowPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkShowPass.Location = new System.Drawing.Point(477, 237);
+            this.chkShowPass.Location = new System.Drawing.Point(476, 237);
             this.chkShowPass.Name = "chkShowPass";
             this.chkShowPass.Size = new System.Drawing.Size(149, 22);
             this.chkShowPass.TabIndex = 2;
@@ -104,7 +102,7 @@ namespace GUI
             this.llblFogotPass.AutoSize = true;
             this.llblFogotPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblFogotPass.LinkColor = System.Drawing.SystemColors.Desktop;
-            this.llblFogotPass.Location = new System.Drawing.Point(269, 237);
+            this.llblFogotPass.Location = new System.Drawing.Point(378, 354);
             this.llblFogotPass.MaximumSize = new System.Drawing.Size(161, 0);
             this.llblFogotPass.Name = "llblFogotPass";
             this.llblFogotPass.Size = new System.Drawing.Size(161, 22);
@@ -121,17 +119,15 @@ namespace GUI
             this.panelLogin.Size = new System.Drawing.Size(242, 153);
             this.panelLogin.TabIndex = 1;
             // 
-            // btn_Exit
+            // picLoginAvt
             // 
-            this.btn_Exit.BackColor = System.Drawing.Color.Brown;
-            this.btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Exit.Location = new System.Drawing.Point(675, 0);
-            this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(59, 39);
-            this.btn_Exit.TabIndex = 6;
-            this.btn_Exit.Text = "Exit";
-            this.btn_Exit.UseVisualStyleBackColor = false;
-            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
+            this.picLoginAvt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picLoginAvt.Image = global::GUI.Properties.Resources.book_login;
+            this.picLoginAvt.Location = new System.Drawing.Point(0, 0);
+            this.picLoginAvt.Name = "picLoginAvt";
+            this.picLoginAvt.Size = new System.Drawing.Size(242, 153);
+            this.picLoginAvt.TabIndex = 0;
+            this.picLoginAvt.TabStop = false;
             // 
             // btn_Login
             // 
@@ -156,7 +152,7 @@ namespace GUI
             this.btn_Login.ImageExpand = new System.Drawing.Point(0, 0);
             this.btn_Login.ImageOffset = new System.Drawing.Point(0, 0);
             this.btn_Login.ImageTint = System.Drawing.Color.White;
-            this.btn_Login.Location = new System.Drawing.Point(502, 305);
+            this.btn_Login.Location = new System.Drawing.Point(498, 283);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(255)))), ((int)(((byte)(216)))));
             this.btn_Login.NormalOutline = System.Drawing.Color.Empty;
@@ -193,7 +189,7 @@ namespace GUI
             this.btn_Register.ImageExpand = new System.Drawing.Point(0, 0);
             this.btn_Register.ImageOffset = new System.Drawing.Point(0, 0);
             this.btn_Register.ImageTint = System.Drawing.Color.White;
-            this.btn_Register.Location = new System.Drawing.Point(298, 305);
+            this.btn_Register.Location = new System.Drawing.Point(309, 283);
             this.btn_Register.Name = "btn_Register";
             this.btn_Register.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(255)))), ((int)(((byte)(216)))));
             this.btn_Register.NormalOutline = System.Drawing.Color.Empty;
@@ -257,16 +253,6 @@ namespace GUI
             this.txtPassword.UnderlinedStyle = false;
             this.txtPassword.ContentChanged += new System.EventHandler(this.txtPassword_ContentChanged);
             // 
-            // picLoginAvt
-            // 
-            this.picLoginAvt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picLoginAvt.Image = global::GUI.Properties.Resources.book_login;
-            this.picLoginAvt.Location = new System.Drawing.Point(0, 0);
-            this.picLoginAvt.Name = "picLoginAvt";
-            this.picLoginAvt.Size = new System.Drawing.Size(242, 153);
-            this.picLoginAvt.TabIndex = 0;
-            this.picLoginAvt.TabStop = false;
-            // 
             // picLogin
             // 
             this.picLogin.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -286,7 +272,6 @@ namespace GUI
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btn_Register);
             this.Controls.Add(this.btn_Login);
-            this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.panelLogin);
             this.Controls.Add(this.llblFogotPass);
             this.Controls.Add(this.chkShowPass);
@@ -300,7 +285,6 @@ namespace GUI
             this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
-            this.Load += new System.EventHandler(this.DangNhap_Load);
             this.panelLogin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLoginAvt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogin)).EndInit();
@@ -319,7 +303,6 @@ namespace GUI
         private System.Windows.Forms.LinkLabel llblFogotPass;
         private System.Windows.Forms.Panel panelLogin;
         private System.Windows.Forms.PictureBox picLoginAvt;
-        private System.Windows.Forms.Button btn_Exit;
         private CuoreUI.Controls.cuiButton btn_Login;
         private CuoreUI.Controls.cuiButton btn_Register;
         private CuoreUI.Controls.cuiTextBox2 txtUsername;

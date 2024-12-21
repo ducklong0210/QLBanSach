@@ -27,7 +27,6 @@ namespace DAL
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "proc_Register";
             int kq = 0;
-
             try
             {
                 cmd.Parameters.AddWithValue("@user", taikhoan.getUsername());
@@ -37,7 +36,6 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@gioiTinh", taikhoan.getGioiTinh());
                 cmd.Parameters.AddWithValue("@diaChi", taikhoan.getDiaChi());
                 cmd.Parameters.AddWithValue("@soDienThoai", taikhoan.getSoDienThoai());
-
                 kq = cmd.ExecuteNonQuery();
                    
             }
