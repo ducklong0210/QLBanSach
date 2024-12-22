@@ -183,12 +183,14 @@ namespace GUI.FormMaster
         private void btnSua_Click(object sender, EventArgs e)
         {
             chucNang = 2;
+            txtMaLoaiSach.Enabled = false;
             grbThongTinChiTiet.Enabled = true;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             chucNang = 1;
+            txtMaLoaiSach.Enabled = true;
             grbThongTinChiTiet.Enabled = true;
             XoaThongTin();
         }

@@ -146,6 +146,7 @@ namespace GUI.FormMaster
         private void ThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
             LoadThongTin();
+            txtQuyenHan.Enabled = false;
         }
 
        

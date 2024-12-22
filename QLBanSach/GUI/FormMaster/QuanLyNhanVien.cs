@@ -187,6 +187,7 @@ namespace GUI.FormMaster
         {
             chucNang = 1;
             XoaThongTin();
+            txtMaNV.Enabled = true;
             grbThongTinChiTiet.Enabled = true;
             btn_Sua.Enabled = false;
             btn_Xoa.Enabled = false;
@@ -196,12 +197,14 @@ namespace GUI.FormMaster
         private void btn_Sua_Click(object sender, EventArgs e)
         {
             chucNang = 2;
+            txtMaNV.Enabled = false;
             grbThongTinChiTiet.Enabled = true;
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
             XoaNhanVien();
+            txtMaNV.Enabled = false;
         }
 
         private void btn_TamNgung_Click(object sender, EventArgs e)

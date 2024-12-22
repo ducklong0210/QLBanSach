@@ -95,7 +95,7 @@ namespace DAL
             {
                 db.DongKetNoi();
             }
-                return password;
+            return password;
         }
     }
 }

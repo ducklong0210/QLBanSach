@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\QLBanSach\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{52B2C338-2462-4CBF-B420-0827EB2584CE}|GUI\\GUI.csproj|c:\\users\\user\\source\\repos\\qlbansach\\gui\\quenmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52B2C338-2462-4CBF-B420-0827EB2584CE}|GUI\\GUI.csproj|solutionrelative:gui\\quenmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52B2C338-2462-4CBF-B420-0827EB2584CE}|GUI\\GUI.csproj|c:\\users\\user\\source\\repos\\qlbansach\\gui\\formmaster\\quanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52B2C338-2462-4CBF-B420-0827EB2584CE}|GUI\\GUI.csproj|solutionrelative:gui\\formmaster\\quanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52B2C338-2462-4CBF-B420-0827EB2584CE}|GUI\\GUI.csproj|c:\\users\\user\\source\\repos\\qlbansach\\gui\\formmaster\\quanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{52B2C338-2462-4CBF-B420-0827EB2584CE}|GUI\\GUI.csproj|solutionrelative:gui\\formmaster\\quanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52B2C338-2462-4CBF-B420-0827EB2584CE}|GUI\\GUI.csproj|c:\\users\\user\\source\\repos\\qlbansach\\gui\\formmaster\\quanlysach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{52B2C338-2462-4CBF-B420-0827EB2584CE}|GUI\\GUI.csproj|solutionrelative:gui\\formmaster\\quanlysach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{81E23197-2DE6-4B8F-9B6E-B8253FBC4A58}|BLL\\BLL.csproj|c:\\users\\user\\source\\repos\\qlbansach\\bll\\forgotpassbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81E23197-2DE6-4B8F-9B6E-B8253FBC4A58}|BLL\\BLL.csproj|solutionrelative:bll\\forgotpassbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52B2C338-2462-4CBF-B420-0827EB2584CE}|GUI\\GUI.csproj|c:\\users\\user\\source\\repos\\qlbansach\\gui\\formmaster\\thongtintaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52B2C338-2462-4CBF-B420-0827EB2584CE}|GUI\\GUI.csproj|solutionrelative:gui\\formmaster\\thongtintaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52B2C338-2462-4CBF-B420-0827EB2584CE}|GUI\\GUI.csproj|c:\\users\\user\\source\\repos\\qlbansach\\gui\\formmaster\\thongtintaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{52B2C338-2462-4CBF-B420-0827EB2584CE}|GUI\\GUI.csproj|solutionrelative:gui\\formmaster\\thongtintaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52B2C338-2462-4CBF-B420-0827EB2584CE}|GUI\\GUI.csproj|c:\\users\\user\\source\\repos\\qlbansach\\gui\\quenmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52B2C338-2462-4CBF-B420-0827EB2584CE}|GUI\\GUI.csproj|solutionrelative:gui\\quenmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C4A4F6D-5D9C-4F00-ACC2-197B5A1661FE}|DAL\\DAL.csproj|c:\\users\\user\\source\\repos\\qlbansach\\dal\\forgotpassmng.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,19 +79,81 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "QuanLyNhanVien.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\FormMaster\\QuanLyNhanVien.cs",
+              "RelativeDocumentMoniker": "GUI\\FormMaster\\QuanLyNhanVien.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\FormMaster\\QuanLyNhanVien.cs*",
+              "RelativeToolTip": "GUI\\FormMaster\\QuanLyNhanVien.cs*",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAYwLsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T16:06:07.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QuanLyNhanVien.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\FormMaster\\QuanLyNhanVien.cs",
+              "RelativeDocumentMoniker": "GUI\\FormMaster\\QuanLyNhanVien.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\FormMaster\\QuanLyNhanVien.cs [Design]*",
+              "RelativeToolTip": "GUI\\FormMaster\\QuanLyNhanVien.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T16:06:05.253Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QuanLySach.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\FormMaster\\QuanLySach.cs",
+              "RelativeDocumentMoniker": "GUI\\FormMaster\\QuanLySach.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\FormMaster\\QuanLySach.cs [Design]",
+              "RelativeToolTip": "GUI\\FormMaster\\QuanLySach.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T16:06:00.63Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ThongTinTaiKhoan.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\FormMaster\\ThongTinTaiKhoan.cs",
+              "RelativeDocumentMoniker": "GUI\\FormMaster\\ThongTinTaiKhoan.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\FormMaster\\ThongTinTaiKhoan.cs",
+              "RelativeToolTip": "GUI\\FormMaster\\ThongTinTaiKhoan.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAYwJQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T16:01:42.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ThongTinTaiKhoan.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\FormMaster\\ThongTinTaiKhoan.cs",
+              "RelativeDocumentMoniker": "GUI\\FormMaster\\ThongTinTaiKhoan.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\FormMaster\\ThongTinTaiKhoan.cs [Design]",
+              "RelativeToolTip": "GUI\\FormMaster\\ThongTinTaiKhoan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T16:01:28.515Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "QuenMK.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\QuenMK.cs",
               "RelativeDocumentMoniker": "GUI\\QuenMK.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\QuenMK.cs*",
-              "RelativeToolTip": "GUI\\QuenMK.cs*",
-              "ViewState": "AgIAADUAAAAAAAAAAAAIwE4AAABHAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\QuenMK.cs",
+              "RelativeToolTip": "GUI\\QuenMK.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAADwvzAAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-22T11:08:16.251Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ForgotPassBLL.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\QLBanSach\\BLL\\ForgotPassBLL.cs",
               "RelativeDocumentMoniker": "BLL\\ForgotPassBLL.cs",
@@ -84,20 +166,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "ForgotPassMng.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\QLBanSach\\DAL\\ForgotPassMng.cs",
               "RelativeDocumentMoniker": "DAL\\ForgotPassMng.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\QLBanSach\\DAL\\ForgotPassMng.cs",
               "RelativeToolTip": "DAL\\ForgotPassMng.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAowEwAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-22T10:57:52.354Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "DangNhap.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\DangNhap.cs",
               "RelativeDocumentMoniker": "GUI\\DangNhap.cs",
@@ -109,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "DangNhap.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\DangNhap.cs",
               "RelativeDocumentMoniker": "GUI\\DangNhap.cs",
@@ -122,19 +204,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "QuenMK.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\QuenMK.cs",
               "RelativeDocumentMoniker": "GUI\\QuenMK.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\QuenMK.cs [Design]*",
-              "RelativeToolTip": "GUI\\QuenMK.cs [Design]*",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\QuenMK.cs [Design]",
+              "RelativeToolTip": "GUI\\QuenMK.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-21T17:45:18.4Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "UserMng.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\QLBanSach\\DAL\\UserMng.cs",
               "RelativeDocumentMoniker": "DAL\\UserMng.cs",
@@ -147,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "Resources.resx",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\QLBanSach\\GUI\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "GUI\\Properties\\Resources.resx",

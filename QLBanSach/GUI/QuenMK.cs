@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -56,8 +57,16 @@ namespace GUI
 
             string password = forgotPassBLL.GetPassword(users);
             string layLaiThanhCong = forgotPassBLL.GuiThongTin(quenMatKhau);
-            switch(layLaiThanhCong) 
+            if(btn_Error.Visible == true)
             {
+                MessageBox.Show("Tên tài khoản không tồn tại trong hệ thống.\n Mời bạn nhập lại tên tài khoản chính xác!",
+                        "Thông báo",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+            }
+            else
+              switch(layLaiThanhCong) 
+                {
                 case "error_forgotPass":
                     MessageBox.Show("Tên tài khoản không có trong hệ thống!\nVui lòng kiểm tra lại tên tài khoản.",
                         "Thông báo",
@@ -73,10 +82,9 @@ namespace GUI
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     XoaThongTin();
-                  
                     if (!string.IsNullOrEmpty(password))
                     {
-                        MessageBox.Show("Mật khẩu của bạn là: =>  " +"' "+ password +" '");
+                            MessageBox.Show("Mật khẩu của bạn là: =>  " +"'"+ password +"'");
                     }
                     else
                     {
@@ -90,7 +98,6 @@ namespace GUI
                     MessageBox.Show("Lỗi không xác định được: " + layLaiThanhCong);
                     return;
             }
-
         }
         private void CheckUsername()
         {
@@ -107,6 +114,7 @@ namespace GUI
                 lbl_Loi.Visible = false;
                 return;
             }
+            
             string check_OK = forgotPassBLL.CheckUsername(users);
             switch(check_OK)
             {
@@ -132,28 +140,6 @@ namespace GUI
                     return;
             }
         }
-        //private void CheckPassword()
-        //{
-        //    ForgotPassBLL forgotPassBLL = new ForgotPassBLL();
-        //    string users = txtUsername.Content.Trim();
-           
-        //    string check_OK = forgotPassBLL.CheckPassword(users);
-        //    switch (check_OK)
-        //    {
-        //        case password:
-        //            MessageBox.Show("Mật khẩu của bạn là: " + check_OK);
-        //            return;
-        //        case "error_Check":
-        //            MessageBox.Show("Tên tài khoản bạn nhập chưa tồn tại trên hệ thống!");
-        //            return;
-        //        case "null_Username":
-        //            MessageBox.Show("Lỗi username null");
-        //            return;
-        //        default:
-        //            MessageBox.Show("Lỗi không xác định được: " + check_OK);
-        //            return;
-        //    }
-        //}
 
         private void btn_Gui_Click(object sender, EventArgs e)
         {
@@ -162,7 +148,8 @@ namespace GUI
                 btn_Access.Visible = false;
                 btn_Error.Visible = false;
                 lbl_Loi.Visible = false;
-            }    
+            }
+            CheckUsername();
             LayLaiMK();
             
         }
