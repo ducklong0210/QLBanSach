@@ -532,6 +532,8 @@
     <Content Include="Image\nobitavahanhtinhmuongthu.jpg" />
     <Content Include="Image\vodaotrongkinhdoanhvacuocsong.png" />
     <None Include="Resources\background.jpg" />
+    <None Include="Resources\checked.png" />
+    <None Include="Resources\remove.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

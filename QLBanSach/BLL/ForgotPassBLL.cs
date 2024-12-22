@@ -35,5 +35,25 @@ namespace BLL
             string guiThanhCong = forgotPassMng.GuiThongTin(qmk);
             return guiThanhCong;
         }
+        public string CheckUsername(string username) 
+        {
+
+            if (string.IsNullOrEmpty(username)) 
+            {
+                return "null_Username";
+            }
+            string check_OK = forgotPassMng.CheckUsername(username);
+            return check_OK;
+        }
+        public string GetPassword(string username)
+        {
+
+            if (string.IsNullOrEmpty(username))
+            {
+                return "null_Username";
+            }
+            string check_OK = forgotPassMng.GetPassword(username);
+            return check_OK;
+        }
     }
 }

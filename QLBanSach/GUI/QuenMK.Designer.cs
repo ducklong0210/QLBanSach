@@ -42,6 +42,9 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.lblHeader = new System.Windows.Forms.Label();
             this.btnBackLogin = new CuoreUI.Controls.cuiButton();
+            this.lbl_Loi = new System.Windows.Forms.Label();
+            this.btn_Error = new CuoreUI.Controls.cuiButton();
+            this.btn_Access = new CuoreUI.Controls.cuiButton();
             this.picBackForgotPass = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBackForgotPass)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +57,7 @@
             this.dtpNgayGui.Enabled = false;
             this.dtpNgayGui.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayGui.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayGui.Location = new System.Drawing.Point(285, 133);
+            this.dtpNgayGui.Location = new System.Drawing.Point(285, 139);
             this.dtpNgayGui.Name = "dtpNgayGui";
             this.dtpNgayGui.Size = new System.Drawing.Size(216, 29);
             this.dtpNgayGui.TabIndex = 1;
@@ -121,13 +124,14 @@
             this.txtNoiDung.TabIndex = 4;
             this.txtNoiDung.TextOffset = new System.Drawing.Size(0, 0);
             this.txtNoiDung.UnderlinedStyle = false;
+            this.txtNoiDung.Click += new System.EventHandler(this.txtNoiDung_Click);
             // 
             // lblNoiDung
             // 
             this.lblNoiDung.AutoSize = true;
             this.lblNoiDung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.lblNoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoiDung.Location = new System.Drawing.Point(106, 299);
+            this.lblNoiDung.Location = new System.Drawing.Point(106, 305);
             this.lblNoiDung.Name = "lblNoiDung";
             this.lblNoiDung.Size = new System.Drawing.Size(100, 24);
             this.lblNoiDung.TabIndex = 29;
@@ -143,7 +147,7 @@
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.Gray;
-            this.txtEmail.Location = new System.Drawing.Point(285, 237);
+            this.txtEmail.Location = new System.Drawing.Point(285, 242);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Multiline = false;
             this.txtEmail.Name = "txtEmail";
@@ -156,13 +160,14 @@
             this.txtEmail.TabIndex = 3;
             this.txtEmail.TextOffset = new System.Drawing.Size(0, 0);
             this.txtEmail.UnderlinedStyle = false;
+            this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(106, 248);
+            this.lblEmail.Location = new System.Drawing.Point(106, 255);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(67, 24);
             this.lblEmail.TabIndex = 27;
@@ -178,7 +183,7 @@
             this.txtSoDienThoai.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoDienThoai.ForeColor = System.Drawing.Color.Gray;
-            this.txtSoDienThoai.Location = new System.Drawing.Point(285, 183);
+            this.txtSoDienThoai.Location = new System.Drawing.Point(285, 186);
             this.txtSoDienThoai.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDienThoai.Multiline = false;
             this.txtSoDienThoai.Name = "txtSoDienThoai";
@@ -191,13 +196,14 @@
             this.txtSoDienThoai.TabIndex = 2;
             this.txtSoDienThoai.TextOffset = new System.Drawing.Size(0, 0);
             this.txtSoDienThoai.UnderlinedStyle = false;
+            this.txtSoDienThoai.Click += new System.EventHandler(this.txtSoDienThoai_Click);
             // 
             // lblSoDienThoai
             // 
             this.lblSoDienThoai.AutoSize = true;
             this.lblSoDienThoai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.lblSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoDienThoai.Location = new System.Drawing.Point(100, 188);
+            this.lblSoDienThoai.Location = new System.Drawing.Point(100, 196);
             this.lblSoDienThoai.Name = "lblSoDienThoai";
             this.lblSoDienThoai.Size = new System.Drawing.Size(140, 24);
             this.lblSoDienThoai.TabIndex = 25;
@@ -208,7 +214,7 @@
             this.lblNgayGui.AutoSize = true;
             this.lblNgayGui.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.lblNgayGui.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayGui.Location = new System.Drawing.Point(100, 132);
+            this.lblNgayGui.Location = new System.Drawing.Point(100, 141);
             this.lblNgayGui.Name = "lblNgayGui";
             this.lblNgayGui.Size = new System.Drawing.Size(98, 24);
             this.lblNgayGui.TabIndex = 24;
@@ -298,6 +304,90 @@
             this.btnBackLogin.TextOffset = new System.Drawing.Point(0, 0);
             this.btnBackLogin.Click += new System.EventHandler(this.btnBackLogin_Click);
             // 
+            // lbl_Loi
+            // 
+            this.lbl_Loi.AutoSize = true;
+            this.lbl_Loi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.lbl_Loi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.lbl_Loi.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Loi.Location = new System.Drawing.Point(290, 110);
+            this.lbl_Loi.Name = "lbl_Loi";
+            this.lbl_Loi.Size = new System.Drawing.Size(20, 15);
+            this.lbl_Loi.TabIndex = 30;
+            this.lbl_Loi.Text = "loi";
+            // 
+            // btn_Error
+            // 
+            this.btn_Error.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Error.CheckButton = false;
+            this.btn_Error.Checked = false;
+            this.btn_Error.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Error.CheckedForeColor = System.Drawing.Color.White;
+            this.btn_Error.CheckedImageTint = System.Drawing.Color.White;
+            this.btn_Error.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Error.Content = "";
+            this.btn_Error.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Error.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btn_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Error.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Error.HoveredImageTint = System.Drawing.Color.White;
+            this.btn_Error.HoverForeColor = System.Drawing.Color.White;
+            this.btn_Error.HoverOutline = System.Drawing.Color.Empty;
+            this.btn_Error.Image = global::GUI.Properties.Resources.remove;
+            this.btn_Error.ImageAutoCenter = true;
+            this.btn_Error.ImageExpand = new System.Drawing.Point(0, 0);
+            this.btn_Error.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_Error.ImageTint = System.Drawing.Color.White;
+            this.btn_Error.Location = new System.Drawing.Point(267, 108);
+            this.btn_Error.Name = "btn_Error";
+            this.btn_Error.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Error.NormalOutline = System.Drawing.Color.Empty;
+            this.btn_Error.OutlineThickness = 1.6F;
+            this.btn_Error.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Error.PressedForeColor = System.Drawing.Color.White;
+            this.btn_Error.PressedImageTint = System.Drawing.Color.White;
+            this.btn_Error.PressedOutline = System.Drawing.Color.Empty;
+            this.btn_Error.Rounding = new System.Windows.Forms.Padding(8);
+            this.btn_Error.Size = new System.Drawing.Size(22, 21);
+            this.btn_Error.TabIndex = 32;
+            this.btn_Error.TextOffset = new System.Drawing.Point(0, 0);
+            // 
+            // btn_Access
+            // 
+            this.btn_Access.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Access.CheckButton = false;
+            this.btn_Access.Checked = false;
+            this.btn_Access.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Access.CheckedForeColor = System.Drawing.Color.White;
+            this.btn_Access.CheckedImageTint = System.Drawing.Color.White;
+            this.btn_Access.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Access.Content = "";
+            this.btn_Access.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Access.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btn_Access.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Access.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Access.HoveredImageTint = System.Drawing.Color.White;
+            this.btn_Access.HoverForeColor = System.Drawing.Color.White;
+            this.btn_Access.HoverOutline = System.Drawing.Color.Empty;
+            this.btn_Access.Image = global::GUI.Properties.Resources._checked;
+            this.btn_Access.ImageAutoCenter = true;
+            this.btn_Access.ImageExpand = new System.Drawing.Point(0, 0);
+            this.btn_Access.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_Access.ImageTint = System.Drawing.Color.White;
+            this.btn_Access.Location = new System.Drawing.Point(267, 108);
+            this.btn_Access.Name = "btn_Access";
+            this.btn_Access.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Access.NormalOutline = System.Drawing.Color.Empty;
+            this.btn_Access.OutlineThickness = 1.6F;
+            this.btn_Access.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Access.PressedForeColor = System.Drawing.Color.White;
+            this.btn_Access.PressedImageTint = System.Drawing.Color.White;
+            this.btn_Access.PressedOutline = System.Drawing.Color.Empty;
+            this.btn_Access.Rounding = new System.Windows.Forms.Padding(8);
+            this.btn_Access.Size = new System.Drawing.Size(22, 21);
+            this.btn_Access.TabIndex = 31;
+            this.btn_Access.TextOffset = new System.Drawing.Point(0, 0);
+            // 
             // picBackForgotPass
             // 
             this.picBackForgotPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
@@ -313,6 +403,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 477);
+            this.Controls.Add(this.btn_Error);
+            this.Controls.Add(this.btn_Access);
+            this.Controls.Add(this.lbl_Loi);
             this.Controls.Add(this.dtpNgayGui);
             this.Controls.Add(this.btn_Gui);
             this.Controls.Add(this.txtNoiDung);
@@ -356,5 +449,8 @@
         private System.Windows.Forms.Label lblHeader;
         private CuoreUI.Controls.cuiButton btnBackLogin;
         private System.Windows.Forms.PictureBox picBackForgotPass;
+        private System.Windows.Forms.Label lbl_Loi;
+        private CuoreUI.Controls.cuiButton btn_Access;
+        private CuoreUI.Controls.cuiButton btn_Error;
     }
 }
