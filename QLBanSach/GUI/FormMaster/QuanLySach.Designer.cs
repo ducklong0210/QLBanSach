@@ -101,7 +101,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(748, 52);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(338, 572);
+            this.panel3.Size = new System.Drawing.Size(323, 584);
             this.panel3.TabIndex = 8;
             // 
             // grbThongTinChiTiet
@@ -129,7 +129,7 @@
             this.grbThongTinChiTiet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbThongTinChiTiet.Location = new System.Drawing.Point(0, 0);
             this.grbThongTinChiTiet.Name = "grbThongTinChiTiet";
-            this.grbThongTinChiTiet.Size = new System.Drawing.Size(338, 572);
+            this.grbThongTinChiTiet.Size = new System.Drawing.Size(323, 584);
             this.grbThongTinChiTiet.TabIndex = 0;
             this.grbThongTinChiTiet.TabStop = false;
             this.grbThongTinChiTiet.Text = "Thông Tin Chi Tiết";
@@ -357,7 +357,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 52);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(748, 572);
+            this.panel2.Size = new System.Drawing.Size(748, 584);
             this.panel2.TabIndex = 7;
             // 
             // panel5
@@ -366,7 +366,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 382);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(748, 190);
+            this.panel5.Size = new System.Drawing.Size(748, 202);
             this.panel5.TabIndex = 1;
             // 
             // grbChucNang
@@ -386,7 +386,7 @@
             this.grbChucNang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbChucNang.Location = new System.Drawing.Point(0, 0);
             this.grbChucNang.Name = "grbChucNang";
-            this.grbChucNang.Size = new System.Drawing.Size(748, 190);
+            this.grbChucNang.Size = new System.Drawing.Size(748, 202);
             this.grbChucNang.TabIndex = 0;
             this.grbChucNang.TabStop = false;
             this.grbChucNang.Text = "Chức Năng";
@@ -544,6 +544,7 @@
             // 
             // dgvThongTinSach
             // 
+            this.dgvThongTinSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThongTinSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSach,
@@ -568,7 +569,6 @@
             this.MaSach.HeaderText = "Mã Sách";
             this.MaSach.Name = "MaSach";
             this.MaSach.ReadOnly = true;
-            this.MaSach.Width = 80;
             // 
             // TenSach
             // 
@@ -576,7 +576,6 @@
             this.TenSach.HeaderText = "Tên Sách";
             this.TenSach.Name = "TenSach";
             this.TenSach.ReadOnly = true;
-            this.TenSach.Width = 120;
             // 
             // MaLoaiSach
             // 
@@ -621,7 +620,7 @@
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1086, 52);
+            this.pnlHeader.Size = new System.Drawing.Size(1071, 52);
             this.pnlHeader.TabIndex = 6;
             // 
             // lblTitle
@@ -639,13 +638,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1086, 624);
+            this.ClientSize = new System.Drawing.Size(1071, 636);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlHeader);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1087, 675);
             this.Name = "QuanLySach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLySach";

@@ -45,6 +45,16 @@ namespace BLL
             string check_OK = forgotPassMng.CheckUsername(username);
             return check_OK;
         }
+        public string CheckSdt(string username)
+        {
+
+            if (string.IsNullOrEmpty(username))
+            {
+                return "null_Username";
+            }
+            string check_OK = forgotPassMng.CheckSdt(username);
+            return check_OK;
+        }
         public string GetPassword(string username)
         {
 

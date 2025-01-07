@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyNguoiDung));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.pnlChucNang = new System.Windows.Forms.Panel();
             this.btn_Thoat = new CuoreUI.Controls.cuiButton();
             this.btn_Xoa = new CuoreUI.Controls.cuiButton();
             this.btn_Sua = new CuoreUI.Controls.cuiButton();
@@ -47,14 +47,14 @@
             this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlTimKiem = new System.Windows.Forms.Panel();
             this.btn_TimKiem = new CuoreUI.Controls.cuiButton();
             this.btnReset = new System.Windows.Forms.Button();
             this.txtTKHoTen = new System.Windows.Forms.TextBox();
             this.lblTKHoTen = new System.Windows.Forms.Label();
             this.txtTKUser = new System.Windows.Forms.TextBox();
             this.lblTKUser = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlHeader = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.grbThongTinChiTiet = new System.Windows.Forms.GroupBox();
@@ -79,40 +79,42 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.pnlChucNang.SuspendLayout();
             this.panel5.SuspendLayout();
             this.grbThongTinNguoiDung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinNguoiDung)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlTimKiem.SuspendLayout();
+            this.pnlHeader.SuspendLayout();
             this.panel2.SuspendLayout();
             this.grbThongTinChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.pnlChucNang);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.pnlTimKiem);
+            this.panel1.Controls.Add(this.pnlHeader);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(777, 519);
             this.panel1.TabIndex = 0;
             // 
-            // panel6
+            // pnlChucNang
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel6.Controls.Add(this.btn_Thoat);
-            this.panel6.Controls.Add(this.btn_Xoa);
-            this.panel6.Controls.Add(this.btn_Sua);
-            this.panel6.Controls.Add(this.btn_Them);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 439);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(777, 80);
-            this.panel6.TabIndex = 3;
+            this.pnlChucNang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlChucNang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlChucNang.Controls.Add(this.btn_Thoat);
+            this.pnlChucNang.Controls.Add(this.btn_Xoa);
+            this.pnlChucNang.Controls.Add(this.btn_Sua);
+            this.pnlChucNang.Controls.Add(this.btn_Them);
+            this.pnlChucNang.Location = new System.Drawing.Point(0, 439);
+            this.pnlChucNang.Name = "pnlChucNang";
+            this.pnlChucNang.Size = new System.Drawing.Size(777, 80);
+            this.pnlChucNang.TabIndex = 3;
             // 
             // btn_Thoat
             // 
@@ -269,8 +271,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.grbThongTinNguoiDung);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 109);
+            this.panel5.Location = new System.Drawing.Point(1, 109);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(777, 330);
             this.panel5.TabIndex = 2;
@@ -288,6 +289,7 @@
             // 
             // dgvThongTinNguoiDung
             // 
+            this.dgvThongTinNguoiDung.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThongTinNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinNguoiDung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaND,
@@ -314,7 +316,6 @@
             this.MaND.HeaderText = "Mã ND";
             this.MaND.Name = "MaND";
             this.MaND.ReadOnly = true;
-            this.MaND.Width = 40;
             // 
             // Username
             // 
@@ -322,7 +323,6 @@
             this.Username.HeaderText = "Username";
             this.Username.Name = "Username";
             this.Username.ReadOnly = true;
-            this.Username.Width = 80;
             // 
             // Pass
             // 
@@ -330,7 +330,6 @@
             this.Pass.HeaderText = "Password";
             this.Pass.Name = "Pass";
             this.Pass.ReadOnly = true;
-            this.Pass.Width = 80;
             // 
             // MaQuyen
             // 
@@ -338,7 +337,6 @@
             this.MaQuyen.HeaderText = "Mã Quyền";
             this.MaQuyen.Name = "MaQuyen";
             this.MaQuyen.ReadOnly = true;
-            this.MaQuyen.Width = 60;
             // 
             // HoVaTen
             // 
@@ -360,7 +358,6 @@
             this.GioiTinh.HeaderText = "Giới Tính";
             this.GioiTinh.Name = "GioiTinh";
             this.GioiTinh.ReadOnly = true;
-            this.GioiTinh.Width = 90;
             // 
             // DiaChi
             // 
@@ -368,7 +365,6 @@
             this.DiaChi.HeaderText = "Địa Chỉ";
             this.DiaChi.Name = "DiaChi";
             this.DiaChi.ReadOnly = true;
-            this.DiaChi.Width = 80;
             // 
             // SoDienThoai
             // 
@@ -377,19 +373,18 @@
             this.SoDienThoai.Name = "SoDienThoai";
             this.SoDienThoai.ReadOnly = true;
             // 
-            // panel4
+            // pnlTimKiem
             // 
-            this.panel4.Controls.Add(this.btn_TimKiem);
-            this.panel4.Controls.Add(this.btnReset);
-            this.panel4.Controls.Add(this.txtTKHoTen);
-            this.panel4.Controls.Add(this.lblTKHoTen);
-            this.panel4.Controls.Add(this.txtTKUser);
-            this.panel4.Controls.Add(this.lblTKUser);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 58);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(777, 51);
-            this.panel4.TabIndex = 1;
+            this.pnlTimKiem.Controls.Add(this.btn_TimKiem);
+            this.pnlTimKiem.Controls.Add(this.btnReset);
+            this.pnlTimKiem.Controls.Add(this.txtTKHoTen);
+            this.pnlTimKiem.Controls.Add(this.lblTKHoTen);
+            this.pnlTimKiem.Controls.Add(this.txtTKUser);
+            this.pnlTimKiem.Controls.Add(this.lblTKUser);
+            this.pnlTimKiem.Location = new System.Drawing.Point(0, 58);
+            this.pnlTimKiem.Name = "pnlTimKiem";
+            this.pnlTimKiem.Size = new System.Drawing.Size(777, 51);
+            this.pnlTimKiem.TabIndex = 1;
             // 
             // btn_TimKiem
             // 
@@ -471,15 +466,17 @@
             this.lblTKUser.TabIndex = 0;
             this.lblTKUser.Text = "Username :";
             // 
-            // panel3
+            // pnlHeader
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(777, 58);
-            this.panel3.TabIndex = 0;
+            this.pnlHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlHeader.Controls.Add(this.label1);
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(777, 58);
+            this.pnlHeader.TabIndex = 0;
             // 
             // label1
             // 
@@ -504,6 +501,9 @@
             // 
             // grbThongTinChiTiet
             // 
+            this.grbThongTinChiTiet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grbThongTinChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.grbThongTinChiTiet.Controls.Add(this.txtmaND);
             this.grbThongTinChiTiet.Controls.Add(this.label10);
@@ -525,7 +525,6 @@
             this.grbThongTinChiTiet.Controls.Add(this.label3);
             this.grbThongTinChiTiet.Controls.Add(this.txtUser);
             this.grbThongTinChiTiet.Controls.Add(this.label2);
-            this.grbThongTinChiTiet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbThongTinChiTiet.Location = new System.Drawing.Point(0, 0);
             this.grbThongTinChiTiet.Name = "grbThongTinChiTiet";
             this.grbThongTinChiTiet.Size = new System.Drawing.Size(291, 519);
@@ -718,6 +717,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScrollMargin = new System.Drawing.Size(1084, 558);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1068, 519);
             this.Controls.Add(this.panel2);
@@ -725,19 +725,20 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1084, 558);
             this.Name = "QuanLyNguoiDung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Tài Khoản Người Dùng";
             this.Load += new System.EventHandler(this.QuanLyNguoiDung_Load);
             this.panel1.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            this.pnlChucNang.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.grbThongTinNguoiDung.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinNguoiDung)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlTimKiem.ResumeLayout(false);
+            this.pnlTimKiem.PerformLayout();
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.grbThongTinChiTiet.ResumeLayout(false);
             this.grbThongTinChiTiet.PerformLayout();
@@ -748,10 +749,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlTimKiem;
+        private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pnlChucNang;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.GroupBox grbThongTinNguoiDung;
         private System.Windows.Forms.DataGridView dgvThongTinNguoiDung;

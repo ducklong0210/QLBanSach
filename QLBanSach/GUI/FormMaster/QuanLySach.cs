@@ -1,16 +1,10 @@
 ﻿using BLL;
 using DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 
 namespace GUI.FormMaster
 {
@@ -19,9 +13,9 @@ namespace GUI.FormMaster
         private NguoiDung taiKhoan;
         private DataTable dtSach;
         private BookBLL bookBLLs = new BookBLL();
-        public QuanLySach( NguoiDung user)
+        public QuanLySach(NguoiDung user)
         {
-            taiKhoan = user;    
+            taiKhoan = user;
             InitializeComponent();
         }
 
@@ -62,7 +56,7 @@ namespace GUI.FormMaster
                 picImage.Image = null;
             }
             //Xóa đường dẫn ảnh
-            txtDuongDanAnh.Text = ""; 
+            txtDuongDanAnh.Text = "";
             MessageBox.Show("Ảnh đã được xóa!");
         }
         private void QuanLySach_Load(object sender, EventArgs e)
@@ -71,7 +65,7 @@ namespace GUI.FormMaster
             grbThongTinChiTiet.Enabled = false;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
-          
+
         }
         int vt = -1;
         private void dgvThongTinSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -102,11 +96,11 @@ namespace GUI.FormMaster
             {
                 cbTheLoai.SelectedIndex = 2;
             }
-            else if(dtRow["MaLoaiSach"].ToString().Trim() == "AN")
+            else if (dtRow["MaLoaiSach"].ToString().Trim() == "AN")
             {
                 cbTheLoai.SelectedIndex = 3;
             }
-            else 
+            else
                 cbTheLoai.SelectedIndex = 4;
 
             // lấy đường dẫn ảnh từ cột "Poster"
@@ -137,7 +131,7 @@ namespace GUI.FormMaster
             // Bỏ qua lỗi DataError (do dữ liệu không đúng kiểu)
             e.ThrowException = false;
         }
-       
+
         private void btnThemImg_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -169,12 +163,12 @@ namespace GUI.FormMaster
                 picImage.ImageLocation = ofd.FileName;
                 txtDuongDanAnh.Text = ofd.FileName;
             }
-            if(picImage != null)
+            if (picImage != null)
             {
                 btnThemImg.Enabled = false;
                 btnSuaImg.Enabled = true;
                 btnXoaImg.Enabled = true;
-            }    
+            }
         }
         private void btnXoaImg_Click(object sender, EventArgs e)
         {
@@ -191,9 +185,9 @@ namespace GUI.FormMaster
             btnSuaImg.Enabled = false;
             btnXoaImg.Enabled = false;
             XoaThongTin();
-            
+
         }
-        
+
         private void ThemThongTinSach()
         {
             BookBLL bookBLL = new BookBLL();
@@ -211,19 +205,19 @@ namespace GUI.FormMaster
             {
                 sach.MaLoaiSach = "BT";//Bomtan
             }
-            else if(cbTheLoai.SelectedIndex == 3)
+            else if (cbTheLoai.SelectedIndex == 3)
             {
                 sach.MaLoaiSach = "AN";
-            }    
+            }
             else
-            sach.MaLoaiSach = "KXD";//Khong xac dinh
+                sach.MaLoaiSach = "KXD";//Khong xac dinh
             sach.NamSanXuat = dtpNamSanXuat.Value;
             sach.Gia = (int)numberGia.Value;
             sach.SoLuong = (int)numberSoLuong.Value;
             sach.Poster = txtDuongDanAnh.Text.Trim();
             // sự kiện thêm sách
             string add_OK = bookBLL.ThemSach(sach);
-            switch(add_OK)
+            switch (add_OK)
             {
                 case "book_Add_Retail":
                     {
@@ -232,7 +226,7 @@ namespace GUI.FormMaster
                        MessageBoxButtons.OK,
                        MessageBoxIcon.Warning);
                         return;
-                    } 
+                    }
                 case "error_null_book":
                     {
                         MessageBox.Show("Bạn chưa điền đầy đủ thông tin.Mời bạn kiểm tra lại thông tin!",
@@ -288,18 +282,18 @@ namespace GUI.FormMaster
                 sach.MaLoaiSach = "AN";//Anime
             }
             else
-             sach.MaLoaiSach = "KXD";//Khong xac dinh
+                sach.MaLoaiSach = "KXD";//Khong xac dinh
 
             sach.NamSanXuat = dtpNamSanXuat.Value;
             sach.Gia = (int)numberGia.Value;
             sach.SoLuong = (int)numberSoLuong.Value;
-            
+
             sach.Poster = txtDuongDanAnh.Text.Trim();
 
             // sự kiện sửa thông tin sách
             string edit_OK = bookBLL.SuaTTSach(sach);
             // xử lý kết quả
-            switch(edit_OK)
+            switch (edit_OK)
             {
                 case "error_null_book":
                     {
@@ -320,16 +314,16 @@ namespace GUI.FormMaster
                             "Cảnh báo",
                             MessageBoxButtons.YesNo,
                             MessageBoxIcon.Warning);
-                            if(rs == DialogResult.Yes)
-                            {
-                                MessageBox.Show("Sửa thông tin sách thành công!");
-                                XoaThongTin();
-                                HienThiThongTin();
-                                grbThongTinChiTiet.Enabled = false;
-                                btnSua.Enabled = false;
-                                btnXoa.Enabled = false;
-                            }    
-                        
+                        if (rs == DialogResult.Yes)
+                        {
+                            MessageBox.Show("Sửa thông tin sách thành công!");
+                            XoaThongTin();
+                            HienThiThongTin();
+                            grbThongTinChiTiet.Enabled = false;
+                            btnSua.Enabled = false;
+                            btnXoa.Enabled = false;
+                        }
+
                         return;
                     }
                 case "error_Edit_Success":
@@ -345,7 +339,7 @@ namespace GUI.FormMaster
         int chucNang = 0;
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(chucNang == 1)
+            if (chucNang == 1)
             {
                 ThemThongTinSach();
             }
@@ -423,18 +417,18 @@ namespace GUI.FormMaster
                 decimal gia = numberTKGia.Value;
                 DataTable dtTenSach = bookBLL.TimKiemTenSach(tenSach);
                 DataTable dtLoaiSach = bookBLL.TimKiemLoaiSach(maLoaiSach);
-                DataTable dtGia = bookBLL.TimKiemGia(gia); 
-                if(dtTenSach.Rows.Count > 0)
+                DataTable dtGia = bookBLL.TimKiemGia(gia);
+                if (dtTenSach.Rows.Count > 0)
                 {
                     dgvThongTinSach.DataSource = dtTenSach;
                 }
-                else if(dtLoaiSach.Rows.Count > 0)
+                else if (dtLoaiSach.Rows.Count > 0)
                 {
                     dgvThongTinSach.DataSource = dtLoaiSach;
-                } 
+                }
                 else if (dtGia.Rows.Count > 0)
-                { 
-                    dgvThongTinSach.DataSource= dtGia;
+                {
+                    dgvThongTinSach.DataSource = dtGia;
                 }
                 else
                 {

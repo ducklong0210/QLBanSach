@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-using BLL;
+﻿using BLL;
 using DTO;
 using GUI.FormCustomer;
 using GUI.FormMaster;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 namespace GUI
 {
     public partial class DangNhap : Form
@@ -37,7 +29,7 @@ namespace GUI
             btn_Login.BackColor = Color.Transparent;
             lblDangKy.Parent = picLogin;
             lblDangKy.BackColor = Color.Transparent;
-           
+
         }
 
         // sự kiện đăng nhập
@@ -49,7 +41,7 @@ namespace GUI
         {
             user.Username = txtUsername.Content;
             user.Pass = txtPassword.Content;
-            staff.MaNV =txtUsername.Content;
+            staff.MaNV = txtUsername.Content;
             staff.Pass = txtPassword.Content;
             string checkUser = tkBLL.CheckLogin(user);
             //string checkStaff = tkBLL.CHeckLoginStaff(staff);
@@ -102,10 +94,10 @@ namespace GUI
                 // Nếu MaQuyen = 1, người dùng sẽ vào trang Quản Trị
                 FrmQuanTriVien();
             }
-            else if(maQuyen == 2)
+            else if (maQuyen == 2)
             {
                 FrmQuanTriVien();
-            }    
+            }
             else
             {
                 // Kiểm tra với các mã quyền khác nếu có
@@ -118,7 +110,7 @@ namespace GUI
             string username = txtUsername.Content;
             Info_Account_MngBLL info = new Info_Account_MngBLL();
             NguoiDung user = info.Check_InFo_Account(username);
-            if(user != null)
+            if (user != null)
             {
                 QuanTri quanTri = new QuanTri(user);
                 quanTri.Show();
@@ -150,7 +142,7 @@ namespace GUI
         // Hiển thị password khi click vào sự kiện hiện mật khẩu
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkShowPass.Checked) 
+            if (chkShowPass.Checked)
             {
                 txtPassword.PasswordChar = false;
             }
@@ -181,11 +173,11 @@ namespace GUI
             txtPassword.PasswordChar = true;
         }
 
-      
+
 
         private void DangNhap_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void lblDangKy_MouseHover(object sender, EventArgs e)

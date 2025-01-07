@@ -64,7 +64,7 @@
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(627, 67);
+            this.pnlHeader.Size = new System.Drawing.Size(626, 67);
             this.pnlHeader.TabIndex = 0;
             // 
             // btn_Thoat
@@ -114,7 +114,7 @@
             this.pnlThongTinTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlThongTinTaiKhoan.Location = new System.Drawing.Point(0, 67);
             this.pnlThongTinTaiKhoan.Name = "pnlThongTinTaiKhoan";
-            this.pnlThongTinTaiKhoan.Size = new System.Drawing.Size(627, 423);
+            this.pnlThongTinTaiKhoan.Size = new System.Drawing.Size(626, 450);
             this.pnlThongTinTaiKhoan.TabIndex = 0;
             // 
             // txtMaND
@@ -290,12 +290,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(627, 490);
+            this.ClientSize = new System.Drawing.Size(626, 517);
             this.Controls.Add(this.pnlThongTinTaiKhoan);
             this.Controls.Add(this.pnlHeader);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(642, 556);
             this.Name = "ThongTinTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThongTinTaiKhoan";

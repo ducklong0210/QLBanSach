@@ -57,7 +57,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(728, 85);
+            this.panel1.Size = new System.Drawing.Size(724, 85);
             this.panel1.TabIndex = 0;
             // 
             // lblTiTlee
@@ -120,7 +120,7 @@
             this.pnlQuanLy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlQuanLy.Location = new System.Drawing.Point(0, 85);
             this.pnlQuanLy.Name = "pnlQuanLy";
-            this.pnlQuanLy.Size = new System.Drawing.Size(728, 337);
+            this.pnlQuanLy.Size = new System.Drawing.Size(724, 332);
             this.pnlQuanLy.TabIndex = 1;
             // 
             // btnThongTinTaiKhoanNV
@@ -244,12 +244,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(728, 422);
+            this.ClientSize = new System.Drawing.Size(724, 417);
             this.Controls.Add(this.pnlQuanLy);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(740, 456);
             this.Name = "QuanTri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Trị Hệ Thống";

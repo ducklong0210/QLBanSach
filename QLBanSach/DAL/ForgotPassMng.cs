@@ -74,6 +74,30 @@ namespace DAL
             }
             return "error_Check";
         }
+        public string CheckSdt(string username)
+        {
+            SqlConnectDatabase db = new SqlConnectDatabase();
+            db.MoKetNoi();
+            SqlConnection sqlCon = db.sqlCon;
+            string sql = "select SoDienThoai from tbl_NguoiDung where Username = @user";
+            SqlCommand cmd = new SqlCommand(sql, sqlCon);
+            string sdt = null;
+            try
+            {
+                cmd.Parameters.AddWithValue("@user", username);
+                sdt = (string)cmd.ExecuteScalar();
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("Lỗi SQL" + ex.Message);
+            }
+            finally
+            {
+                db.DongKetNoi();
+            }
+            return sdt;
+        }
+
         public string GetPassword(string username)
         {
             SqlConnectDatabase db = new SqlConnectDatabase();

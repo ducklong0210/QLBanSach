@@ -80,11 +80,13 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.lblTitle);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(925, 64);
+            this.panel1.Size = new System.Drawing.Size(917, 1);
             this.panel1.TabIndex = 0;
             // 
             // lblTitle
@@ -102,9 +104,9 @@
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 64);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(925, 549);
+            this.panel2.Size = new System.Drawing.Size(917, 544);
             this.panel2.TabIndex = 1;
             // 
             // panel6
@@ -113,7 +115,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(626, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(299, 549);
+            this.panel6.Size = new System.Drawing.Size(291, 544);
             this.panel6.TabIndex = 8;
             // 
             // grbThongTinChiTiet
@@ -130,7 +132,7 @@
             this.grbThongTinChiTiet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbThongTinChiTiet.Location = new System.Drawing.Point(0, 0);
             this.grbThongTinChiTiet.Name = "grbThongTinChiTiet";
-            this.grbThongTinChiTiet.Size = new System.Drawing.Size(299, 549);
+            this.grbThongTinChiTiet.Size = new System.Drawing.Size(291, 544);
             this.grbThongTinChiTiet.TabIndex = 0;
             this.grbThongTinChiTiet.TabStop = false;
             this.grbThongTinChiTiet.Text = "Thông Tin Chi Tiết";
@@ -229,7 +231,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(626, 549);
+            this.panel11.Size = new System.Drawing.Size(626, 544);
             this.panel11.TabIndex = 7;
             // 
             // panel10
@@ -238,7 +240,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(0, 461);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(626, 88);
+            this.panel10.Size = new System.Drawing.Size(626, 83);
             this.panel10.TabIndex = 1;
             // 
             // grbChucNang
@@ -250,7 +252,7 @@
             this.grbChucNang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbChucNang.Location = new System.Drawing.Point(0, 0);
             this.grbChucNang.Name = "grbChucNang";
-            this.grbChucNang.Size = new System.Drawing.Size(626, 88);
+            this.grbChucNang.Size = new System.Drawing.Size(626, 83);
             this.grbChucNang.TabIndex = 0;
             this.grbChucNang.TabStop = false;
             this.grbChucNang.Text = "Chức Năng";
@@ -321,8 +323,9 @@
             // 
             // grbThongTinLoaiSach
             // 
+            this.grbThongTinLoaiSach.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grbThongTinLoaiSach.Controls.Add(this.dgvThongTinLoaiSach);
-            this.grbThongTinLoaiSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbThongTinLoaiSach.Location = new System.Drawing.Point(0, 54);
             this.grbThongTinLoaiSach.Name = "grbThongTinLoaiSach";
             this.grbThongTinLoaiSach.Size = new System.Drawing.Size(626, 407);
@@ -332,6 +335,7 @@
             // 
             // dgvThongTinLoaiSach
             // 
+            this.dgvThongTinLoaiSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThongTinLoaiSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinLoaiSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaLoaiSach,
@@ -352,7 +356,6 @@
             this.MaLoaiSach.HeaderText = "Mã Loại Sách";
             this.MaLoaiSach.Name = "MaLoaiSach";
             this.MaLoaiSach.ReadOnly = true;
-            this.MaLoaiSach.Width = 155;
             // 
             // NgayThem
             // 
@@ -360,7 +363,6 @@
             this.NgayThem.HeaderText = "Ngày Thêm";
             this.NgayThem.Name = "NgayThem";
             this.NgayThem.ReadOnly = true;
-            this.NgayThem.Width = 190;
             // 
             // TenLoaiSach
             // 
@@ -368,7 +370,6 @@
             this.TenLoaiSach.HeaderText = "Tên Loại Sách";
             this.TenLoaiSach.Name = "TenLoaiSach";
             this.TenLoaiSach.ReadOnly = true;
-            this.TenLoaiSach.Width = 230;
             // 
             // panel9
             // 
@@ -454,12 +455,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(925, 613);
+            this.ClientSize = new System.Drawing.Size(917, 544);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(933, 583);
             this.Name = "QuanLyLoaiSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Loại Sách";

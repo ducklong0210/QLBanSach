@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BLL;
+﻿using BLL;
 using DTO;
+using System;
+using System.Data;
+using System.Windows.Forms;
 namespace GUI.FormMaster
 {
     public partial class QuanLyNhanVien : Form
@@ -64,7 +58,7 @@ namespace GUI.FormMaster
                 nhanVien.TrangThai = "Đã Nghỉ";
             else
                 nhanVien.TrangThai = "Không Xác Định";
-            
+
             // sự kiện gán thêm nhân viên vào
             string add_OK = staffBLL.ThemNhanVien(nhanVien);
             // sự kiện giá trị của bll null thì trả về KXD
@@ -136,7 +130,7 @@ namespace GUI.FormMaster
                 return;
             }
             //Xử lý kết quả
-            switch(edit_OK)
+            switch (edit_OK)
             {
                 case "edit_Success":
                     MessageBox.Show("Chỉnh sửa thông tin nhân viên thành công!");
@@ -160,7 +154,7 @@ namespace GUI.FormMaster
         }
         private void XoaNhanVien()
         {
-           // khởi tạo đối tượng Nhân Viên BLL
+            // khởi tạo đối tượng Nhân Viên BLL
             StaffBLL staffBLL = new StaffBLL();
             // khởi tạo đối tượng nhan viên
             NhanVien nhanVien = new NhanVien();
@@ -171,7 +165,7 @@ namespace GUI.FormMaster
             {
                 case "delete_Success":
                     MessageBox.Show("Xóa nhân viên thành công!");
-                    HienThiThongTin();  
+                    HienThiThongTin();
                     btn_Sua.Enabled = false;
                     btn_Xoa.Enabled = false;
                     return;
@@ -290,7 +284,7 @@ namespace GUI.FormMaster
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            
+
             string tenNV = txtTKTenNV.Text.Trim();
             string trangThai = cbTKTrangThai.Text.Trim();
             // khoi tao bien datatable để hiển thị lên dgv
@@ -302,7 +296,7 @@ namespace GUI.FormMaster
             }
             if (dtTrangThai.Rows.Count > 0)
             {
-                dgvThongTinNguoiDung.DataSource= dtTrangThai;
+                dgvThongTinNguoiDung.DataSource = dtTrangThai;
             }
             else
             {
@@ -318,11 +312,11 @@ namespace GUI.FormMaster
         int chucNang = 0;
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-            if(chucNang == 1)
+            if (chucNang == 1)
             {
                 ThemNhanVien();
             }
-            if(chucNang == 2)
+            if (chucNang == 2)
             {
                 DialogResult rs = MessageBox.Show("Bạn có muốn sửa thông tin nhân viên không ?",
                     "Xác nhận",
@@ -333,9 +327,9 @@ namespace GUI.FormMaster
                     SuaNhanVien();
 
                 }
-            }    
+            }
         }
-        
+
         private void btn_Huy_Click(object sender, EventArgs e)
         {
             DialogResult rs = MessageBox.Show("Bạn có muốn hủy bỏ thay đổi này không",
@@ -380,7 +374,7 @@ namespace GUI.FormMaster
             string[] a = dtRow["NamSinh"].ToString().Split(' ');
             string[] ns = a[0].Split('/');
             dtpNamSinh.Value = new DateTime(int.Parse(ns[2]), int.Parse(ns[0]), int.Parse(ns[1]));
-            
+
             // hiển thị các btn khi click vào dgv
             btn_Sua.Enabled = true;
             btn_Xoa.Enabled = true;

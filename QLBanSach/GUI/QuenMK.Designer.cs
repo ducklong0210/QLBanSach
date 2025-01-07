@@ -46,6 +46,8 @@
             this.btn_Error = new CuoreUI.Controls.cuiButton();
             this.btn_Access = new CuoreUI.Controls.cuiButton();
             this.picBackForgotPass = new System.Windows.Forms.PictureBox();
+            this.btn_Sdt_Yes = new CuoreUI.Controls.cuiButton();
+            this.btn_Sdt_No = new CuoreUI.Controls.cuiButton();
             ((System.ComponentModel.ISupportInitialize)(this.picBackForgotPass)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,7 +87,7 @@
             this.btn_Gui.ImageExpand = new System.Drawing.Point(0, 0);
             this.btn_Gui.ImageOffset = new System.Drawing.Point(0, 0);
             this.btn_Gui.ImageTint = System.Drawing.Color.White;
-            this.btn_Gui.Location = new System.Drawing.Point(220, 421);
+            this.btn_Gui.Location = new System.Drawing.Point(223, 420);
             this.btn_Gui.Name = "btn_Gui";
             this.btn_Gui.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
             this.btn_Gui.NormalOutline = System.Drawing.Color.Empty;
@@ -243,6 +245,7 @@
             this.txtUsername.TabIndex = 0;
             this.txtUsername.TextOffset = new System.Drawing.Size(0, 0);
             this.txtUsername.UnderlinedStyle = false;
+            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
             // 
             // lblUser
             // 
@@ -398,11 +401,85 @@
             this.picBackForgotPass.TabIndex = 19;
             this.picBackForgotPass.TabStop = false;
             // 
+            // btn_Sdt_Yes
+            // 
+            this.btn_Sdt_Yes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Sdt_Yes.CheckButton = false;
+            this.btn_Sdt_Yes.Checked = false;
+            this.btn_Sdt_Yes.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Sdt_Yes.CheckedForeColor = System.Drawing.Color.White;
+            this.btn_Sdt_Yes.CheckedImageTint = System.Drawing.Color.White;
+            this.btn_Sdt_Yes.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Sdt_Yes.Content = "";
+            this.btn_Sdt_Yes.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Sdt_Yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btn_Sdt_Yes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Sdt_Yes.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Sdt_Yes.HoveredImageTint = System.Drawing.Color.White;
+            this.btn_Sdt_Yes.HoverForeColor = System.Drawing.Color.White;
+            this.btn_Sdt_Yes.HoverOutline = System.Drawing.Color.Empty;
+            this.btn_Sdt_Yes.Image = global::GUI.Properties.Resources._checked;
+            this.btn_Sdt_Yes.ImageAutoCenter = true;
+            this.btn_Sdt_Yes.ImageExpand = new System.Drawing.Point(0, 0);
+            this.btn_Sdt_Yes.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_Sdt_Yes.ImageTint = System.Drawing.Color.White;
+            this.btn_Sdt_Yes.Location = new System.Drawing.Point(502, 204);
+            this.btn_Sdt_Yes.Name = "btn_Sdt_Yes";
+            this.btn_Sdt_Yes.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Sdt_Yes.NormalOutline = System.Drawing.Color.Empty;
+            this.btn_Sdt_Yes.OutlineThickness = 1.6F;
+            this.btn_Sdt_Yes.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Sdt_Yes.PressedForeColor = System.Drawing.Color.White;
+            this.btn_Sdt_Yes.PressedImageTint = System.Drawing.Color.White;
+            this.btn_Sdt_Yes.PressedOutline = System.Drawing.Color.Empty;
+            this.btn_Sdt_Yes.Rounding = new System.Windows.Forms.Padding(8);
+            this.btn_Sdt_Yes.Size = new System.Drawing.Size(22, 21);
+            this.btn_Sdt_Yes.TabIndex = 33;
+            this.btn_Sdt_Yes.TextOffset = new System.Drawing.Point(0, 0);
+            // 
+            // btn_Sdt_No
+            // 
+            this.btn_Sdt_No.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Sdt_No.CheckButton = false;
+            this.btn_Sdt_No.Checked = false;
+            this.btn_Sdt_No.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Sdt_No.CheckedForeColor = System.Drawing.Color.White;
+            this.btn_Sdt_No.CheckedImageTint = System.Drawing.Color.White;
+            this.btn_Sdt_No.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Sdt_No.Content = "";
+            this.btn_Sdt_No.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Sdt_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btn_Sdt_No.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Sdt_No.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Sdt_No.HoveredImageTint = System.Drawing.Color.White;
+            this.btn_Sdt_No.HoverForeColor = System.Drawing.Color.White;
+            this.btn_Sdt_No.HoverOutline = System.Drawing.Color.Empty;
+            this.btn_Sdt_No.Image = global::GUI.Properties.Resources.remove;
+            this.btn_Sdt_No.ImageAutoCenter = true;
+            this.btn_Sdt_No.ImageExpand = new System.Drawing.Point(0, 0);
+            this.btn_Sdt_No.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_Sdt_No.ImageTint = System.Drawing.Color.White;
+            this.btn_Sdt_No.Location = new System.Drawing.Point(502, 204);
+            this.btn_Sdt_No.Name = "btn_Sdt_No";
+            this.btn_Sdt_No.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Sdt_No.NormalOutline = System.Drawing.Color.Empty;
+            this.btn_Sdt_No.OutlineThickness = 1.6F;
+            this.btn_Sdt_No.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn_Sdt_No.PressedForeColor = System.Drawing.Color.White;
+            this.btn_Sdt_No.PressedImageTint = System.Drawing.Color.White;
+            this.btn_Sdt_No.PressedOutline = System.Drawing.Color.Empty;
+            this.btn_Sdt_No.Rounding = new System.Windows.Forms.Padding(8);
+            this.btn_Sdt_No.Size = new System.Drawing.Size(22, 21);
+            this.btn_Sdt_No.TabIndex = 34;
+            this.btn_Sdt_No.TextOffset = new System.Drawing.Point(0, 0);
+            // 
             // QuenMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 477);
+            this.Controls.Add(this.btn_Sdt_No);
+            this.Controls.Add(this.btn_Sdt_Yes);
             this.Controls.Add(this.btn_Error);
             this.Controls.Add(this.btn_Access);
             this.Controls.Add(this.lbl_Loi);
@@ -452,5 +529,7 @@
         private System.Windows.Forms.Label lbl_Loi;
         private CuoreUI.Controls.cuiButton btn_Access;
         private CuoreUI.Controls.cuiButton btn_Error;
+        private CuoreUI.Controls.cuiButton btn_Sdt_Yes;
+        private CuoreUI.Controls.cuiButton btn_Sdt_No;
     }
 }

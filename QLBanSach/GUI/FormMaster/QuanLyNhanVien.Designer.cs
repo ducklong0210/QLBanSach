@@ -445,6 +445,7 @@
             // 
             // dgvThongTinNguoiDung
             // 
+            this.dgvThongTinNguoiDung.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThongTinNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinNguoiDung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNV,
@@ -470,7 +471,6 @@
             this.MaNV.HeaderText = "Mã Nhân Viên";
             this.MaNV.Name = "MaNV";
             this.MaNV.ReadOnly = true;
-            this.MaNV.Width = 90;
             // 
             // Pass
             // 
@@ -485,7 +485,6 @@
             this.TenNV.HeaderText = "Tên Nhân Viên";
             this.TenNV.Name = "TenNV";
             this.TenNV.ReadOnly = true;
-            this.TenNV.Width = 120;
             // 
             // NamSinh
             // 
@@ -500,7 +499,6 @@
             this.CCCD.HeaderText = "Căn Cước Công Dân";
             this.CCCD.Name = "CCCD";
             this.CCCD.ReadOnly = true;
-            this.CCCD.Width = 117;
             // 
             // SoDienThoai
             // 
@@ -623,6 +621,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1081, 567);
             this.Name = "QuanLyNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLyNhanVien";

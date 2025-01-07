@@ -1,13 +1,7 @@
 ﻿using BLL;
 using DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI.FormMaster
@@ -35,8 +29,8 @@ namespace GUI.FormMaster
                     "Xác nhận",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question);
-                if(rs == DialogResult.Yes)
-                {     
+                if (rs == DialogResult.Yes)
+                {
                     SuaTTLoaiSach();
                 }
             }
@@ -90,9 +84,9 @@ namespace GUI.FormMaster
             loaiSach.TenLoaiSach = txtTenLoaiSach.Text;
             loaiSach.NgayThem = dtpNgayThem.Value;
             string Edit_OK = bookBLL.SuaLoaiSach(loaiSach);
-            switch(Edit_OK)
+            switch (Edit_OK)
             {
-                
+
                 case "error_null_LoaiSach":
                     {
                         MessageBox.Show("Lỗi null loại sách!");
@@ -122,9 +116,9 @@ namespace GUI.FormMaster
             BookBLL bookBLL = new BookBLL();
             LoaiSach loaiSach = new LoaiSach();
             loaiSach.MaLoaiSach = txtMaLoaiSach.Text;
-           
+
             string Delete_OK = bookBLL.XoaLoaiSach(loaiSach);
-            switch(Delete_OK)
+            switch (Delete_OK)
             {
                 case "error_null_LoaiSach":
                     {
@@ -153,7 +147,7 @@ namespace GUI.FormMaster
         {
             txtMaLoaiSach.Clear();
             txtTenLoaiSach.Clear();
-            
+
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -243,20 +237,20 @@ namespace GUI.FormMaster
             string tenLoaiSach = txtTKTenLoaiSach.Text.Trim();
             DataTable dtMaLoaiSach = bookBLLs.TimKiemMaLoaiSach(maLoaiSach);
             DataTable dtTenLoaiSach = bookBLLs.TimKiemTenLoaiSach(tenLoaiSach);
-            if(dtMaLoaiSach.Rows.Count > 0)
+            if (dtMaLoaiSach.Rows.Count > 0)
             {
                 dgvThongTinLoaiSach.DataSource = dtMaLoaiSach;
             }
-            else if(dtTenLoaiSach.Rows.Count > 0)
+            else if (dtTenLoaiSach.Rows.Count > 0)
             {
-                dgvThongTinLoaiSach.DataSource=dtTenLoaiSach;
+                dgvThongTinLoaiSach.DataSource = dtTenLoaiSach;
             }
             else
             {
                 MessageBox.Show("Không tìm thấy thông tin loại sách!");
                 dgvThongTinLoaiSach.DataSource = dtLoaiSach;
-            } 
-                
+            }
+
         }
 
         private void btnReset_Click(object sender, EventArgs e)

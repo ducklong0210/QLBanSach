@@ -1,14 +1,7 @@
 ﻿using BLL;
 using DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI
@@ -23,10 +16,10 @@ namespace GUI
             lblHeaderRegister.BackColor = Color.Transparent;
             grbRegister.Parent = picBackRegister;
             grbRegister.BackColor = Color.Transparent;
-       
+
         }
-        
-        
+
+
         // sự kiện đăng ký tài khoản
         private void btnRegister_Click(object sender, EventArgs e)
         {
@@ -70,43 +63,43 @@ namespace GUI
             }
             else
             {
-            switch (CheckRegister)
+                switch (CheckRegister)
                 {
-                case "register_access":
-                    {
-                       XoaDuLieu();
-                        MessageBox.Show("Đăng ký tài khoản thành công!");
-                       DialogResult result = MessageBox.Show("Bạn có muốn trở lại trang đăng nhập không",
-                            "Hỏi Thoát",
-                       MessageBoxButtons.YesNo,
-                       MessageBoxIcon.Question);
-                            if(result == DialogResult.Yes)
+                    case "register_access":
+                        {
+                            XoaDuLieu();
+                            MessageBox.Show("Đăng ký tài khoản thành công!");
+                            DialogResult result = MessageBox.Show("Bạn có muốn trở lại trang đăng nhập không",
+                                 "Hỏi Thoát",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question);
+                            if (result == DialogResult.Yes)
                             {
                                 this.Close();
                             }
-                        return;
-                    }
-                case "register_retail":
-                    {
-                        MessageBox.Show("Tài khoản đã tồn tại!");
-                        return;
-                    }
-                case "error":
-                    {
-                        MessageBox.Show("Đăng ký tài khoản không thành công ");
-                        return;
-                    }
-                default:
-                    {
-                        MessageBox.Show("Lỗi không xác định" + CheckRegister);
-                        return;
-                    }
+                            return;
+                        }
+                    case "register_retail":
+                        {
+                            MessageBox.Show("Tài khoản đã tồn tại!");
+                            return;
+                        }
+                    case "error":
+                        {
+                            MessageBox.Show("Đăng ký tài khoản không thành công ");
+                            return;
+                        }
+                    default:
+                        {
+                            MessageBox.Show("Lỗi không xác định" + CheckRegister);
+                            return;
+                        }
                 }
             }
         }
         // sự kiện check xem tài khoản và mật khẩu nhập đúng định dạng chưa
-        
-       
+
+
 
         //Sự kiện xóa dữ liệu khi người dùng đăng ký tài khoản thành công
         private void XoaDuLieu()
