@@ -16,7 +16,7 @@ namespace DAL
     {
 
         // Tạo chuỗi kết nối csdl
-        string strCon = "Data Source=DESKTOP-82BTP3O\\DUCLONG;Initial Catalog=QLBanSach;Integrated Security=True;TrustServerCertificate=True";
+        string strCon = "Data Source=DESKTOP-2FP5J3V;Initial Catalog=QLBanSach;Integrated Security=True;TrustServerCertificate=True";
         public SqlConnection sqlCon = null;
         // trả về sqlConnect để dễ tái sử dụng khi cần
         public SqlConnection MoKetNoi()
