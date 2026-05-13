@@ -16,7 +16,7 @@ QLBanSach là ứng dụng quản lý bán sách được phát triển bằng .
 
 Clone hoặc tải mã nguồn dự án về máy:
 ```bash
-git clone https://github.com/<tên-tài-khoản>/<tên-repo>.git
+git clone https://github.com/ducklong0210/QLBanSach.git
 ```
 
 ### 2. Mở dự án
